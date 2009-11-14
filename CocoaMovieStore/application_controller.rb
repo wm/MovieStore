@@ -8,23 +8,14 @@
 require 'osx/cocoa'
 
 class ApplicationController < OSX::NSObject
-  ib_outlets :customers_box
+  ib_outlets :customers_box, :catalog_box
 
-  ib_action :sales_returns
-  def sales_returns
+  #ib_action :hide_boxes
+  def hide_boxes
     @customers_box.setHidden_(true)
+	@catalog_box.setHidden_(true)
   end
   
-  ib_action :catalog
-  def catalog
-    @customers_box.setHidden_(true)
-  end
-  
-  ib_action :close_register
-  def close_register
-    @customers_box.setHidden_(true)
-  end
- 
   # Recieves notification when window closes 
   # and terminates the application.
   def windowWillClose(notification)

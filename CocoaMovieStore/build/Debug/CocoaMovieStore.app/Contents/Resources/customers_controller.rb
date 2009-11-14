@@ -7,7 +7,7 @@
 #
 require 'osx/cocoa'
 
-class CustomersController < OSX::NSObject
+class CustomersController < ApplicationController
   ib_outlets :customers_box, :new_customer_box, :edit_customer_box, :new_edit_box, :cust_box_label
   ib_outlets :find_customer_text_field, :find_customer_box, :customer_form, :new_cust_error_label
   
@@ -52,6 +52,7 @@ class CustomersController < OSX::NSObject
   
   ib_action :reset_customers
   def reset_customers
+	hide_boxes
     @find_customer_text_field.setStringValue("")
     @new_edit_box.setHidden_(false)
     @find_customer_box.setHidden_(true)

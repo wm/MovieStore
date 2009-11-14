@@ -1,0 +1,28 @@
+<p>
+  <b>Media:</b>
+  <%=h @copy.media_id %>
+</p>
+
+<p>
+  <b>Copy type:</b>
+  <%=h @copy.copy_type %>
+</p>
+
+<p>
+  <b>Sale price:</b>
+  <%=h @copy.sale_price %>
+</p>
+
+<p>
+  <b>Wholesale price:</b>
+  <%=h @copy.wholesale_price %>
+</p>
+
+<p>
+  <b>Store section:</b>
+  <%=h @copy.store_section_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_copy_path(@copy) %> |
+<%= link_to 'Back', copies_path %>

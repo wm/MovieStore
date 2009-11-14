@@ -1,0 +1,26 @@
+<h1>Listing media_people</h1>
+
+<table>
+  <tr>
+    <th>First name</th>
+    <th>Last name</th>
+    <th>Dob</th>
+    <th>Position</th>
+  </tr>
+
+<% @media_people.each do |media_person| %>
+  <tr>
+    <td><%=h media_person.first_name %></td>
+    <td><%=h media_person.last_name %></td>
+    <td><%=h media_person.dob %></td>
+    <td><%=h media_person.position %></td>
+    <td><%= link_to 'Show', media_person %></td>
+    <td><%= link_to 'Edit', edit_media_person_path(media_person) %></td>
+    <td><%= link_to 'Destroy', media_person, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New media_person', new_media_person_path %>

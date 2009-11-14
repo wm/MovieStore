@@ -1,0 +1,23 @@
+<p>
+  <b>Title:</b>
+  <%=h @medium.title %>
+</p>
+
+<p>
+  <b>Year:</b>
+  <%=h @medium.year %>
+</p>
+
+<p>
+  <b>Genre:</b>
+  <%=h @medium.genre %>
+</p>
+
+<p>
+  <b>Media type:</b>
+  <%=h @medium.media_type %>
+</p>
+
+
+<%= link_to 'Edit', edit_medium_path(@medium) %> |
+<%= link_to 'Back', media_path %>

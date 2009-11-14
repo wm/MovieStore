@@ -1,0 +1,498 @@
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (2.1ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (1.9ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateCustomers (20091112044013)
+  [4;36;1mSQL (69.7ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (5.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (10.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (494.7ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (482.0ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateCustomers (20091112044013)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateCustomers (20091112044013)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateCustomers (20091112044013)
+  [4;36;1mSQL (171.0ms)[0m   [0;1mCREATE TABLE `customers` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `f_name` varchar(255), `l_name` varchar(255), `street1` varchar(255), `street2` varchar(255), `city` varchar(255), `zip` varchar(255), `state` varchar(255), `phone` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (6.4ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091112044013')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (17.6ms)[0m   [0mSHOW FIELDS FROM `customers`[0m
+  [4;36;1mSQL (2.5ms)[0m   [0;1mdescribe `customers`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW KEYS FROM `customers`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mCustomer Columns (2.3ms)[0m   [0;1mSHOW FIELDS FROM `customers`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mCustomer Columns (47.1ms)[0m   [0;1mSHOW FIELDS FROM `customers`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mCustomer Columns (2.6ms)[0m   [0;1mSHOW FIELDS FROM `customers`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mCustomer Columns (2.3ms)[0m   [0;1mSHOW FIELDS FROM `customers`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mCustomer Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `customers`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mCustomer Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `customers`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mCustomer Columns (33.4ms)[0m   [0;1mSHOW FIELDS FROM `customers`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateCustomers (20091112044013)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mCREATE TABLE "customers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "f_name" varchar(255), "l_name" varchar(255), "street1" varchar(255), "street2" varchar(255), "city" varchar(255), "zip" varchar(255), "state" varchar(255), "phone" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091112044013')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("customers")[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-13 10:24:57) [GET]
+
+ActionController::RoutingError (No route matches "/customers" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CustomersController#index (for 127.0.0.1 at 2009-11-13 10:25:33) [GET]
+  [4;36;1mCustomer Load (12.6ms)[0m   [0;1mSELECT * FROM "customers" [0m
+Rendering template within layouts/customers
+Rendering customers/index
+Completed in 124ms (View: 105, DB: 13) | 200 OK [http://localhost/customers]
+
+
+Processing CustomersController#index to xml (for 127.0.0.1 at 2009-11-13 10:25:41) [GET]
+  [4;35;1mCustomer Load (0.5ms)[0m   [0mSELECT * FROM "customers" [0m
+Completed in 6ms (View: 1, DB: 0) | 200 OK [http://localhost/customers.xml]
+
+
+Processing CustomersController#create to xml (for 127.0.0.1 at 2009-11-13 10:26:04) [POST]
+  Parameters: {"customer"=>"\n"}
+
+NoMethodError (undefined method `stringify_keys!' for "\n":String):
+  app/controllers/customers_controller.rb:43:in `new'
+  app/controllers/customers_controller.rb:43:in `create'
+
+Rendered rescues/_trace (43.6ms)
+Rendered rescues/_request_and_response (1.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CustomersController#create to xml (for 127.0.0.1 at 2009-11-13 10:30:39) [POST]
+  Parameters: {"customer"=>{"fname"=>"Will"}}
+
+ActiveRecord::UnknownAttributeError (unknown attribute: fname):
+  app/controllers/customers_controller.rb:43:in `new'
+  app/controllers/customers_controller.rb:43:in `create'
+
+Rendered rescues/_trace (37.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CustomersController#index (for 127.0.0.1 at 2009-11-13 10:31:25) [GET]
+  [4;36;1mCustomer Load (0.4ms)[0m   [0;1mSELECT * FROM "customers" [0m
+Rendering template within layouts/customers
+Rendering customers/index
+Completed in 79ms (View: 1, DB: 0) | 200 OK [http://localhost/customers]
+
+
+Processing CustomersController#create to xml (for 127.0.0.1 at 2009-11-13 10:33:01) [POST]
+  Parameters: {"customer"=>{"f_name"=>"Will"}}
+  [4;36;1mCustomer Create (1.5ms)[0m   [0;1mINSERT INTO "customers" ("city", "zip", "created_at", "street1", "updated_at", "f_name", "street2", "phone", "l_name", "state") VALUES(NULL, NULL, '2009-11-13 15:33:01', NULL, '2009-11-13 15:33:01', 'Will', NULL, NULL, NULL, NULL)[0m
+Completed in 238ms (View: 220, DB: 2) | 201 Created [http://localhost/customers.xml]
+
+
+Processing CustomersController#index (for 127.0.0.1 at 2009-11-13 10:33:11) [GET]
+  [4;35;1mCustomer Load (0.5ms)[0m   [0mSELECT * FROM "customers" [0m
+Rendering template within layouts/customers
+Rendering customers/index
+Completed in 22ms (View: 17, DB: 1) | 200 OK [http://localhost/customers]
+
+
+Processing CustomersController#show (for 127.0.0.1 at 2009-11-13 10:33:13) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCustomer Load (0.3ms)[0m   [0;1mSELECT * FROM "customers" WHERE ("customers"."id" = 1) [0m
+Rendering template within layouts/customers
+Rendering customers/show
+Completed in 13ms (View: 6, DB: 0) | 200 OK [http://localhost/customers/1]
+
+
+Processing CustomersController#index (for 127.0.0.1 at 2009-11-13 10:33:15) [GET]
+  [4;35;1mCustomer Load (0.5ms)[0m   [0mSELECT * FROM "customers" [0m
+Rendering template within layouts/customers
+Rendering customers/index
+Completed in 11ms (View: 7, DB: 1) | 200 OK [http://localhost/customers]
+
+
+Processing CustomersController#index (for 127.0.0.1 at 2009-11-13 23:41:43) [GET]
+  [4;36;1mCustomer Load (0.6ms)[0m   [0;1mSELECT * FROM "customers" [0m
+Rendering template within layouts/customers
+Rendering customers/index
+Completed in 126ms (View: 120, DB: 1) | 200 OK [http://localhost/customers]
+
+
+Processing CustomersController#edit (for 127.0.0.1 at 2009-11-13 23:41:46) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCustomer Load (0.3ms)[0m   [0mSELECT * FROM "customers" WHERE ("customers"."id" = 1) [0m
+Rendering template within layouts/customers
+Rendering customers/edit
+Completed in 19ms (View: 13, DB: 0) | 200 OK [http://localhost/customers/1/edit]
+
+
+Processing CustomersController#edit (for 127.0.0.1 at 2009-11-13 23:42:26) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCustomer Load (0.3ms)[0m   [0;1mSELECT * FROM "customers" WHERE ("customers"."id" = 1) [0m
+Rendering template within layouts/customers
+Rendering customers/edit
+Completed in 14ms (View: 9, DB: 0) | 200 OK [http://localhost/customers/1/edit]
+
+
+Processing CustomersController#create to xml (for 127.0.0.1 at 2009-11-13 23:43:42) [POST]
+  Parameters: {"customer"=>{"f_name"=>"Will"}}
+  [4;35;1mCustomer Create (0.4ms)[0m   [0mINSERT INTO "customers" ("city", "zip", "created_at", "street1", "updated_at", "f_name", "street2", "phone", "l_name", "state") VALUES(NULL, NULL, '2009-11-14 04:43:42', NULL, '2009-11-14 04:43:42', 'Will', NULL, NULL, NULL, NULL)[0m
+Completed in 107ms (View: 83, DB: 0) | 201 Created [http://localhost/customers.xml]
+
+
+Processing CustomersController#index (for 127.0.0.1 at 2009-11-13 23:43:55) [GET]
+  [4;36;1mCustomer Load (0.6ms)[0m   [0;1mSELECT * FROM "customers" [0m
+Rendering template within layouts/customers
+Rendering customers/index
+Completed in 16ms (View: 11, DB: 1) | 200 OK [http://localhost/customers]
+
+
+Processing CustomersController#edit (for 127.0.0.1 at 2009-11-13 23:44:57) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mCustomer Load (0.3ms)[0m   [0mSELECT * FROM "customers" WHERE ("customers"."id" = 2) [0m
+Rendering template within layouts/customers
+Rendering customers/edit
+Completed in 15ms (View: 9, DB: 0) | 200 OK [http://localhost/customers/2/edit]
+
+
+Processing CustomersController#create to xml (for 127.0.0.1 at 2009-11-13 23:46:57) [POST]
+  Parameters: {"customer"=>{"city"=>"Malden", "zip"=>"02148", "street1"=>"190 Summer St", "f_name"=>"Will", "street2"=>"#405", "phone"=>"617 51 0352", "l_name"=>"Mernagh", "state"=>"wmernagh@gmail.com"}}
+  [4;36;1mCustomer Create (0.4ms)[0m   [0;1mINSERT INTO "customers" ("city", "zip", "created_at", "street1", "updated_at", "f_name", "street2", "phone", "l_name", "state") VALUES('Malden', '02148', '2009-11-14 04:46:57', '190 Summer St', '2009-11-14 04:46:57', 'Will', '#405', '617 51 0352', 'Mernagh', 'wmernagh@gmail.com')[0m
+Completed in 13ms (View: 2, DB: 0) | 201 Created [http://localhost/customers.xml]
+
+
+Processing CustomersController#index (for 127.0.0.1 at 2009-11-13 23:47:03) [GET]
+  [4;35;1mCustomer Load (0.8ms)[0m   [0mSELECT * FROM "customers" [0m
+Rendering template within layouts/customers
+Rendering customers/index
+Completed in 20ms (View: 15, DB: 1) | 200 OK [http://localhost/customers]
+
+
+Processing CustomersController#destroy (for 127.0.0.1 at 2009-11-13 23:47:06) [DELETE]
+  Parameters: {"authenticity_token"=>"nJi7SdsGUPUIw1pgvJhBRqg64aNvzSpauK9yunY+LCo=", "id"=>"1"}
+  [4;36;1mCustomer Load (0.3ms)[0m   [0;1mSELECT * FROM "customers" WHERE ("customers"."id" = 1) [0m
+  [4;35;1mCustomer Destroy (0.3ms)[0m   [0mDELETE FROM "customers" WHERE "id" = 1[0m
+Redirected to http://localhost:3000/customers
+Completed in 10ms (DB: 1) | 302 Found [http://localhost/customers/1]
+
+
+Processing CustomersController#index (for 127.0.0.1 at 2009-11-13 23:47:06) [GET]
+  [4;36;1mCustomer Load (0.6ms)[0m   [0;1mSELECT * FROM "customers" [0m
+Rendering template within layouts/customers
+Rendering customers/index
+Completed in 17ms (View: 12, DB: 1) | 200 OK [http://localhost/customers]
+
+
+Processing CustomersController#destroy (for 127.0.0.1 at 2009-11-13 23:47:07) [DELETE]
+  Parameters: {"authenticity_token"=>"nJi7SdsGUPUIw1pgvJhBRqg64aNvzSpauK9yunY+LCo=", "id"=>"2"}
+  [4;35;1mCustomer Load (0.3ms)[0m   [0mSELECT * FROM "customers" WHERE ("customers"."id" = 2) [0m
+  [4;36;1mCustomer Destroy (0.3ms)[0m   [0;1mDELETE FROM "customers" WHERE "id" = 2[0m
+Redirected to http://localhost:3000/customers
+Completed in 10ms (DB: 1) | 302 Found [http://localhost/customers/2]
+
+
+Processing CustomersController#index (for 127.0.0.1 at 2009-11-13 23:47:07) [GET]
+  [4;35;1mCustomer Load (0.6ms)[0m   [0mSELECT * FROM "customers" [0m
+Rendering template within layouts/customers
+Rendering customers/index
+Completed in 15ms (View: 9, DB: 1) | 200 OK [http://localhost/customers]
+
+
+Processing CustomersController#show (for 127.0.0.1 at 2009-11-13 23:47:09) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mCustomer Load (0.3ms)[0m   [0;1mSELECT * FROM "customers" WHERE ("customers"."id" = 3) [0m
+Rendering template within layouts/customers
+Rendering customers/show
+Completed in 14ms (View: 8, DB: 0) | 200 OK [http://localhost/customers/3]
+
+
+Processing CustomersController#create to xml (for 127.0.0.1 at 2009-11-13 23:52:14) [POST]
+  Parameters: {"customer"=>{"city"=>nil, "zip"=>nil, "street1"=>nil, "f_name"=>"Will", "street2"=>nil, "phone"=>nil, "l_name"=>nil, "state"=>nil}}
+Completed in 11ms (View: 4, DB: 0) | 422 Unprocessable Entity [http://localhost/customers.xml]
+
+
+Processing CustomersController#index (for 127.0.0.1 at 2009-11-13 23:52:39) [GET]
+  [4;35;1mCustomer Load (0.5ms)[0m   [0mSELECT * FROM "customers" [0m
+Rendering template within layouts/customers
+Rendering customers/index
+Completed in 13ms (View: 8, DB: 1) | 200 OK [http://localhost/customers]
+
+
+Processing CustomersController#create to xml (for 127.0.0.1 at 2009-11-13 23:54:11) [POST]
+  Parameters: {"customer"=>{"city"=>nil, "zip"=>nil, "street1"=>nil, "f_name"=>"Will", "street2"=>nil, "phone"=>nil, "l_name"=>nil, "state"=>nil}}
+Completed in 11ms (View: 4, DB: 0) | 422 Unprocessable Entity [http://localhost/customers.xml]
+
+
+Processing CustomersController#create to xml (for 127.0.0.1 at 2009-11-13 23:56:42) [POST]
+  Parameters: {"customer"=>{"city"=>nil, "zip"=>nil, "street1"=>nil, "f_name"=>nil, "street2"=>nil, "phone"=>nil, "l_name"=>nil, "state"=>nil}}
+Completed in 11ms (View: 4, DB: 0) | 422 Unprocessable Entity [http://localhost/customers.xml]
+
+
+Processing CustomersController#create to xml (for 127.0.0.1 at 2009-11-13 23:57:17) [POST]
+  Parameters: {"customer"=>{"city"=>nil, "zip"=>nil, "street1"=>nil, "f_name"=>nil, "street2"=>nil, "phone"=>nil, "l_name"=>nil, "state"=>nil}}
+Completed in 128ms (View: 121, DB: 0) | 422 Unprocessable Entity [http://localhost/customers.xml]
+
+
+Processing CustomersController#create to xml (for 127.0.0.1 at 2009-11-13 23:57:41) [POST]
+  Parameters: {"customer"=>{"city"=>nil, "zip"=>nil, "street1"=>nil, "f_name"=>nil, "street2"=>nil, "phone"=>nil, "l_name"=>nil, "state"=>nil}}
+Completed in 12ms (View: 4, DB: 0) | 422 Unprocessable Entity [http://localhost/customers.xml]
+
+
+Processing CustomersController#create to xml (for 127.0.0.1 at 2009-11-14 00:08:42) [POST]
+  Parameters: {"customer"=>{"city"=>nil, "zip"=>nil, "street1"=>nil, "f_name"=>nil, "street2"=>nil, "phone"=>nil, "l_name"=>nil, "state"=>nil}}
+Completed in 11ms (View: 4, DB: 0) | 422 Unprocessable Entity [http://localhost/customers.xml]
+
+
+Processing CustomersController#create to xml (for 127.0.0.1 at 2009-11-14 00:12:29) [POST]
+  Parameters: {"customer"=>{"city"=>nil, "zip"=>nil, "street1"=>nil, "f_name"=>nil, "street2"=>nil, "phone"=>nil, "l_name"=>nil, "state"=>nil}}
+Completed in 12ms (View: 4, DB: 0) | 422 Unprocessable Entity [http://localhost/customers.xml]
+
+
+Processing CustomersController#index to xml (for 127.0.0.1 at 2009-11-14 00:14:03) [GET]
+  [4;36;1mCustomer Load (0.5ms)[0m   [0;1mSELECT * FROM "customers" [0m
+Completed in 8ms (View: 4, DB: 1) | 200 OK [http://localhost/customers.xml]
+
+
+Processing CustomersController#show (for 127.0.0.1 at 2009-11-14 00:14:11) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mCustomer Load (0.3ms)[0m   [0mSELECT * FROM "customers" WHERE ("customers"."id" = 3) [0m
+Rendering template within layouts/customers
+Rendering customers/show
+Completed in 9ms (View: 3, DB: 0) | 200 OK [http://localhost/customers/3/]
+
+
+Processing CustomersController#show to xml (for 127.0.0.1 at 2009-11-14 00:14:15) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mCustomer Load (0.3ms)[0m   [0;1mSELECT * FROM "customers" WHERE ("customers"."id" = 3) [0m
+Completed in 9ms (View: 3, DB: 0) | 200 OK [http://localhost/customers/3.xml]
+
+
+Processing CustomersController#edit (for 127.0.0.1 at 2009-11-14 00:14:44) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mCustomer Load (0.3ms)[0m   [0mSELECT * FROM "customers" WHERE ("customers"."id" = 3) [0m
+Rendering template within layouts/customers
+Rendering customers/edit
+Completed in 15ms (View: 9, DB: 0) | 200 OK [http://localhost/customers/3/edit]
+
+
+Processing CustomersController#create to xml (for 127.0.0.1 at 2009-11-14 00:16:44) [POST]
+  Parameters: {"customer"=>{"city"=>nil, "zip"=>nil, "street1"=>nil, "f_name"=>nil, "street2"=>nil, "phone"=>nil, "l_name"=>nil, "state"=>nil}}
+Completed in 12ms (View: 5, DB: 0) | 422 Unprocessable Entity [http://localhost/customers.xml]
+
+
+Processing CustomersController#create to xml (for 127.0.0.1 at 2009-11-14 00:32:41) [POST]
+  Parameters: {"customer"=>{"city"=>nil, "zip"=>nil, "street1"=>nil, "f_name"=>nil, "street2"=>nil, "phone"=>nil, "l_name"=>nil, "state"=>nil}}
+#<ActiveRecord::Errors:0x1010922c8>
+Completed in 13ms (View: 5, DB: 0) | 422 Unprocessable Entity [http://localhost/customers.xml]
+
+
+Processing CustomersController#create to xml (for 127.0.0.1 at 2009-11-14 00:33:04) [POST]
+  Parameters: {"customer"=>{"city"=>nil, "zip"=>nil, "street1"=>nil, "f_name"=>nil, "street2"=>nil, "phone"=>nil, "l_name"=>nil, "state"=>nil}}
+State can't be blank
+Completed in 13ms (View: 2, DB: 0) | 422 Unprocessable Entity [http://localhost/customers.xml]
+
+
+Processing CustomersController#create to xml (for 127.0.0.1 at 2009-11-14 00:33:28) [POST]
+  Parameters: {"customer"=>{"city"=>nil, "zip"=>nil, "street1"=>nil, "f_name"=>nil, "street2"=>nil, "phone"=>nil, "l_name"=>nil, "state"=>nil}}
+1
+Completed in 12ms (View: 5, DB: 0) | 422 Unprocessable Entity [http://localhost/customers.xml]
+
+
+Processing CustomersController#create to xml (for 127.0.0.1 at 2009-11-14 00:37:02) [POST]
+  Parameters: {"customer"=>{"city"=>nil, "zip"=>nil, "street1"=>nil, "f_name"=>nil, "street2"=>nil, "phone"=>nil, "l_name"=>nil, "state"=>nil}}
+State can't be blank
+Completed in 13ms (View: 2, DB: 0) | 422 Unprocessable Entity [http://localhost/customers.xml]
+
+
+Processing CustomersController#create to xml (for 127.0.0.1 at 2009-11-14 00:37:09) [POST]
+  Parameters: {"customer"=>{"city"=>nil, "zip"=>nil, "street1"=>nil, "f_name"=>nil, "street2"=>nil, "phone"=>nil, "l_name"=>nil, "state"=>nil}}
+State can't be blank
+Completed in 12ms (View: 2, DB: 0) | 422 Unprocessable Entity [http://localhost/customers.xml]
+
+
+Processing CustomersController#create to xml (for 127.0.0.1 at 2009-11-14 00:41:07) [POST]
+  Parameters: {"customer"=>{"city"=>nil, "zip"=>nil, "street1"=>nil, "f_name"=>nil, "street2"=>nil, "phone"=>nil, "l_name"=>nil, "state"=>nil}}
+State can't be blank
+Completed in 15ms (View: 3, DB: 0) | 422 Unprocessable Entity [http://localhost/customers.xml]
+
+
+Processing CustomersController#create to xml (for 127.0.0.1 at 2009-11-14 00:50:33) [POST]
+  Parameters: {"customer"=>{"city"=>nil, "zip"=>nil, "street1"=>nil, "f_name"=>nil, "street2"=>nil, "phone"=>nil, "l_name"=>nil, "state"=>nil}}
+State can't be blank
+Completed in 13ms (View: 2, DB: 0) | 422 Unprocessable Entity [http://localhost/customers.xml]
+
+
+Processing CustomersController#create to xml (for 127.0.0.1 at 2009-11-14 00:51:10) [POST]
+  Parameters: {"customer"=>{"city"=>nil, "zip"=>nil, "street1"=>nil, "f_name"=>nil, "street2"=>nil, "phone"=>nil, "l_name"=>nil, "state"=>nil}}
+State can't be blank
+Completed in 12ms (View: 2, DB: 0) | 422 Unprocessable Entity [http://localhost/customers.xml]
+
+
+Processing CustomersController#create to xml (for 127.0.0.1 at 2009-11-14 01:01:59) [POST]
+  Parameters: {"customer"=>{"city"=>nil, "zip"=>nil, "street1"=>nil, "f_name"=>nil, "street2"=>nil, "phone"=>nil, "l_name"=>nil, "state"=>nil}}
+F name can't be blankL name can't be blank
+Completed in 16ms (View: 4, DB: 0) | 422 Unprocessable Entity [http://localhost/customers.xml]
+
+
+Processing CustomersController#create to xml (for 127.0.0.1 at 2009-11-14 01:08:51) [POST]
+  Parameters: {"customer"=>{"city"=>nil, "zip"=>nil, "street1"=>nil, "f_name"=>nil, "street2"=>nil, "phone"=>nil, "l_name"=>nil, "state"=>nil}}
+F name can't be blankL name can't be blank
+Completed in 78ms (View: 65, DB: 0) | 422 Unprocessable Entity [http://localhost/customers.xml]
+
+
+Processing CustomersController#create to xml (for 127.0.0.1 at 2009-11-14 01:10:06) [POST]
+  Parameters: {"customer"=>{"city"=>nil, "zip"=>nil, "street1"=>nil, "street2"=>nil, "last_name"=>nil, "phone"=>nil, "first_name"=>nil, "email"=>nil}}
+
+ActiveRecord::UnknownAttributeError (unknown attribute: last_name):
+  app/controllers/customers_controller.rb:43:in `new'
+  app/controllers/customers_controller.rb:43:in `create'
+
+Rendered rescues/_trace (36.2ms)
+Rendered rescues/_request_and_response (1.2ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateCustomers (20091112044013)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mDROP TABLE "customers"[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20091112044013'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateCustomers (20091112044013)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCREATE TABLE "customers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "last_name" varchar(255), "street_1" varchar(255), "street_2" varchar(255), "city" varchar(255), "zip" varchar(255), "email" varchar(255), "phone" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091112044013')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("customers")[0m
+
+
+Processing CustomersController#create to xml (for 127.0.0.1 at 2009-11-14 01:14:58) [POST]
+  Parameters: {"customer"=>{"city"=>nil, "zip"=>nil, "street1"=>nil, "street2"=>nil, "last_name"=>nil, "phone"=>nil, "first_name"=>nil, "email"=>nil}}
+
+ActiveRecord::UnknownAttributeError (unknown attribute: street1):
+  app/controllers/customers_controller.rb:43:in `new'
+  app/controllers/customers_controller.rb:43:in `create'
+
+Rendered rescues/_trace (36.3ms)
+Rendered rescues/_request_and_response (1.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CustomersController#create to xml (for 127.0.0.1 at 2009-11-14 01:15:24) [POST]
+  Parameters: {"customer"=>{"city"=>nil, "zip"=>nil, "street_1"=>nil, "street_2"=>nil, "last_name"=>nil, "phone"=>nil, "first_name"=>nil, "email"=>nil}}
+Last name can't be blankFirst name can't be blank
+Completed in 16ms (View: 4, DB: 0) | 422 Unprocessable Entity [http://localhost/customers.xml]
+
+
+Processing CustomersController#create to xml (for 127.0.0.1 at 2009-11-14 01:15:41) [POST]
+  Parameters: {"customer"=>{"city"=>nil, "zip"=>nil, "street_1"=>nil, "street_2"=>nil, "last_name"=>"eee", "phone"=>nil, "first_name"=>nil, "email"=>nil}}
+First name can't be blank
+Completed in 13ms (View: 2, DB: 0) | 422 Unprocessable Entity [http://localhost/customers.xml]
+
+
+Processing CustomersController#create to xml (for 127.0.0.1 at 2009-11-14 01:37:44) [POST]
+  Parameters: {"customer"=>{"city"=>nil, "zip"=>nil, "street_1"=>nil, "street_2"=>nil, "last_name"=>nil, "phone"=>nil, "first_name"=>nil, "email"=>nil}}
+Last name can't be blankFirst name can't be blank
+Completed in 16ms (View: 4, DB: 0) | 422 Unprocessable Entity [http://localhost/customers.xml]
+
+
+Processing CustomersController#create to xml (for 127.0.0.1 at 2009-11-14 01:37:50) [POST]
+  Parameters: {"customer"=>{"city"=>nil, "zip"=>nil, "street_1"=>nil, "street_2"=>nil, "last_name"=>"Connolly", "phone"=>nil, "first_name"=>"Orla", "email"=>nil}}
+  [4;36;1mCustomer Create (0.5ms)[0m   [0;1mINSERT INTO "customers" ("city", "street_1", "zip", "created_at", "street_2", "updated_at", "last_name", "phone", "first_name", "email") VALUES(NULL, NULL, NULL, '2009-11-14 06:37:50', NULL, '2009-11-14 06:37:50', 'Connolly', NULL, 'Orla', NULL)[0m
+Completed in 164ms (View: 75, DB: 0) | 201 Created [http://localhost/customers.xml]
+
+
+Processing CustomersController#create to xml (for 127.0.0.1 at 2009-11-14 01:40:12) [POST]
+  Parameters: {"customer"=>{"city"=>nil, "zip"=>nil, "street_1"=>nil, "street_2"=>nil, "last_name"=>"Mernagh", "phone"=>nil, "first_name"=>"Will", "email"=>nil}}
+  [4;35;1mCustomer Create (0.5ms)[0m   [0mINSERT INTO "customers" ("city", "street_1", "zip", "created_at", "street_2", "updated_at", "last_name", "phone", "first_name", "email") VALUES(NULL, NULL, NULL, '2009-11-14 06:40:12', NULL, '2009-11-14 06:40:12', 'Mernagh', NULL, 'Will', NULL)[0m
+Completed in 14ms (View: 2, DB: 0) | 201 Created [http://localhost/customers.xml]
+
+
+Processing CustomersController#create to xml (for 127.0.0.1 at 2009-11-14 01:40:55) [POST]
+  Parameters: {"customer"=>{"city"=>nil, "zip"=>nil, "street_1"=>nil, "street_2"=>nil, "last_name"=>"Connolly", "phone"=>nil, "first_name"=>"Bridget", "email"=>nil}}
+  [4;36;1mCustomer Create (0.4ms)[0m   [0;1mINSERT INTO "customers" ("city", "street_1", "zip", "created_at", "street_2", "updated_at", "last_name", "phone", "first_name", "email") VALUES(NULL, NULL, NULL, '2009-11-14 06:40:55', NULL, '2009-11-14 06:40:55', 'Connolly', NULL, 'Bridget', NULL)[0m
+Completed in 14ms (View: 2, DB: 0) | 201 Created [http://localhost/customers.xml]
+
+
+Processing CustomersController#create to xml (for 127.0.0.1 at 2009-11-14 01:42:34) [POST]
+  Parameters: {"customer"=>{"city"=>nil, "zip"=>nil, "street_1"=>nil, "street_2"=>nil, "last_name"=>"Connolly", "phone"=>nil, "first_name"=>"Aoife", "email"=>nil}}
+  [4;35;1mCustomer Create (0.7ms)[0m   [0mINSERT INTO "customers" ("city", "street_1", "zip", "created_at", "street_2", "updated_at", "last_name", "phone", "first_name", "email") VALUES(NULL, NULL, NULL, '2009-11-14 06:42:34', NULL, '2009-11-14 06:42:34', 'Connolly', NULL, 'Aoife', NULL)[0m
+Completed in 14ms (View: 2, DB: 1) | 201 Created [http://localhost/customers.xml]

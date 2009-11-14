@@ -1,0 +1,32 @@
+<h1>Editing copy</h1>
+
+<% form_for(@copy) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :media_id %><br />
+    <%= f.text_field :media_id %>
+  </p>
+  <p>
+    <%= f.label :copy_type %><br />
+    <%= f.text_field :copy_type %>
+  </p>
+  <p>
+    <%= f.label :sale_price %><br />
+    <%= f.text_field :sale_price %>
+  </p>
+  <p>
+    <%= f.label :wholesale_price %><br />
+    <%= f.text_field :wholesale_price %>
+  </p>
+  <p>
+    <%= f.label :store_section_id %><br />
+    <%= f.text_field :store_section_id %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @copy %> |
+<%= link_to 'Back', copies_path %>

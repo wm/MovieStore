@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  media_id: 1
+  copy_type: MyString
+  sale_price: 1.5
+  wholesale_price: 1.5
+  store_section_id: 1
+
+two:
+  media_id: 1
+  copy_type: MyString
+  sale_price: 1.5
+  wholesale_price: 1.5
+  store_section_id: 1

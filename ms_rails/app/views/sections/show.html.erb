@@ -1,0 +1,13 @@
+<p>
+  <b>Name:</b>
+  <%=h @section.name %>
+</p>
+
+<p>
+  <b>Location:</b>
+  <%=h @section.location %>
+</p>
+
+
+<%= link_to 'Edit', edit_section_path(@section) %> |
+<%= link_to 'Back', sections_path %>

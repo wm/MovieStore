@@ -17,6 +17,7 @@
 		6615569110AB982700FACE3B /* customers_controller.rb in Resources */ = {isa = PBXBuildFile; fileRef = 6615569010AB982700FACE3B /* customers_controller.rb */; };
 		66B02EDB10ABC726003DBE8C /* customer.rb in Resources */ = {isa = PBXBuildFile; fileRef = 66B02EDA10ABC726003DBE8C /* customer.rb */; };
 		66B02EED10ACE926003DBE8C /* database.yml in Resources */ = {isa = PBXBuildFile; fileRef = 66B02EEC10ACE926003DBE8C /* database.yml */; };
+		66BD0D4F10AF1902007FC410 /* catalog_controller.rb in Resources */ = {isa = PBXBuildFile; fileRef = 66BD0D4E10AF1902007FC410 /* catalog_controller.rb */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		6615569010AB982700FACE3B /* customers_controller.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = customers_controller.rb; sourceTree = "<group>"; };
 		66B02EDA10ABC726003DBE8C /* customer.rb */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = text.script.ruby; path = customer.rb; sourceTree = "<group>"; tabWidth = 2; usesTabs = 1; };
 		66B02EEC10ACE926003DBE8C /* database.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = database.yml; sourceTree = "<group>"; };
+		66BD0D4E10AF1902007FC410 /* catalog_controller.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = catalog_controller.rb; sourceTree = "<group>"; };
 		E8F5E24E03AEB6EC03A81C6F /* RubyCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RubyCocoa.framework; path = /Library/Frameworks/RubyCocoa.framework; sourceTree = "<absolute>"; };
 		E8F5E25803AEB7C803A81C6F /* rb_main.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = rb_main.rb; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -128,6 +130,7 @@
 		66B02ED610ABC6D5003DBE8C /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				66BD0D4E10AF1902007FC410 /* catalog_controller.rb */,
 				6615569010AB982700FACE3B /* customers_controller.rb */,
 				6615567810AB8BE700FACE3B /* application_controller.rb */,
 			);
@@ -203,6 +206,7 @@
 				6615569110AB982700FACE3B /* customers_controller.rb in Resources */,
 				66B02EDB10ABC726003DBE8C /* customer.rb in Resources */,
 				66B02EED10ACE926003DBE8C /* database.yml in Resources */,
+				66BD0D4F10AF1902007FC410 /* catalog_controller.rb in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

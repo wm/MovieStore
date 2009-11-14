@@ -1,0 +1,22 @@
+<h1>Listing studios</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Category</th>
+  </tr>
+
+<% @studios.each do |studio| %>
+  <tr>
+    <td><%=h studio.name %></td>
+    <td><%=h studio.category %></td>
+    <td><%= link_to 'Show', studio %></td>
+    <td><%= link_to 'Edit', edit_studio_path(studio) %></td>
+    <td><%= link_to 'Destroy', studio, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New studio', new_studio_path %>

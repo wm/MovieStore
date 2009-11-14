@@ -100,6 +100,25 @@
 			66BD0D3F10AE871B007FC410 /* PBXTextBookmark */ = 66BD0D3F10AE871B007FC410 /* PBXTextBookmark */;
 			66BD0D4110AE87AB007FC410 /* PBXTextBookmark */ = 66BD0D4110AE87AB007FC410 /* PBXTextBookmark */;
 			66BD0D4610AE886A007FC410 /* PBXTextBookmark */ = 66BD0D4610AE886A007FC410 /* PBXTextBookmark */;
+			66BD0D5110AF256C007FC410 /* PBXTextBookmark */ = 66BD0D5110AF256C007FC410 /* PBXTextBookmark */;
+			66BD0D5210AF256C007FC410 /* PBXTextBookmark */ = 66BD0D5210AF256C007FC410 /* PBXTextBookmark */;
+			66BD0D5310AF256C007FC410 /* PBXTextBookmark */ = 66BD0D5310AF256C007FC410 /* PBXTextBookmark */;
+			66BD0D5410AF256C007FC410 /* PBXTextBookmark */ = 66BD0D5410AF256C007FC410 /* PBXTextBookmark */;
+			66BD0D5510AF25B5007FC410 /* PBXTextBookmark */ = 66BD0D5510AF25B5007FC410 /* PBXTextBookmark */;
+			66BD0D5610AF27AE007FC410 /* PBXTextBookmark */ = 66BD0D5610AF27AE007FC410 /* PBXTextBookmark */;
+			66BD0D6510AF3A5F007FC410 /* PBXTextBookmark */ = 66BD0D6510AF3A5F007FC410 /* PBXTextBookmark */;
+			66BD0D6610AF3A5F007FC410 /* PBXTextBookmark */ = 66BD0D6610AF3A5F007FC410 /* PBXTextBookmark */;
+			66BD0D6710AF3A5F007FC410 /* PBXTextBookmark */ = 66BD0D6710AF3A5F007FC410 /* PBXTextBookmark */;
+			66BD0D6810AF3A5F007FC410 /* PBXTextBookmark */ = 66BD0D6810AF3A5F007FC410 /* PBXTextBookmark */;
+			66BD0D6A10AF3A81007FC410 /* PBXTextBookmark */ = 66BD0D6A10AF3A81007FC410 /* PBXTextBookmark */;
+			66BD0D6B10AF3A8A007FC410 /* PBXTextBookmark */ = 66BD0D6B10AF3A8A007FC410 /* PBXTextBookmark */;
+			66BD0D6E10AF3AF9007FC410 /* PBXTextBookmark */ = 66BD0D6E10AF3AF9007FC410 /* PBXTextBookmark */;
+			66BD0D6F10AF3AF9007FC410 /* PBXTextBookmark */ = 66BD0D6F10AF3AF9007FC410 /* PBXTextBookmark */;
+			66BD0D7010AF3AF9007FC410 /* PBXTextBookmark */ = 66BD0D7010AF3AF9007FC410 /* PBXTextBookmark */;
+			66BD0D7110AF3AF9007FC410 /* PBXTextBookmark */ = 66BD0D7110AF3AF9007FC410 /* PBXTextBookmark */;
+			66BD0D7710AF3B8D007FC410 /* PBXTextBookmark */ = 66BD0D7710AF3B8D007FC410 /* PBXTextBookmark */;
+			66BD0D7810AF3B8D007FC410 /* PBXTextBookmark */ = 66BD0D7810AF3B8D007FC410 /* PBXTextBookmark */;
+			66BD0D7910AF3B8D007FC410 /* PBXTextBookmark */ = 66BD0D7910AF3B8D007FC410 /* PBXTextBookmark */;
 		};
 		sourceControlManager = 661555FC10AA85BB00FACE3B /* Source Control */;
 		userBuildSettings = {
@@ -157,16 +176,17 @@
 	};
 	6615567810AB8BE700FACE3B /* application_controller.rb */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {771, 442}}";
-			sepNavSelRange = "{636, 26}";
-			sepNavVisRange = "{0, 669}";
+			sepNavIntBoundsRect = "{{0, 0}, {771, 384}}";
+			sepNavSelRange = "{266, 0}";
+			sepNavVisRange = "{0, 540}";
+			sepNavWindowFrame = "{{15, 315}, {750, 558}}";
 		};
 	};
 	6615569010AB982700FACE3B /* customers_controller.rb */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {771, 923}}";
-			sepNavSelRange = "{1665, 0}";
-			sepNavVisRange = "{1175, 717}";
+			sepNavIntBoundsRect = "{{0, 0}, {771, 936}}";
+			sepNavSelRange = "{1447, 0}";
+			sepNavVisRange = "{1197, 715}";
 		};
 	};
 	6625ADEE10AD9B5F00D434D3 /* PBXTextBookmark */ = {
@@ -184,7 +204,7 @@
 		fRef = 6615569010AB982700FACE3B /* customers_controller.rb */;
 		name = "customers_controller.rb: 24";
 		rLen = 0;
-		rLoc = 629;
+		rLoc = 637;
 		rType = 0;
 		vrLen = 839;
 		vrLoc = 0;
@@ -228,7 +248,7 @@
 		fRef = 6615567810AB8BE700FACE3B /* application_controller.rb */;
 		name = "application_controller.rb: 30";
 		rLen = 0;
-		rLoc = 595;
+		rLoc = 462;
 		rType = 0;
 		vrLen = 674;
 		vrLoc = 0;
@@ -328,7 +348,7 @@
 		fRef = 6615569010AB982700FACE3B /* customers_controller.rb */;
 		name = "customers_controller.rb: 30";
 		rLen = 0;
-		rLoc = 1108;
+		rLoc = 1116;
 		rType = 0;
 		vrLen = 804;
 		vrLoc = 151;
@@ -338,7 +358,7 @@
 		fRef = 6615569010AB982700FACE3B /* customers_controller.rb */;
 		name = "customers_controller.rb: 34";
 		rLen = 0;
-		rLoc = 1174;
+		rLoc = 1182;
 		rType = 0;
 		vrLen = 806;
 		vrLoc = 151;
@@ -348,7 +368,7 @@
 		fRef = 6615569010AB982700FACE3B /* customers_controller.rb */;
 		name = "customers_controller.rb: 34";
 		rLen = 0;
-		rLoc = 1174;
+		rLoc = 1182;
 		rType = 0;
 		vrLen = 806;
 		vrLoc = 151;
@@ -358,7 +378,7 @@
 		fRef = 6615569010AB982700FACE3B /* customers_controller.rb */;
 		name = "customers_controller.rb: 30";
 		rLen = 0;
-		rLoc = 958;
+		rLoc = 966;
 		rType = 0;
 		vrLen = 827;
 		vrLoc = 151;
@@ -368,7 +388,7 @@
 		fRef = 6615569010AB982700FACE3B /* customers_controller.rb */;
 		name = "customers_controller.rb: 30";
 		rLen = 0;
-		rLoc = 1104;
+		rLoc = 1112;
 		rType = 0;
 		vrLen = 828;
 		vrLoc = 151;
@@ -438,7 +458,7 @@
 		fRef = 6615569010AB982700FACE3B /* customers_controller.rb */;
 		name = "customers_controller.rb: 36";
 		rLen = 0;
-		rLoc = 1174;
+		rLoc = 1182;
 		rType = 0;
 		vrLen = 855;
 		vrLoc = 174;
@@ -448,7 +468,7 @@
 		fRef = 6615569010AB982700FACE3B /* customers_controller.rb */;
 		name = "customers_controller.rb: 36";
 		rLen = 0;
-		rLoc = 1174;
+		rLoc = 1182;
 		rType = 0;
 		vrLen = 828;
 		vrLoc = 151;
@@ -498,7 +518,7 @@
 		fRef = 6615569010AB982700FACE3B /* customers_controller.rb */;
 		name = "customers_controller.rb: 36";
 		rLen = 0;
-		rLoc = 1174;
+		rLoc = 1182;
 		rType = 0;
 		vrLen = 828;
 		vrLoc = 151;
@@ -508,7 +528,7 @@
 		fRef = 6615569010AB982700FACE3B /* customers_controller.rb */;
 		name = "customers_controller.rb: 30";
 		rLen = 0;
-		rLoc = 957;
+		rLoc = 965;
 		rType = 0;
 		vrLen = 845;
 		vrLoc = 151;
@@ -518,7 +538,7 @@
 		fRef = 6615569010AB982700FACE3B /* customers_controller.rb */;
 		name = "customers_controller.rb: 30";
 		rLen = 0;
-		rLoc = 957;
+		rLoc = 965;
 		rType = 0;
 		vrLen = 854;
 		vrLoc = 151;
@@ -588,7 +608,7 @@
 		fRef = 6615569010AB982700FACE3B /* customers_controller.rb */;
 		name = "customers_controller.rb: 30";
 		rLen = 0;
-		rLoc = 957;
+		rLoc = 965;
 		rType = 0;
 		vrLen = 854;
 		vrLoc = 151;
@@ -598,7 +618,7 @@
 		fRef = 6615569010AB982700FACE3B /* customers_controller.rb */;
 		name = "customers_controller.rb: 12";
 		rLen = 0;
-		rLoc = 396;
+		rLoc = 404;
 		rType = 0;
 		vrLen = 903;
 		vrLoc = 0;
@@ -608,7 +628,7 @@
 		fRef = 6615569010AB982700FACE3B /* customers_controller.rb */;
 		name = "customers_controller.rb: 33";
 		rLen = 0;
-		rLoc = 1104;
+		rLoc = 1112;
 		rType = 0;
 		vrLen = 878;
 		vrLoc = 151;
@@ -618,7 +638,7 @@
 		fRef = 6615567810AB8BE700FACE3B /* application_controller.rb */;
 		name = "application_controller.rb: 31";
 		rLen = 26;
-		rLoc = 636;
+		rLoc = 503;
 		rType = 0;
 		vrLen = 669;
 		vrLoc = 0;
@@ -628,7 +648,7 @@
 		fRef = 6615569010AB982700FACE3B /* customers_controller.rb */;
 		name = "customers_controller.rb: 35";
 		rLen = 0;
-		rLoc = 1134;
+		rLoc = 1142;
 		rType = 0;
 		vrLen = 748;
 		vrLoc = 479;
@@ -638,7 +658,7 @@
 		fRef = 6615569010AB982700FACE3B /* customers_controller.rb */;
 		name = "customers_controller.rb: 37";
 		rLen = 0;
-		rLoc = 1174;
+		rLoc = 1182;
 		rType = 0;
 		vrLen = 772;
 		vrLoc = 479;
@@ -648,7 +668,7 @@
 		fRef = 6615569010AB982700FACE3B /* customers_controller.rb */;
 		name = "customers_controller.rb: 37";
 		rLen = 0;
-		rLoc = 1174;
+		rLoc = 1182;
 		rType = 0;
 		vrLen = 938;
 		vrLoc = 216;
@@ -698,7 +718,7 @@
 		fRef = 6615569010AB982700FACE3B /* customers_controller.rb */;
 		name = "customers_controller.rb: 58";
 		rLen = 0;
-		rLoc = 1719;
+		rLoc = 1739;
 		rType = 0;
 		vrLen = 979;
 		vrLoc = 49;
@@ -708,7 +728,7 @@
 		fRef = 6615569010AB982700FACE3B /* customers_controller.rb */;
 		name = "customers_controller.rb: 58";
 		rLen = 0;
-		rLoc = 1719;
+		rLoc = 1739;
 		rType = 0;
 		vrLen = 767;
 		vrLoc = 934;
@@ -718,7 +738,7 @@
 		fRef = 6615569010AB982700FACE3B /* customers_controller.rb */;
 		name = "customers_controller.rb: 65";
 		rLen = 0;
-		rLoc = 1842;
+		rLoc = 1862;
 		rType = 0;
 		vrLen = 707;
 		vrLoc = 995;
@@ -728,7 +748,7 @@
 		fRef = 6615569010AB982700FACE3B /* customers_controller.rb */;
 		name = "customers_controller.rb: 65";
 		rLen = 0;
-		rLoc = 1876;
+		rLoc = 1896;
 		rType = 0;
 		vrLen = 683;
 		vrLoc = 1028;
@@ -738,7 +758,7 @@
 		fRef = 6615569010AB982700FACE3B /* customers_controller.rb */;
 		name = "customers_controller.rb: 64";
 		rLen = 0;
-		rLoc = 1821;
+		rLoc = 1841;
 		rType = 0;
 		vrLen = 713;
 		vrLoc = 995;
@@ -748,7 +768,7 @@
 		fRef = 6615569010AB982700FACE3B /* customers_controller.rb */;
 		name = "customers_controller.rb: 11";
 		rLen = 0;
-		rLoc = 314;
+		rLoc = 322;
 		rType = 0;
 		vrLen = 1012;
 		vrLoc = 0;
@@ -758,7 +778,7 @@
 		fRef = 6615569010AB982700FACE3B /* customers_controller.rb */;
 		name = "customers_controller.rb: 60";
 		rLen = 0;
-		rLoc = 1695;
+		rLoc = 1715;
 		rType = 0;
 		vrLen = 788;
 		vrLoc = 1112;
@@ -768,7 +788,7 @@
 		fRef = 6615569010AB982700FACE3B /* customers_controller.rb */;
 		name = "customers_controller.rb: 60";
 		rLen = 0;
-		rLoc = 1695;
+		rLoc = 1715;
 		rType = 0;
 		vrLen = 762;
 		vrLoc = 1175;
@@ -778,9 +798,206 @@
 		fRef = 6615569010AB982700FACE3B /* customers_controller.rb */;
 		name = "customers_controller.rb: 60";
 		rLen = 0;
-		rLoc = 1665;
+		rLoc = 1685;
 		rType = 0;
 		vrLen = 717;
 		vrLoc = 1175;
+	};
+	66BD0D4E10AF1902007FC410 /* catalog_controller.rb */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {771, 384}}";
+			sepNavSelRange = "{310, 0}";
+			sepNavVisRange = "{0, 429}";
+		};
+	};
+	66BD0D5110AF256C007FC410 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 66BD0D4E10AF1902007FC410 /* catalog_controller.rb */;
+		name = "catalog_controller.rb: 21";
+		rLen = 0;
+		rLoc = 420;
+		rType = 0;
+		vrLen = 409;
+		vrLoc = 0;
+	};
+	66BD0D5210AF256C007FC410 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 6615569010AB982700FACE3B /* customers_controller.rb */;
+		name = "customers_controller.rb: 61";
+		rLen = 0;
+		rLoc = 1739;
+		rType = 0;
+		vrLen = 810;
+		vrLoc = 958;
+	};
+	66BD0D5310AF256C007FC410 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 6615567810AB8BE700FACE3B /* application_controller.rb */;
+		name = "application_controller.rb: 11";
+		rLen = 0;
+		rLoc = 261;
+		rType = 0;
+		vrLen = 687;
+		vrLoc = 0;
+	};
+	66BD0D5410AF256C007FC410 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 6615567810AB8BE700FACE3B /* application_controller.rb */;
+		name = "application_controller.rb: 14";
+		rLen = 0;
+		rLoc = 304;
+		rType = 0;
+		vrLen = 719;
+		vrLoc = 30;
+	};
+	66BD0D5510AF25B5007FC410 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 6615567810AB8BE700FACE3B /* application_controller.rb */;
+		name = "application_controller.rb: 41";
+		rLen = 0;
+		rLoc = 540;
+		rType = 0;
+		vrLen = 676;
+		vrLoc = 155;
+	};
+	66BD0D5610AF27AE007FC410 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 6615567810AB8BE700FACE3B /* application_controller.rb */;
+		name = "application_controller.rb: 27";
+		rLen = 0;
+		rLoc = 380;
+		rType = 0;
+		vrLen = 784;
+		vrLoc = 155;
+	};
+	66BD0D6510AF3A5F007FC410 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 66BD0D4E10AF1902007FC410 /* catalog_controller.rb */;
+		name = "catalog_controller.rb: 11";
+		rLen = 0;
+		rLoc = 220;
+		rType = 0;
+		vrLen = 417;
+		vrLoc = 0;
+	};
+	66BD0D6610AF3A5F007FC410 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 6615569010AB982700FACE3B /* customers_controller.rb */;
+		name = "customers_controller.rb: 10";
+		rLen = 0;
+		rLoc = 223;
+		rType = 0;
+		vrLen = 1018;
+		vrLoc = 0;
+	};
+	66BD0D6710AF3A5F007FC410 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 6615567810AB8BE700FACE3B /* application_controller.rb */;
+		name = "application_controller.rb: 10";
+		rLen = 21;
+		rLoc = 182;
+		rType = 0;
+		vrLen = 709;
+		vrLoc = 0;
+	};
+	66BD0D6810AF3A5F007FC410 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 6615567810AB8BE700FACE3B /* application_controller.rb */;
+		name = "application_controller.rb: 14";
+		rLen = 0;
+		rLoc = 304;
+		rType = 0;
+		vrLen = 539;
+		vrLoc = 0;
+	};
+	66BD0D6A10AF3A81007FC410 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 6615567810AB8BE700FACE3B /* application_controller.rb */;
+		name = "application_controller.rb: 12";
+		rLen = 0;
+		rLoc = 287;
+		rType = 0;
+		vrLen = 515;
+		vrLoc = 0;
+	};
+	66BD0D6B10AF3A8A007FC410 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 6615567810AB8BE700FACE3B /* application_controller.rb */;
+		name = "application_controller.rb: 13";
+		rLen = 0;
+		rLoc = 266;
+		rType = 0;
+		vrLen = 540;
+		vrLoc = 0;
+	};
+	66BD0D6E10AF3AF9007FC410 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 6615567810AB8BE700FACE3B /* application_controller.rb */;
+		name = "application_controller.rb: 13";
+		rLen = 0;
+		rLoc = 266;
+		rType = 0;
+		vrLen = 540;
+		vrLoc = 0;
+	};
+	66BD0D6F10AF3AF9007FC410 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 66BD0D4E10AF1902007FC410 /* catalog_controller.rb */;
+		name = "catalog_controller.rb: 16";
+		rLen = 0;
+		rLoc = 310;
+		rType = 0;
+		vrLen = 429;
+		vrLoc = 0;
+	};
+	66BD0D7010AF3AF9007FC410 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 6615569010AB982700FACE3B /* customers_controller.rb */;
+		name = "customers_controller.rb: 17";
+		rLen = 0;
+		rLoc = 543;
+		rType = 0;
+		vrLen = 964;
+		vrLoc = 2;
+	};
+	66BD0D7110AF3AF9007FC410 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 6615569010AB982700FACE3B /* customers_controller.rb */;
+		name = "customers_controller.rb: 66";
+		rLen = 0;
+		rLoc = 1787;
+		rType = 0;
+		vrLen = 715;
+		vrLoc = 1197;
+	};
+	66BD0D7710AF3B8D007FC410 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 6615567810AB8BE700FACE3B /* application_controller.rb */;
+		name = "application_controller.rb: 13";
+		rLen = 0;
+		rLoc = 266;
+		rType = 0;
+		vrLen = 540;
+		vrLoc = 0;
+	};
+	66BD0D7810AF3B8D007FC410 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 6615569010AB982700FACE3B /* customers_controller.rb */;
+		name = "customers_controller.rb: 66";
+		rLen = 0;
+		rLoc = 1787;
+		rType = 0;
+		vrLen = 796;
+		vrLoc = 802;
+	};
+	66BD0D7910AF3B8D007FC410 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 6615569010AB982700FACE3B /* customers_controller.rb */;
+		name = "customers_controller.rb: 55";
+		rLen = 0;
+		rLoc = 1447;
+		rType = 0;
+		vrLen = 715;
+		vrLoc = 1197;
 	};
 }

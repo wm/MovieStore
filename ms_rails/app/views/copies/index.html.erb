@@ -1,0 +1,28 @@
+<h1>Listing copies</h1>
+
+<table>
+  <tr>
+    <th>Media</th>
+    <th>Copy type</th>
+    <th>Sale price</th>
+    <th>Wholesale price</th>
+    <th>Store section</th>
+  </tr>
+
+<% @copies.each do |copy| %>
+  <tr>
+    <td><%=h copy.media_id %></td>
+    <td><%=h copy.copy_type %></td>
+    <td><%=h copy.sale_price %></td>
+    <td><%=h copy.wholesale_price %></td>
+    <td><%=h copy.store_section_id %></td>
+    <td><%= link_to 'Show', copy %></td>
+    <td><%= link_to 'Edit', edit_copy_path(copy) %></td>
+    <td><%= link_to 'Destroy', copy, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New copy', new_copy_path %>

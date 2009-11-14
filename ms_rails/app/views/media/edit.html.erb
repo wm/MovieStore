@@ -1,0 +1,28 @@
+<h1>Editing medium</h1>
+
+<% form_for(@medium) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :year %><br />
+    <%= f.date_select :year %>
+  </p>
+  <p>
+    <%= f.label :genre %><br />
+    <%= f.text_field :genre %>
+  </p>
+  <p>
+    <%= f.label :media_type %><br />
+    <%= f.text_field :media_type %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @medium %> |
+<%= link_to 'Back', media_path %>

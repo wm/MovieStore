@@ -1,0 +1,40 @@
+<h1>Editing sale</h1>
+
+<% form_for(@sale) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :copy_id %><br />
+    <%= f.text_field :copy_id %>
+  </p>
+  <p>
+    <%= f.label :customer_id %><br />
+    <%= f.text_field :customer_id %>
+  </p>
+  <p>
+    <%= f.label :transaction_date %><br />
+    <%= f.date_select :transaction_date %>
+  </p>
+  <p>
+    <%= f.label :employee_id %><br />
+    <%= f.text_field :employee_id %>
+  </p>
+  <p>
+    <%= f.label :transaction_type %><br />
+    <%= f.text_field :transaction_type %>
+  </p>
+  <p>
+    <%= f.label :transaction_ammount %><br />
+    <%= f.text_field :transaction_ammount %>
+  </p>
+  <p>
+    <%= f.label :coupon_note %><br />
+    <%= f.text_field :coupon_note %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @sale %> |
+<%= link_to 'Back', sales_path %>
