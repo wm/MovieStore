@@ -5,7 +5,6 @@
 #  Created by Will Mernagh on 11/11/09.
 #  Copyright (c) 2009 __MyCompanyName__. All rights reserved.
 #
-
 require 'osx/cocoa'
 
 class ApplicationController < OSX::NSObject
@@ -24,5 +23,11 @@ class ApplicationController < OSX::NSObject
   ib_action :close_register
   def close_register
     @customers_box.setHidden_(true)
+  end
+ 
+  # Recieves notification when window closes 
+  # and terminates the application.
+  def windowWillClose(notification)
+    OSX::NSApp.terminate(self)
   end
 end

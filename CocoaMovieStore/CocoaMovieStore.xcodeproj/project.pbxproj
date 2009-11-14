@@ -15,6 +15,8 @@
 		4DDCA70D0ACC9A6100E082CE /* RubyCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8F5E24E03AEB6EC03A81C6F /* RubyCocoa.framework */; };
 		6615567910AB8BE700FACE3B /* application_controller.rb in Resources */ = {isa = PBXBuildFile; fileRef = 6615567810AB8BE700FACE3B /* application_controller.rb */; };
 		6615569110AB982700FACE3B /* customers_controller.rb in Resources */ = {isa = PBXBuildFile; fileRef = 6615569010AB982700FACE3B /* customers_controller.rb */; };
+		66B02EDB10ABC726003DBE8C /* customer.rb in Resources */ = {isa = PBXBuildFile; fileRef = 66B02EDA10ABC726003DBE8C /* customer.rb */; };
+		66B02EED10ACE926003DBE8C /* database.yml in Resources */ = {isa = PBXBuildFile; fileRef = 66B02EEC10ACE926003DBE8C /* database.yml */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		4DDCA7120ACC9A6100E082CE /* CocoaMovieStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CocoaMovieStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6615567810AB8BE700FACE3B /* application_controller.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = application_controller.rb; sourceTree = "<group>"; };
 		6615569010AB982700FACE3B /* customers_controller.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = customers_controller.rb; sourceTree = "<group>"; };
+		66B02EDA10ABC726003DBE8C /* customer.rb */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = text.script.ruby; path = customer.rb; sourceTree = "<group>"; tabWidth = 2; usesTabs = 1; };
+		66B02EEC10ACE926003DBE8C /* database.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = database.yml; sourceTree = "<group>"; };
 		E8F5E24E03AEB6EC03A81C6F /* RubyCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RubyCocoa.framework; path = /Library/Frameworks/RubyCocoa.framework; sourceTree = "<absolute>"; };
 		E8F5E25803AEB7C803A81C6F /* rb_main.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = rb_main.rb; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -48,6 +52,8 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				66B02ED710ABC6DC003DBE8C /* Models */,
+				66B02ED610ABC6D5003DBE8C /* Controllers */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -81,14 +87,13 @@
 		29B97314FDCFA39411CA2CEA /* CocoaMovieStore */ = {
 			isa = PBXGroup;
 			children = (
-				6615569010AB982700FACE3B /* customers_controller.rb */,
+				66B02EEC10ACE926003DBE8C /* database.yml */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
 				4DDCA7110ACC9A6100E082CE /* Info.plist */,
-				6615567810AB8BE700FACE3B /* application_controller.rb */,
 			);
 			name = CocoaMovieStore;
 			sourceTree = "<group>";
@@ -118,6 +123,23 @@
 				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		66B02ED610ABC6D5003DBE8C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				6615569010AB982700FACE3B /* customers_controller.rb */,
+				6615567810AB8BE700FACE3B /* application_controller.rb */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		66B02ED710ABC6DC003DBE8C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				66B02EDA10ABC726003DBE8C /* customer.rb */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -179,6 +201,8 @@
 				4DDCA7080ACC9A6100E082CE /* rb_main.rb in Resources */,
 				6615567910AB8BE700FACE3B /* application_controller.rb in Resources */,
 				6615569110AB982700FACE3B /* customers_controller.rb in Resources */,
+				66B02EDB10ABC726003DBE8C /* customer.rb in Resources */,
+				66B02EED10ACE926003DBE8C /* database.yml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

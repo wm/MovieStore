@@ -1,0 +1,5 @@
+adapter:  mysql
+database: movie_store
+username: wmernagh
+password: water7932
+host:     localhost
