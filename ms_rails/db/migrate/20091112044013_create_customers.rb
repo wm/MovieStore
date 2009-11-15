@@ -9,8 +9,6 @@ class CreateCustomers < ActiveRecord::Migration
       t.string :zip
       t.string :email
       t.string :phone
-
-      t.timestamps
     end
   end
 

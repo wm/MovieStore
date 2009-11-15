@@ -3,8 +3,6 @@ class CreateStudios < ActiveRecord::Migration
     create_table :studios do |t|
       t.string :name
       t.string :category
-
-      t.timestamps
     end
   end
 

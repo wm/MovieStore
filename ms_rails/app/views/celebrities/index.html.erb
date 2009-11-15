@@ -1,0 +1,26 @@
+<h1>Listing celebrities</h1>
+
+<table>
+  <tr>
+    <th>First name</th>
+    <th>Last name</th>
+    <th>Dob</th>
+    <th>Position</th>
+  </tr>
+
+<% @celebrities.each do |celebrity| %>
+  <tr>
+    <td><%=h celebrity.first_name %></td>
+    <td><%=h celebrity.last_name %></td>
+    <td><%=h celebrity.dob %></td>
+    <td><%=h celebrity.position %></td>
+    <td><%= link_to 'Show', celebrity %></td>
+    <td><%= link_to 'Edit', edit_celebrity_path(celebrity) %></td>
+    <td><%= link_to 'Destroy', celebrity, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New celebrity', new_celebrity_path %>

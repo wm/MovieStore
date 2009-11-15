@@ -11,11 +11,11 @@
 
 <% @copies.each do |copy| %>
   <tr>
-    <td><%=h copy.media_id %></td>
+    <td><%=h copy.item_id %></td>
     <td><%=h copy.copy_type %></td>
     <td><%=h copy.sale_price %></td>
     <td><%=h copy.wholesale_price %></td>
-    <td><%=h copy.store_section_id %></td>
+    <td><%=h copy.section_id %></td>
     <td><%= link_to 'Show', copy %></td>
     <td><%= link_to 'Edit', edit_copy_path(copy) %></td>
     <td><%= link_to 'Destroy', copy, :confirm => 'Are you sure?', :method => :delete %></td>

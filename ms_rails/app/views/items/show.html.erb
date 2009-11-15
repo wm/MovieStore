@@ -1,0 +1,23 @@
+<p>
+  <b>Title:</b>
+  <%=h @item.title %>
+</p>
+
+<p>
+  <b>Year:</b>
+  <%=h @item.year %>
+</p>
+
+<p>
+  <b>Genre:</b>
+  <%=h @item.genre %>
+</p>
+
+<p>
+  <b>Items type:</b>
+  <%=h @item.item_type %>
+</p>
+
+
+<%= link_to 'Edit', edit_item_path(@item) %> |
+<%= link_to 'Back', items_path %>

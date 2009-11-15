@@ -3,23 +3,15 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :sales
 
-  map.resources :sales
-
-  map.resources :sales
-
   map.resources :sections
-
-  map.resources :sales
 
   map.resources :copies
 
   map.resources :studios
 
-  map.resources :media_people
+  map.resources :celebrities
 
-  map.resources :media
-
-  map.resources :customers
+  map.resources :items
 
   map.resources :customers
 

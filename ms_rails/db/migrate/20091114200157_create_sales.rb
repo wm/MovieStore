@@ -9,7 +9,6 @@ class CreateSales < ActiveRecord::Migration
       t.float :transaction_ammount
       t.string :coupon_note
 
-      t.timestamps
     end
   end
 

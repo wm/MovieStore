@@ -1,0 +1,23 @@
+<p>
+  <b>First name:</b>
+  <%=h @celebrity.first_name %>
+</p>
+
+<p>
+  <b>Last name:</b>
+  <%=h @celebrity.last_name %>
+</p>
+
+<p>
+  <b>Dob:</b>
+  <%=h @celebrity.dob %>
+</p>
+
+<p>
+  <b>Position:</b>
+  <%=h @celebrity.position %>
+</p>
+
+
+<%= link_to 'Edit', edit_celebrity_path(@celebrity) %> |
+<%= link_to 'Back', celebrities_path %>

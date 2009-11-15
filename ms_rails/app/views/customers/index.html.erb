@@ -2,10 +2,10 @@
 
 <table>
   <tr>
-    <th>F name</th>
-    <th>L name</th>
-    <th>Street1</th>
-    <th>Street2</th>
+    <th>First name</th>
+    <th>Last name</th>
+    <th>Street_1</th>
+    <th>Street_2</th>
     <th>City</th>
     <th>Zip</th>
     <th>State</th>
@@ -14,13 +14,13 @@
 
 <% @customers.each do |customer| %>
   <tr>
-    <td><%=h customer.f_name %></td>
-    <td><%=h customer.l_name %></td>
-    <td><%=h customer.street1 %></td>
-    <td><%=h customer.street2 %></td>
+    <td><%=h customer.first_name %></td>
+    <td><%=h customer.last_name %></td>
+    <td><%=h customer.street_1 %></td>
+    <td><%=h customer.street_2 %></td>
     <td><%=h customer.city %></td>
     <td><%=h customer.zip %></td>
-    <td><%=h customer.state %></td>
+    <td><%=h customer.email %></td>
     <td><%=h customer.phone %></td>
     <td><%= link_to 'Show', customer %></td>
     <td><%= link_to 'Edit', edit_customer_path(customer) %></td>
