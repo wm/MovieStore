@@ -1,10 +1,10 @@
 class Item < ActiveRecord::Base
   has_many :copies
   # based on the BITMAP [DAPO] with each set to 0 or 1.
-  has_and_belongs_to_many :actors, :class_name => "Celebrity", :conditions => ["position REGEXP ?", ".1.."]
-  has_and_belongs_to_many :directors, :class_name => "Celebrity", :conditions => ["position REGEXP ?", "1..."]
-  has_and_belongs_to_many :producers, :class_name => "Celebrity", :conditions => ["position REGEXP ?", "..1."]
-  has_and_belongs_to_many :other_people, :class_name => "Celebrity", :conditions => ["position REGEXP ?", "...1"]
+  has_and_belongs_to_many :actors, :class_name => "Celebrity", :conditions => ["celebrities_items.position REGEXP ?", ".1.."]
+  has_and_belongs_to_many :directors, :class_name => "Celebrity", :conditions => ["celebrities_items.position REGEXP ?", "1..."]
+  has_and_belongs_to_many :producers, :class_name => "Celebrity", :conditions => ["celebrities_items.position REGEXP ?", "..1."]
+  has_and_belongs_to_many :other_people, :class_name => "Celebrity", :conditions => ["celebrities_items.position REGEXP ?", "...1"]
   has_and_belongs_to_many :celebrities
   has_and_belongs_to_many :studios
   has_many :sales, :through => :copies

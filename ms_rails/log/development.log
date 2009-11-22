@@ -3404,3 +3404,1285 @@ Processing SectionsController#edit (for 127.0.0.1 at 2009-11-15 02:19:12) [GET]
 Rendering template within layouts/sections
 Rendering sections/edit
 Completed in 19ms (View: 11, DB: 3) | 200 OK [http://localhost/sections/1/edit]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mCustomer Load (0.3ms)[0m   [0;1mSELECT * FROM `customers` ORDER BY customers.id DESC LIMIT 1[0m
+  [4;35;1mCustomer Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `customers`[0m
+  [4;36;1mCustomer Load (1.3ms)[0m   [0;1mSELECT * FROM `customers` WHERE (`customers`.`last_name` = 'Mernagh' AND `customers`.`first_name` = 'Will') LIMIT 1[0m
+  [4;35;1mCustomer Load (0.4ms)[0m   [0mSELECT * FROM `customers` WHERE (`customers`.`last_name` = 'mernagh' AND `customers`.`first_name` = 'will') LIMIT 1[0m
+  [4;36;1mCustomer Load (0.4ms)[0m   [0;1mSELECT * FROM `customers` WHERE (`customers`.`last_name` = 'mernagh' AND `customers`.`first_name` = 'will') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CustomersController#create to xml (for 127.0.0.1 at 2009-11-16 17:41:17) [POST]
+  Parameters: {"customer"=>{"city"=>"k", "zip"=>"l", "street_1"=>";kkl", "street_2"=>";lk;", "last_name"=>"Mernagh", "phone"=>"l", "first_name"=>"Will", "email"=>"ll"}}
+  [4;36;1mCustomer Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `customers`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mBEGIN[0m
+  [4;36;1mCustomer Load (0.4ms)[0m   [0;1mSELECT `customers`.id FROM `customers` WHERE (`customers`.`first_name` = BINARY 'Will' AND `customers`.last_name = 'Mernagh') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+First name has already been taken
+Completed in 57ms (View: 3, DB: 3) | 422 Unprocessable Entity [http://localhost/customers.xml]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CustomersController#create to xml (for 127.0.0.1 at 2009-11-16 17:41:28) [POST]
+  Parameters: {"customer"=>{"city"=>"k", "zip"=>"l", "street_1"=>";kkl", "street_2"=>";lk;", "last_name"=>"Mernagh", "phone"=>"l", "first_name"=>"William", "email"=>"ll"}}
+  [4;36;1mCustomer Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `customers`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mCustomer Load (0.4ms)[0m   [0;1mSELECT `customers`.id FROM `customers` WHERE (`customers`.`first_name` = BINARY 'William' AND `customers`.last_name = 'Mernagh') LIMIT 1[0m
+  [4;35;1mCustomer Create (5.0ms)[0m   [0mINSERT INTO `customers` (`city`, `street_1`, `zip`, `street_2`, `last_name`, `phone`, `first_name`, `email`) VALUES('k', ';kkl', 'l', ';lk;', 'Mernagh', 'l', 'William', 'll')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+Completed in 31ms (View: 2, DB: 10) | 201 Created [http://localhost/customers.xml]
+  [4;35;1mSQL (0.3ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CustomersController#create to xml (for 127.0.0.1 at 2009-11-16 17:41:42) [POST]
+  Parameters: {"customer"=>{"city"=>nil, "zip"=>nil, "street_1"=>nil, "street_2"=>nil, "last_name"=>"mernagh", "phone"=>nil, "first_name"=>"will", "email"=>nil}}
+  [4;35;1mCustomer Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `customers`[0m
+  [4;36;1mSQL (2.4ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCustomer Load (0.4ms)[0m   [0mSELECT `customers`.id FROM `customers` WHERE (`customers`.`first_name` = BINARY 'will' AND `customers`.last_name = 'mernagh') LIMIT 1[0m
+  [4;36;1mCustomer Create (2.3ms)[0m   [0;1mINSERT INTO `customers` (`city`, `street_1`, `zip`, `street_2`, `last_name`, `phone`, `first_name`, `email`) VALUES(NULL, NULL, NULL, NULL, 'mernagh', NULL, 'will', NULL)[0m
+  [4;35;1mSQL (57.9ms)[0m   [0mCOMMIT[0m
+Completed in 80ms (View: 2, DB: 66) | 201 Created [http://localhost/customers.xml]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mCustomer Load (0.3ms)[0m   [0;1mSELECT * FROM `customers` ORDER BY customers.id DESC LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mCustomer Columns (2.5ms)[0m   [0;1mSHOW FIELDS FROM `customers`[0m
+  [4;35;1mCustomer Destroy (1.0ms)[0m   [0mDELETE FROM `customers` WHERE `id` = 6[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mCustomer Load (0.4ms)[0m   [0mSELECT * FROM `customers` ORDER BY customers.id DESC LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCustomer Destroy (0.2ms)[0m   [0mDELETE FROM `customers` WHERE `id` = 5[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CustomersController#create to xml (for 127.0.0.1 at 2009-11-16 17:42:53) [POST]
+  Parameters: {"customer"=>{"city"=>nil, "zip"=>nil, "street_1"=>nil, "street_2"=>nil, "last_name"=>"mernagh", "phone"=>nil, "first_name"=>"will", "email"=>nil}}
+  [4;36;1mCustomer Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `customers`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mCustomer Load (0.8ms)[0m   [0;1mSELECT `customers`.id FROM `customers` WHERE (LOWER(`customers`.`first_name`) = BINARY 'will' AND `customers`.last_name = 'mernagh') LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mROLLBACK[0m
+First name has already been taken
+Completed in 270ms (View: 2, DB: 4) | 422 Unprocessable Entity [http://localhost/customers.xml]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CustomersController#create to xml (for 127.0.0.1 at 2009-11-16 17:43:29) [POST]
+  Parameters: {"customer"=>{"city"=>nil, "zip"=>nil, "street_1"=>nil, "street_2"=>nil, "last_name"=>"mernagh", "phone"=>nil, "first_name"=>"will", "email"=>nil}}
+  [4;36;1mCustomer Columns (3.2ms)[0m   [0;1mSHOW FIELDS FROM `customers`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mCustomer Load (0.3ms)[0m   [0;1mSELECT `customers`.id FROM `customers` WHERE (LOWER(`customers`.`first_name`) = BINARY 'will' AND `customers`.last_name = 'mernagh') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+First name  last_name combination already taken
+Completed in 20ms (View: 3, DB: 4) | 422 Unprocessable Entity [http://localhost/customers.xml]
+  [4;35;1mItem Load (0.3ms)[0m   [0mSELECT * FROM `items` ORDER BY items.id DESC LIMIT 1[0m
+  [4;36;1mItem Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mcelebrities_items Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `celebrities_items`[0m
+  [4;36;1mCelebrity Load (0.9ms)[0m   [0;1mSELECT * FROM `celebrities` INNER JOIN `celebrities_items` ON `celebrities`.id = `celebrities_items`.celebrity_id WHERE (`celebrities_items`.item_id = 4 ) [0m
+  [4;35;1mCelebrity Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `celebrities`[0m
+  [4;36;1mItem Load (0.3ms)[0m   [0;1mSELECT * FROM `items` ORDER BY items.id DESC LIMIT 1[0m
+  [4;35;1mcelebrities_items Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `celebrities_items`[0m
+  [4;36;1mCelebrity Load (0.0ms)[0m   [0;1mMysql::Error: Unknown column 'celebrities_items.position' in 'where clause': SELECT * FROM `celebrities` INNER JOIN `celebrities_items` ON `celebrities`.id = `celebrities_items`.celebrity_id WHERE (`celebrities_items`.item_id = 4 AND (celebrities_items.position REGEXP '1...')) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (111.7ms)[0m   [0mCREATE TABLE `celebrities` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `first_name` varchar(255), `last_name` varchar(255), `dob` date, `position` varchar(255)) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (271.6ms)[0m   [0mCREATE TABLE `celebrities_items` (`item_id` int(11), `celebrity_id` int(11)) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (207.7ms)[0m   [0mCREATE TABLE `copies` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `item_id` int(11), `copy_type` varchar(255), `sale_price` float, `wholesale_price` float, `section_id` int(11)) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (122.0ms)[0m   [0mCREATE TABLE `customers` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `first_name` varchar(255), `last_name` varchar(255), `street_1` varchar(255), `street_2` varchar(255), `city` varchar(255), `zip` varchar(255), `email` varchar(255), `phone` varchar(255)) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (185.8ms)[0m   [0mCREATE TABLE `employees` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `first_name` varchar(255), `last_name` varchar(255), `password` varchar(255), `enabled` tinyint(1), `position` varchar(255)) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (102.8ms)[0m   [0mCREATE TABLE `items` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `title` varchar(255), `year` date, `genre` varchar(255), `item_type` varchar(255)) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (122.7ms)[0m   [0mCREATE TABLE `items_studios` (`item_id` int(11), `studio_id` int(11)) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (137.5ms)[0m   [0mCREATE TABLE `sales` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `copy_id` int(11), `customer_id` varchar(255), `transaction_date` date, `employee_id` int(11), `transaction_type` varchar(255), `transaction_ammount` float, `coupon_note` varchar(255)) ENGINE=InnoDB[0m
+  [4;36;1mSQL (16.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (103.6ms)[0m   [0mCREATE TABLE `sections` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `location` varchar(255)) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (131.8ms)[0m   [0mCREATE TABLE `studios` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `category` varchar(255)) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (60.4ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (127.9ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20091114205700')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20091112044013')[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20091114193716')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20091114194233')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20091114194458')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20091114194858')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20091114195349')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20091114200157')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20091114200356')[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20091114205600')[0m
+  [4;35;1mCustomer Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `customers`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCustomer Load (1.1ms)[0m   [0mSELECT `customers`.id FROM `customers` WHERE (LOWER(`customers`.`first_name`) = BINARY 'will' AND `customers`.last_name = 'Mernagh') LIMIT 1[0m
+  [4;36;1mCustomer Create (0.2ms)[0m   [0;1mINSERT INTO `customers` (`city`, `street_1`, `zip`, `street_2`, `last_name`, `phone`, `first_name`, `email`) VALUES('Malden', '190 Summer', '02148', '#405', 'Mernagh', '617-519-0352', 'Will', 'will@gmail.com')[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCustomer Load (0.2ms)[0m   [0mSELECT `customers`.id FROM `customers` WHERE (LOWER(`customers`.`first_name`) = BINARY 'orla' AND `customers`.last_name = 'Mernagh') LIMIT 1[0m
+  [4;36;1mCustomer Create (0.2ms)[0m   [0;1mINSERT INTO `customers` (`city`, `street_1`, `zip`, `street_2`, `last_name`, `phone`, `first_name`, `email`) VALUES('Malden', '190 Summer', '02148', '#405', 'Mernagh', '617-519-0353', 'Orla', 'orla@gmail.com')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCustomer Load (0.2ms)[0m   [0mSELECT `customers`.id FROM `customers` WHERE (LOWER(`customers`.`first_name`) = BINARY 'bridget' AND `customers`.last_name = 'Connolly') LIMIT 1[0m
+  [4;36;1mCustomer Create (0.2ms)[0m   [0;1mINSERT INTO `customers` (`city`, `street_1`, `zip`, `street_2`, `last_name`, `phone`, `first_name`, `email`) VALUES('Medford', '10 Day', '02148', 'Unit 2', 'Connolly', '617-519-0354', 'Bridget', 'bridget@gmail.com')[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCustomer Load (0.3ms)[0m   [0mSELECT `customers`.id FROM `customers` WHERE (LOWER(`customers`.`first_name`) = BINARY 'éanna' AND `customers`.last_name = 'Mernagh') LIMIT 1[0m
+  [4;36;1mCustomer Create (0.2ms)[0m   [0;1mINSERT INTO `customers` (`city`, `street_1`, `zip`, `street_2`, `last_name`, `phone`, `first_name`, `email`) VALUES('Medford', '90 Main', '02148', 'Apt 5', 'Mernagh', '617-519-0355', 'Éanna', 'eanna@gmail.com')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mEmployee Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `employees`[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mBEGIN[0m
+  [4;36;1mEmployee Create (0.2ms)[0m   [0;1mINSERT INTO `employees` (`position`, `enabled`, `last_name`, `password`, `first_name`) VALUES('associate', NULL, 'Dalton', 'letmein', 'Jim')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mEmployee Create (0.1ms)[0m   [0mINSERT INTO `employees` (`position`, `enabled`, `last_name`, `password`, `first_name`) VALUES('associate', NULL, 'Dunn', 'letmein', 'Sarah')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mEmployee Create (0.2ms)[0m   [0;1mINSERT INTO `employees` (`position`, `enabled`, `last_name`, `password`, `first_name`) VALUES('associate', NULL, 'Young', 'letmein', 'Peter')[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mEmployee Create (0.2ms)[0m   [0mINSERT INTO `employees` (`position`, `enabled`, `last_name`, `password`, `first_name`) VALUES('owner', NULL, 'Daly', 'letmein', 'Paul')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSection Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `sections`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSection Create (0.2ms)[0m   [0mINSERT INTO `sections` (`name`, `location`) VALUES('New Releases', 'C01')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSection Create (0.2ms)[0m   [0;1mINSERT INTO `sections` (`name`, `location`) VALUES('Comedy', 'C02')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSection Create (0.1ms)[0m   [0mINSERT INTO `sections` (`name`, `location`) VALUES('Award Winners', 'C03')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSection Create (0.1ms)[0m   [0;1mINSERT INTO `sections` (`name`, `location`) VALUES('Action', 'C04')[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mItem Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mBEGIN[0m
+  [4;36;1mItem Create (0.3ms)[0m   [0;1mINSERT INTO `items` (`title`, `year`, `genre`, `item_type`) VALUES('(500) Days of Summer', '2009-01-01', 'Romance', 'Movie')[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mItem Create (0.6ms)[0m   [0mINSERT INTO `items` (`title`, `year`, `genre`, `item_type`) VALUES('Where the Wild Things Are', '2009-01-01', 'Family', 'Movie')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mItem Create (0.2ms)[0m   [0;1mINSERT INTO `items` (`title`, `year`, `genre`, `item_type`) VALUES('Couples Retreat', '2009-01-01', 'Comedy', 'Movie')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mItem Create (0.2ms)[0m   [0mINSERT INTO `items` (`title`, `year`, `genre`, `item_type`) VALUES('Transformers', '2007-01-01', 'Action', 'Movie')[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mCopy Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `copies`[0m
+  [4;36;1mSQL (1.9ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCopy Create (0.2ms)[0m   [0mINSERT INTO `copies` (`section_id`, `copy_type`, `item_id`, `sale_price`, `wholesale_price`) VALUES(1, 'BlueRay', 1, 9.99, 4.0)[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mCopy Create (0.3ms)[0m   [0;1mINSERT INTO `copies` (`section_id`, `copy_type`, `item_id`, `sale_price`, `wholesale_price`) VALUES(1, 'DVD', 2, 9.99, 4.0)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCopy Create (0.3ms)[0m   [0mINSERT INTO `copies` (`section_id`, `copy_type`, `item_id`, `sale_price`, `wholesale_price`) VALUES(2, 'BlueRay', 3, 9.99, 4.0)[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mCopy Create (0.1ms)[0m   [0;1mINSERT INTO `copies` (`section_id`, `copy_type`, `item_id`, `sale_price`, `wholesale_price`) VALUES(4, 'DVD', 4, 9.99, 4.0)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCopy Create (0.1ms)[0m   [0mINSERT INTO `copies` (`section_id`, `copy_type`, `item_id`, `sale_price`, `wholesale_price`) VALUES(1, 'BlueRay', 1, 9.99, 4.0)[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mCopy Create (0.1ms)[0m   [0;1mINSERT INTO `copies` (`section_id`, `copy_type`, `item_id`, `sale_price`, `wholesale_price`) VALUES(1, 'DVD', 2, 9.99, 4.0)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCopy Create (0.1ms)[0m   [0mINSERT INTO `copies` (`section_id`, `copy_type`, `item_id`, `sale_price`, `wholesale_price`) VALUES(2, 'BlueRay', 3, 9.99, 4.0)[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mCopy Create (0.2ms)[0m   [0;1mINSERT INTO `copies` (`section_id`, `copy_type`, `item_id`, `sale_price`, `wholesale_price`) VALUES(4, 'DVD', 4, 9.99, 4.0)[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCopy Create (0.2ms)[0m   [0mINSERT INTO `copies` (`section_id`, `copy_type`, `item_id`, `sale_price`, `wholesale_price`) VALUES(1, 'BlueRay', 1, 9.99, 4.0)[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mCopy Create (0.1ms)[0m   [0;1mINSERT INTO `copies` (`section_id`, `copy_type`, `item_id`, `sale_price`, `wholesale_price`) VALUES(1, 'DVD', 2, 9.99, 4.0)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCopy Create (0.2ms)[0m   [0mINSERT INTO `copies` (`section_id`, `copy_type`, `item_id`, `sale_price`, `wholesale_price`) VALUES(2, 'BlueRay', 3, 9.99, 4.0)[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mCopy Create (0.2ms)[0m   [0;1mINSERT INTO `copies` (`section_id`, `copy_type`, `item_id`, `sale_price`, `wholesale_price`) VALUES(4, 'DVD', 4, 9.99, 4.0)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCopy Create (0.2ms)[0m   [0mINSERT INTO `copies` (`section_id`, `copy_type`, `item_id`, `sale_price`, `wholesale_price`) VALUES(1, 'BlueRay', 1, 9.99, 4.0)[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mCopy Create (0.2ms)[0m   [0;1mINSERT INTO `copies` (`section_id`, `copy_type`, `item_id`, `sale_price`, `wholesale_price`) VALUES(1, 'DVD', 2, 9.99, 4.0)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCopy Create (0.1ms)[0m   [0mINSERT INTO `copies` (`section_id`, `copy_type`, `item_id`, `sale_price`, `wholesale_price`) VALUES(2, 'BlueRay', 3, 9.99, 4.0)[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mCopy Create (0.1ms)[0m   [0;1mINSERT INTO `copies` (`section_id`, `copy_type`, `item_id`, `sale_price`, `wholesale_price`) VALUES(4, 'DVD', 4, 9.99, 4.0)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSale Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `sales`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mSale Create (0.2ms)[0m   [0;1mINSERT INTO `sales` (`coupon_note`, `transaction_ammount`, `employee_id`, `transaction_type`, `transaction_date`, `copy_id`, `customer_id`) VALUES(NULL, 9.99, 1, 'sale', '2009-11-16 17:55:55', 1, 1)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSale Create (0.2ms)[0m   [0mINSERT INTO `sales` (`coupon_note`, `transaction_ammount`, `employee_id`, `transaction_type`, `transaction_date`, `copy_id`, `customer_id`) VALUES(NULL, 9.99, 2, 'sale', '2009-11-16 17:55:55', 3, 2)[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSale Create (0.4ms)[0m   [0;1mINSERT INTO `sales` (`coupon_note`, `transaction_ammount`, `employee_id`, `transaction_type`, `transaction_date`, `copy_id`, `customer_id`) VALUES(NULL, 9.99, 3, 'sale', '2009-11-16 17:55:55', 4, 3)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSale Create (0.2ms)[0m   [0mINSERT INTO `sales` (`coupon_note`, `transaction_ammount`, `employee_id`, `transaction_type`, `transaction_date`, `copy_id`, `customer_id`) VALUES(NULL, 9.99, 4, 'sale', '2009-11-16 17:55:55', 7, 4)[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mStudio Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `studios`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mStudio Create (0.2ms)[0m   [0mINSERT INTO `studios` (`name`, `category`) VALUES('Fox Searchlight', 'Hollywood')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mStudio Create (0.1ms)[0m   [0;1mINSERT INTO `studios` (`name`, `category`) VALUES('Warner Bros.', 'Hollywood')[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mStudio Create (0.2ms)[0m   [0mINSERT INTO `studios` (`name`, `category`) VALUES('Universal Pictures', 'Hollywood')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mStudio Create (0.4ms)[0m   [0;1mINSERT INTO `studios` (`name`, `category`) VALUES('DreamWorks SKG', 'Hollywood')[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mStudio Create (0.2ms)[0m   [0mINSERT INTO `studios` (`name`, `category`) VALUES('Canal+', 'Foreign')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mStudio Create (0.1ms)[0m   [0;1mINSERT INTO `studios` (`name`, `category`) VALUES('IFC', 'independant')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mStudio Load (0.2ms)[0m   [0;1mSELECT * FROM `studios` WHERE (`studios`.`id` = 1) [0m
+  [4;35;1mItem Load (0.2ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.`id` = 1) [0m
+  [4;36;1mItem Load (0.1ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.`id` = 2) [0m
+  [4;35;1mItem Load (0.1ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.`id` = 3) [0m
+  [4;36;1mItem Load (0.1ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.`id` = 4) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mdescribe `items_studios`[0m
+  [4;35;1mitems_studios Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `items_studios`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mINSERT INTO `items_studios` (`studio_id`, `item_id`) VALUES (1, 1)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mdescribe `items_studios`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mINSERT INTO `items_studios` (`studio_id`, `item_id`) VALUES (1, 2)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mdescribe `items_studios`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mINSERT INTO `items_studios` (`studio_id`, `item_id`) VALUES (1, 3)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mdescribe `items_studios`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mINSERT INTO `items_studios` (`studio_id`, `item_id`) VALUES (1, 4)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mCOMMIT[0m
+  [4;36;1mCelebrity Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `celebrities`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mCelebrity Create (0.2ms)[0m   [0;1mINSERT INTO `celebrities` (`position`, `dob`, `last_name`, `first_name`) VALUES('1010', '1965-02-19', 'Bay', 'Michael')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCelebrity Create (0.2ms)[0m   [0mINSERT INTO `celebrities` (`position`, `dob`, `last_name`, `first_name`) VALUES('1000', '1971-04-16', 'Billingsley', 'Peter')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mCelebrity Create (0.1ms)[0m   [0;1mINSERT INTO `celebrities` (`position`, `dob`, `last_name`, `first_name`) VALUES('1000', '1969-10-22', 'Jonze', 'Spike')[0m
+  [4;35;1mSQL (1.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCelebrity Create (0.2ms)[0m   [0mINSERT INTO `celebrities` (`position`, `dob`, `last_name`, `first_name`) VALUES('1000', NULL, 'Webb', 'Mark')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mCelebrity Create (0.1ms)[0m   [0;1mINSERT INTO `celebrities` (`position`, `dob`, `last_name`, `first_name`) VALUES('0100', NULL, 'Deschanel', 'Zooey')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCelebrity Create (0.1ms)[0m   [0mINSERT INTO `celebrities` (`position`, `dob`, `last_name`, `first_name`) VALUES('0100', NULL, 'LaBeouf', 'Shia')[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mCelebrity Create (0.2ms)[0m   [0;1mINSERT INTO `celebrities` (`position`, `dob`, `last_name`, `first_name`) VALUES('0100', NULL, 'Bateman', 'Jason')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCelebrity Create (0.2ms)[0m   [0mINSERT INTO `celebrities` (`position`, `dob`, `last_name`, `first_name`) VALUES('0100', NULL, 'Records', 'Max')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mCelebrity Create (0.1ms)[0m   [0;1mINSERT INTO `celebrities` (`position`, `dob`, `last_name`, `first_name`) VALUES('0010', NULL, 'Isbell', 'John')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCelebrity Create (0.1ms)[0m   [0mINSERT INTO `celebrities` (`position`, `dob`, `last_name`, `first_name`) VALUES('0010', NULL, 'Bates', 'Kenny')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mCelebrity Create (0.1ms)[0m   [0;1mINSERT INTO `celebrities` (`position`, `dob`, `last_name`, `first_name`) VALUES('0010', NULL, 'Doe', 'John')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCelebrity Create (0.2ms)[0m   [0mINSERT INTO `celebrities` (`position`, `dob`, `last_name`, `first_name`) VALUES('0010', NULL, 'Doe', 'Jane')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mCelebrity Load (0.2ms)[0m   [0mSELECT * FROM `celebrities` WHERE (`celebrities`.`id` = 1) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (1.5ms)[0m   [0mdescribe `celebrities_items`[0m
+  [4;36;1mcelebrities_items Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `celebrities_items`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mINSERT INTO `celebrities_items` (`item_id`, `celebrity_id`) VALUES (1, 1)[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mCelebrity Load (0.2ms)[0m   [0mSELECT * FROM `celebrities` WHERE (`celebrities`.`id` = 2) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mdescribe `celebrities_items`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mINSERT INTO `celebrities_items` (`item_id`, `celebrity_id`) VALUES (2, 2)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mCelebrity Load (0.2ms)[0m   [0;1mSELECT * FROM `celebrities` WHERE (`celebrities`.`id` = 3) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mdescribe `celebrities_items`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mINSERT INTO `celebrities_items` (`item_id`, `celebrity_id`) VALUES (3, 3)[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mCelebrity Load (0.2ms)[0m   [0mSELECT * FROM `celebrities` WHERE (`celebrities`.`id` = 4) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mdescribe `celebrities_items`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mINSERT INTO `celebrities_items` (`item_id`, `celebrity_id`) VALUES (4, 4)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mCelebrity Load (0.2ms)[0m   [0;1mSELECT * FROM `celebrities` WHERE (`celebrities`.`id` = 5) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mdescribe `celebrities_items`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mINSERT INTO `celebrities_items` (`item_id`, `celebrity_id`) VALUES (4, 5)[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mCelebrity Load (0.2ms)[0m   [0mSELECT * FROM `celebrities` WHERE (`celebrities`.`id` = 6) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (1.9ms)[0m   [0mdescribe `celebrities_items`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mINSERT INTO `celebrities_items` (`item_id`, `celebrity_id`) VALUES (3, 6)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mCelebrity Load (0.2ms)[0m   [0;1mSELECT * FROM `celebrities` WHERE (`celebrities`.`id` = 7) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mdescribe `celebrities_items`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mINSERT INTO `celebrities_items` (`item_id`, `celebrity_id`) VALUES (2, 7)[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mCelebrity Load (0.2ms)[0m   [0mSELECT * FROM `celebrities` WHERE (`celebrities`.`id` = 8) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mdescribe `celebrities_items`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mINSERT INTO `celebrities_items` (`item_id`, `celebrity_id`) VALUES (1, 8)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mCelebrity Load (0.2ms)[0m   [0;1mSELECT * FROM `celebrities` WHERE (`celebrities`.`id` = 9) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mdescribe `celebrities_items`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO `celebrities_items` (`item_id`, `celebrity_id`) VALUES (1, 9)[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mCelebrity Load (0.2ms)[0m   [0mSELECT * FROM `celebrities` WHERE (`celebrities`.`id` = 10) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mdescribe `celebrities_items`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mINSERT INTO `celebrities_items` (`item_id`, `celebrity_id`) VALUES (2, 10)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mCelebrity Load (0.2ms)[0m   [0;1mSELECT * FROM `celebrities` WHERE (`celebrities`.`id` = 11) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mdescribe `celebrities_items`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mINSERT INTO `celebrities_items` (`item_id`, `celebrity_id`) VALUES (3, 11)[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mCelebrity Load (0.2ms)[0m   [0mSELECT * FROM `celebrities` WHERE (`celebrities`.`id` = 12) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mdescribe `celebrities_items`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mINSERT INTO `celebrities_items` (`item_id`, `celebrity_id`) VALUES (4, 12)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mCustomer Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `customers`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mCustomer Load (0.6ms)[0m   [0;1mSELECT `customers`.id FROM `customers` WHERE (LOWER(`customers`.`first_name`) = BINARY 'will' AND `customers`.last_name = 'Mernagh') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCustomer Load (0.2ms)[0m   [0mSELECT `customers`.id FROM `customers` WHERE (LOWER(`customers`.`first_name`) = BINARY 'orla' AND `customers`.last_name = 'Mernagh') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mCustomer Load (0.2ms)[0m   [0;1mSELECT `customers`.id FROM `customers` WHERE (LOWER(`customers`.`first_name`) = BINARY 'bridget' AND `customers`.last_name = 'Connolly') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCustomer Load (0.2ms)[0m   [0mSELECT `customers`.id FROM `customers` WHERE (LOWER(`customers`.`first_name`) = BINARY 'éanna' AND `customers`.last_name = 'Mernagh') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mEmployee Columns (94.3ms)[0m   [0mSHOW FIELDS FROM `employees`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mEmployee Create (0.2ms)[0m   [0mINSERT INTO `employees` (`position`, `enabled`, `last_name`, `password`, `first_name`) VALUES('associate', NULL, 'Dalton', 'letmein', 'Jim')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mEmployee Create (0.1ms)[0m   [0;1mINSERT INTO `employees` (`position`, `enabled`, `last_name`, `password`, `first_name`) VALUES('associate', NULL, 'Dunn', 'letmein', 'Sarah')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mEmployee Create (1.5ms)[0m   [0mINSERT INTO `employees` (`position`, `enabled`, `last_name`, `password`, `first_name`) VALUES('associate', NULL, 'Young', 'letmein', 'Peter')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mEmployee Create (0.2ms)[0m   [0;1mINSERT INTO `employees` (`position`, `enabled`, `last_name`, `password`, `first_name`) VALUES('owner', NULL, 'Daly', 'letmein', 'Paul')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSection Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `sections`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mSection Create (0.2ms)[0m   [0;1mINSERT INTO `sections` (`name`, `location`) VALUES('New Releases', 'C01')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSection Create (0.1ms)[0m   [0mINSERT INTO `sections` (`name`, `location`) VALUES('Comedy', 'C02')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSection Create (0.1ms)[0m   [0;1mINSERT INTO `sections` (`name`, `location`) VALUES('Award Winners', 'C03')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSection Create (0.1ms)[0m   [0mINSERT INTO `sections` (`name`, `location`) VALUES('Action', 'C04')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mItem Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mItem Create (0.4ms)[0m   [0mINSERT INTO `items` (`title`, `year`, `genre`, `item_type`) VALUES('(500) Days of Summer', '2009-01-01', 'Romance', 'Movie')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mItem Create (0.2ms)[0m   [0;1mINSERT INTO `items` (`title`, `year`, `genre`, `item_type`) VALUES('Where the Wild Things Are', '2009-01-01', 'Family', 'Movie')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mItem Create (0.2ms)[0m   [0mINSERT INTO `items` (`title`, `year`, `genre`, `item_type`) VALUES('Couples Retreat', '2009-01-01', 'Comedy', 'Movie')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mItem Create (0.2ms)[0m   [0;1mINSERT INTO `items` (`title`, `year`, `genre`, `item_type`) VALUES('Transformers', '2007-01-01', 'Action', 'Movie')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mCopy Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `copies`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mCopy Create (0.2ms)[0m   [0;1mINSERT INTO `copies` (`section_id`, `copy_type`, `item_id`, `sale_price`, `wholesale_price`) VALUES(1, 'BlueRay', 1, 9.99, 4.0)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCopy Create (0.2ms)[0m   [0mINSERT INTO `copies` (`section_id`, `copy_type`, `item_id`, `sale_price`, `wholesale_price`) VALUES(1, 'DVD', 2, 9.99, 4.0)[0m
+  [4;36;1mSQL (174.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mCopy Create (0.3ms)[0m   [0;1mINSERT INTO `copies` (`section_id`, `copy_type`, `item_id`, `sale_price`, `wholesale_price`) VALUES(2, 'BlueRay', 3, 9.99, 4.0)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCopy Create (0.2ms)[0m   [0mINSERT INTO `copies` (`section_id`, `copy_type`, `item_id`, `sale_price`, `wholesale_price`) VALUES(4, 'DVD', 4, 9.99, 4.0)[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mCopy Create (0.2ms)[0m   [0;1mINSERT INTO `copies` (`section_id`, `copy_type`, `item_id`, `sale_price`, `wholesale_price`) VALUES(1, 'BlueRay', 1, 9.99, 4.0)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCopy Create (0.1ms)[0m   [0mINSERT INTO `copies` (`section_id`, `copy_type`, `item_id`, `sale_price`, `wholesale_price`) VALUES(1, 'DVD', 2, 9.99, 4.0)[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mCopy Create (0.1ms)[0m   [0;1mINSERT INTO `copies` (`section_id`, `copy_type`, `item_id`, `sale_price`, `wholesale_price`) VALUES(2, 'BlueRay', 3, 9.99, 4.0)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCopy Create (0.2ms)[0m   [0mINSERT INTO `copies` (`section_id`, `copy_type`, `item_id`, `sale_price`, `wholesale_price`) VALUES(4, 'DVD', 4, 9.99, 4.0)[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mCopy Create (0.1ms)[0m   [0;1mINSERT INTO `copies` (`section_id`, `copy_type`, `item_id`, `sale_price`, `wholesale_price`) VALUES(1, 'BlueRay', 1, 9.99, 4.0)[0m
+  [4;35;1mSQL (1.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCopy Create (0.2ms)[0m   [0mINSERT INTO `copies` (`section_id`, `copy_type`, `item_id`, `sale_price`, `wholesale_price`) VALUES(1, 'DVD', 2, 9.99, 4.0)[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mCopy Create (0.1ms)[0m   [0;1mINSERT INTO `copies` (`section_id`, `copy_type`, `item_id`, `sale_price`, `wholesale_price`) VALUES(2, 'BlueRay', 3, 9.99, 4.0)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCopy Create (0.2ms)[0m   [0mINSERT INTO `copies` (`section_id`, `copy_type`, `item_id`, `sale_price`, `wholesale_price`) VALUES(4, 'DVD', 4, 9.99, 4.0)[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mCopy Create (0.2ms)[0m   [0;1mINSERT INTO `copies` (`section_id`, `copy_type`, `item_id`, `sale_price`, `wholesale_price`) VALUES(1, 'BlueRay', 1, 9.99, 4.0)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCopy Create (0.1ms)[0m   [0mINSERT INTO `copies` (`section_id`, `copy_type`, `item_id`, `sale_price`, `wholesale_price`) VALUES(1, 'DVD', 2, 9.99, 4.0)[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mCopy Create (0.1ms)[0m   [0;1mINSERT INTO `copies` (`section_id`, `copy_type`, `item_id`, `sale_price`, `wholesale_price`) VALUES(2, 'BlueRay', 3, 9.99, 4.0)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCopy Create (0.1ms)[0m   [0mINSERT INTO `copies` (`section_id`, `copy_type`, `item_id`, `sale_price`, `wholesale_price`) VALUES(4, 'DVD', 4, 9.99, 4.0)[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSale Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `sales`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSale Create (0.2ms)[0m   [0mINSERT INTO `sales` (`coupon_note`, `transaction_ammount`, `employee_id`, `transaction_type`, `transaction_date`, `copy_id`, `customer_id`) VALUES(NULL, 9.99, 1, 'sale', '2009-11-16 17:56:00', 1, 1)[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSale Create (0.2ms)[0m   [0;1mINSERT INTO `sales` (`coupon_note`, `transaction_ammount`, `employee_id`, `transaction_type`, `transaction_date`, `copy_id`, `customer_id`) VALUES(NULL, 9.99, 2, 'sale', '2009-11-16 17:56:00', 3, 2)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSale Create (0.3ms)[0m   [0mINSERT INTO `sales` (`coupon_note`, `transaction_ammount`, `employee_id`, `transaction_type`, `transaction_date`, `copy_id`, `customer_id`) VALUES(NULL, 9.99, 3, 'sale', '2009-11-16 17:56:00', 4, 3)[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSale Create (0.2ms)[0m   [0;1mINSERT INTO `sales` (`coupon_note`, `transaction_ammount`, `employee_id`, `transaction_type`, `transaction_date`, `copy_id`, `customer_id`) VALUES(NULL, 9.99, 4, 'sale', '2009-11-16 17:56:00', 7, 4)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mStudio Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `studios`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mStudio Create (0.2ms)[0m   [0;1mINSERT INTO `studios` (`name`, `category`) VALUES('Fox Searchlight', 'Hollywood')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mStudio Create (0.1ms)[0m   [0mINSERT INTO `studios` (`name`, `category`) VALUES('Warner Bros.', 'Hollywood')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mStudio Create (0.1ms)[0m   [0;1mINSERT INTO `studios` (`name`, `category`) VALUES('Universal Pictures', 'Hollywood')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mStudio Create (0.7ms)[0m   [0mINSERT INTO `studios` (`name`, `category`) VALUES('DreamWorks SKG', 'Hollywood')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mStudio Create (0.1ms)[0m   [0;1mINSERT INTO `studios` (`name`, `category`) VALUES('Canal+', 'Foreign')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mStudio Create (0.1ms)[0m   [0mINSERT INTO `studios` (`name`, `category`) VALUES('IFC', 'independant')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mStudio Load (0.2ms)[0m   [0mSELECT * FROM `studios` WHERE (`studios`.`id` = 1) [0m
+  [4;36;1mItem Load (0.2ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.`id` = 1) [0m
+  [4;35;1mItem Load (0.1ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.`id` = 2) [0m
+  [4;36;1mItem Load (0.1ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.`id` = 3) [0m
+  [4;35;1mItem Load (0.1ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.`id` = 4) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mdescribe `items_studios`[0m
+  [4;36;1mitems_studios Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `items_studios`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mINSERT INTO `items_studios` (`studio_id`, `item_id`) VALUES (1, 1)[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mdescribe `items_studios`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mINSERT INTO `items_studios` (`studio_id`, `item_id`) VALUES (1, 2)[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mdescribe `items_studios`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mINSERT INTO `items_studios` (`studio_id`, `item_id`) VALUES (1, 3)[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mdescribe `items_studios`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mINSERT INTO `items_studios` (`studio_id`, `item_id`) VALUES (1, 4)[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mCelebrity Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `celebrities`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCelebrity Create (0.6ms)[0m   [0mINSERT INTO `celebrities` (`position`, `dob`, `last_name`, `first_name`) VALUES('1010', '1965-02-19', 'Bay', 'Michael')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mCelebrity Create (0.2ms)[0m   [0;1mINSERT INTO `celebrities` (`position`, `dob`, `last_name`, `first_name`) VALUES('1000', '1971-04-16', 'Billingsley', 'Peter')[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCelebrity Create (0.1ms)[0m   [0mINSERT INTO `celebrities` (`position`, `dob`, `last_name`, `first_name`) VALUES('1000', '1969-10-22', 'Jonze', 'Spike')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mCelebrity Create (0.1ms)[0m   [0;1mINSERT INTO `celebrities` (`position`, `dob`, `last_name`, `first_name`) VALUES('1000', NULL, 'Webb', 'Mark')[0m
+  [4;35;1mSQL (1.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCelebrity Create (0.4ms)[0m   [0mINSERT INTO `celebrities` (`position`, `dob`, `last_name`, `first_name`) VALUES('0100', NULL, 'Deschanel', 'Zooey')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mCelebrity Create (0.1ms)[0m   [0;1mINSERT INTO `celebrities` (`position`, `dob`, `last_name`, `first_name`) VALUES('0100', NULL, 'LaBeouf', 'Shia')[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCelebrity Create (0.2ms)[0m   [0mINSERT INTO `celebrities` (`position`, `dob`, `last_name`, `first_name`) VALUES('0100', NULL, 'Bateman', 'Jason')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mCelebrity Create (0.1ms)[0m   [0;1mINSERT INTO `celebrities` (`position`, `dob`, `last_name`, `first_name`) VALUES('0100', NULL, 'Records', 'Max')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCelebrity Create (0.1ms)[0m   [0mINSERT INTO `celebrities` (`position`, `dob`, `last_name`, `first_name`) VALUES('0010', NULL, 'Isbell', 'John')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mCelebrity Create (0.1ms)[0m   [0;1mINSERT INTO `celebrities` (`position`, `dob`, `last_name`, `first_name`) VALUES('0010', NULL, 'Bates', 'Kenny')[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCelebrity Create (0.1ms)[0m   [0mINSERT INTO `celebrities` (`position`, `dob`, `last_name`, `first_name`) VALUES('0010', NULL, 'Doe', 'John')[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mCelebrity Create (0.2ms)[0m   [0;1mINSERT INTO `celebrities` (`position`, `dob`, `last_name`, `first_name`) VALUES('0010', NULL, 'Doe', 'Jane')[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mCelebrity Load (0.2ms)[0m   [0;1mSELECT * FROM `celebrities` WHERE (`celebrities`.`id` = 1) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mdescribe `celebrities_items`[0m
+  [4;35;1mcelebrities_items Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `celebrities_items`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mINSERT INTO `celebrities_items` (`item_id`, `celebrity_id`) VALUES (1, 1)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mCelebrity Load (0.2ms)[0m   [0;1mSELECT * FROM `celebrities` WHERE (`celebrities`.`id` = 2) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mdescribe `celebrities_items`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mINSERT INTO `celebrities_items` (`item_id`, `celebrity_id`) VALUES (2, 2)[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mCelebrity Load (0.2ms)[0m   [0mSELECT * FROM `celebrities` WHERE (`celebrities`.`id` = 3) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mdescribe `celebrities_items`[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mINSERT INTO `celebrities_items` (`item_id`, `celebrity_id`) VALUES (3, 3)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mCelebrity Load (0.2ms)[0m   [0;1mSELECT * FROM `celebrities` WHERE (`celebrities`.`id` = 4) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mdescribe `celebrities_items`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mINSERT INTO `celebrities_items` (`item_id`, `celebrity_id`) VALUES (4, 4)[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mCelebrity Load (0.2ms)[0m   [0mSELECT * FROM `celebrities` WHERE (`celebrities`.`id` = 5) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mdescribe `celebrities_items`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mINSERT INTO `celebrities_items` (`item_id`, `celebrity_id`) VALUES (4, 5)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mCelebrity Load (0.2ms)[0m   [0;1mSELECT * FROM `celebrities` WHERE (`celebrities`.`id` = 6) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mdescribe `celebrities_items`[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mINSERT INTO `celebrities_items` (`item_id`, `celebrity_id`) VALUES (3, 6)[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mCelebrity Load (0.2ms)[0m   [0mSELECT * FROM `celebrities` WHERE (`celebrities`.`id` = 7) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mdescribe `celebrities_items`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mINSERT INTO `celebrities_items` (`item_id`, `celebrity_id`) VALUES (2, 7)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mCelebrity Load (0.1ms)[0m   [0;1mSELECT * FROM `celebrities` WHERE (`celebrities`.`id` = 8) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (1.8ms)[0m   [0;1mdescribe `celebrities_items`[0m
+  [4;35;1mSQL (2.2ms)[0m   [0mINSERT INTO `celebrities_items` (`item_id`, `celebrity_id`) VALUES (1, 8)[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mCelebrity Load (0.4ms)[0m   [0mSELECT * FROM `celebrities` WHERE (`celebrities`.`id` = 9) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (1.9ms)[0m   [0mdescribe `celebrities_items`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mINSERT INTO `celebrities_items` (`item_id`, `celebrity_id`) VALUES (1, 9)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mCelebrity Load (0.2ms)[0m   [0;1mSELECT * FROM `celebrities` WHERE (`celebrities`.`id` = 10) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mdescribe `celebrities_items`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mINSERT INTO `celebrities_items` (`item_id`, `celebrity_id`) VALUES (2, 10)[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mCelebrity Load (0.1ms)[0m   [0mSELECT * FROM `celebrities` WHERE (`celebrities`.`id` = 11) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mdescribe `celebrities_items`[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mINSERT INTO `celebrities_items` (`item_id`, `celebrity_id`) VALUES (3, 11)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mCelebrity Load (0.2ms)[0m   [0;1mSELECT * FROM `celebrities` WHERE (`celebrities`.`id` = 12) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mdescribe `celebrities_items`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mINSERT INTO `celebrities_items` (`item_id`, `celebrity_id`) VALUES (4, 12)[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mItem Load (0.3ms)[0m   [0;1mSELECT * FROM `items` ORDER BY items.id DESC LIMIT 1[0m
+  [4;35;1mItem Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+  [4;36;1mcelebrities_items Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `celebrities_items`[0m
+  [4;35;1mCelebrity Load (0.0ms)[0m   [0mMysql::Error: Unknown column 'celebrities_items.position' in 'where clause': SELECT * FROM `celebrities` INNER JOIN `celebrities_items` ON `celebrities`.id = `celebrities_items`.celebrity_id WHERE (`celebrities_items`.item_id = 8 AND (celebrities_items.position REGEXP '1...')) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (43.1ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (136.0ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateCustomers (20091112044013)
+  [4;35;1mSQL (163.2ms)[0m   [0mCREATE TABLE `customers` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `first_name` varchar(255), `last_name` varchar(255), `street_1` varchar(255), `street_2` varchar(255), `city` varchar(255), `zip` varchar(255), `email` varchar(255), `phone` varchar(255)) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091112044013')[0m
+Migrating to CreateItems (20091114193716)
+  [4;35;1mSQL (143.7ms)[0m   [0mCREATE TABLE `items` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `title` varchar(255), `year` date, `genre` varchar(255), `item_type` varchar(255)) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091114193716')[0m
+Migrating to CreateCelebrities (20091114194233)
+  [4;35;1mSQL (121.3ms)[0m   [0mCREATE TABLE `celebrities` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `first_name` varchar(255), `last_name` varchar(255), `dob` date, `position` varchar(255)) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091114194233')[0m
+Migrating to CreateStudios (20091114194458)
+  [4;35;1mSQL (107.9ms)[0m   [0mCREATE TABLE `studios` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `category` varchar(255)) ENGINE=InnoDB[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091114194458')[0m
+Migrating to CreateCopies (20091114194858)
+  [4;35;1mSQL (111.3ms)[0m   [0mCREATE TABLE `copies` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `item_id` int(11), `copy_type` varchar(255), `sale_price` float, `wholesale_price` float, `section_id` int(11)) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091114194858')[0m
+Migrating to CreateSections (20091114195349)
+  [4;35;1mSQL (141.4ms)[0m   [0mCREATE TABLE `sections` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `location` varchar(255)) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091114195349')[0m
+Migrating to CreateSales (20091114200157)
+  [4;35;1mSQL (141.9ms)[0m   [0mCREATE TABLE `sales` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `copy_id` int(11), `customer_id` varchar(255), `transaction_date` date, `employee_id` int(11), `transaction_type` varchar(255), `transaction_ammount` float, `coupon_note` varchar(255)) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091114200157')[0m
+Migrating to CreateEmployees (20091114200356)
+  [4;35;1mSQL (124.8ms)[0m   [0mCREATE TABLE `employees` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `first_name` varchar(255), `last_name` varchar(255), `password` varchar(255), `enabled` tinyint(1), `position` varchar(255)) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091114200356')[0m
+Migrating to CreateItemsStudios (20091114205600)
+  [4;35;1mSQL (122.7ms)[0m   [0mCREATE TABLE `items_studios` (`item_id` int(11), `studio_id` int(11)) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091114205600')[0m
+Migrating to CreateCelebritiesItems (20091114205700)
+  [4;35;1mSQL (142.9ms)[0m   [0mCREATE TABLE `celebrities_items` (`item_id` int(11), `celebrity_id` int(11), `position` varchar(255)) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091114205700')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mSHOW FIELDS FROM `celebrities`[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mdescribe `celebrities`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `celebrities`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW FIELDS FROM `celebrities_items`[0m
+  [4;36;1mSQL (2.3ms)[0m   [0;1mdescribe `celebrities_items`[0m
+  [4;35;1mSQL (2.1ms)[0m   [0mSHOW KEYS FROM `celebrities_items`[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mSHOW FIELDS FROM `copies`[0m
+  [4;35;1mSQL (1.8ms)[0m   [0mdescribe `copies`[0m
+  [4;36;1mSQL (2.5ms)[0m   [0;1mSHOW KEYS FROM `copies`[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mSHOW FIELDS FROM `customers`[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mdescribe `customers`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `customers`[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mSHOW FIELDS FROM `employees`[0m
+  [4;35;1mSQL (1.8ms)[0m   [0mdescribe `employees`[0m
+  [4;36;1mSQL (1.6ms)[0m   [0;1mSHOW KEYS FROM `employees`[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+  [4;36;1mSQL (2.2ms)[0m   [0;1mdescribe `items`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `items`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW FIELDS FROM `items_studios`[0m
+  [4;35;1mSQL (1.5ms)[0m   [0mdescribe `items_studios`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `items_studios`[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mSHOW FIELDS FROM `sales`[0m
+  [4;36;1mSQL (2.1ms)[0m   [0;1mdescribe `sales`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `sales`[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mSHOW FIELDS FROM `sections`[0m
+  [4;35;1mSQL (1.5ms)[0m   [0mdescribe `sections`[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSHOW KEYS FROM `sections`[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mSHOW FIELDS FROM `studios`[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mdescribe `studios`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW KEYS FROM `studios`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mCustomer Columns (2.6ms)[0m   [0;1mSHOW FIELDS FROM `customers`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mCustomer Load (0.4ms)[0m   [0;1mSELECT `customers`.id FROM `customers` WHERE (LOWER(`customers`.`first_name`) = BINARY 'will' AND `customers`.last_name = 'Mernagh') LIMIT 1[0m
+  [4;35;1mCustomer Create (0.2ms)[0m   [0mINSERT INTO `customers` (`city`, `street_1`, `zip`, `street_2`, `last_name`, `phone`, `first_name`, `email`) VALUES('Malden', '190 Summer', '02148', '#405', 'Mernagh', '617-519-0352', 'Will', 'will@gmail.com')[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mCustomer Load (0.2ms)[0m   [0;1mSELECT `customers`.id FROM `customers` WHERE (LOWER(`customers`.`first_name`) = BINARY 'orla' AND `customers`.last_name = 'Mernagh') LIMIT 1[0m
+  [4;35;1mCustomer Create (0.2ms)[0m   [0mINSERT INTO `customers` (`city`, `street_1`, `zip`, `street_2`, `last_name`, `phone`, `first_name`, `email`) VALUES('Malden', '190 Summer', '02148', '#405', 'Mernagh', '617-519-0353', 'Orla', 'orla@gmail.com')[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mCustomer Load (0.2ms)[0m   [0;1mSELECT `customers`.id FROM `customers` WHERE (LOWER(`customers`.`first_name`) = BINARY 'bridget' AND `customers`.last_name = 'Connolly') LIMIT 1[0m
+  [4;35;1mCustomer Create (0.2ms)[0m   [0mINSERT INTO `customers` (`city`, `street_1`, `zip`, `street_2`, `last_name`, `phone`, `first_name`, `email`) VALUES('Medford', '10 Day', '02148', 'Unit 2', 'Connolly', '617-519-0354', 'Bridget', 'bridget@gmail.com')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mCustomer Load (0.2ms)[0m   [0;1mSELECT `customers`.id FROM `customers` WHERE (LOWER(`customers`.`first_name`) = BINARY 'éanna' AND `customers`.last_name = 'Mernagh') LIMIT 1[0m
+  [4;35;1mCustomer Create (0.1ms)[0m   [0mINSERT INTO `customers` (`city`, `street_1`, `zip`, `street_2`, `last_name`, `phone`, `first_name`, `email`) VALUES('Medford', '90 Main', '02148', 'Apt 5', 'Mernagh', '617-519-0355', 'Éanna', 'eanna@gmail.com')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mEmployee Columns (2.8ms)[0m   [0mSHOW FIELDS FROM `employees`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mEmployee Create (0.2ms)[0m   [0mINSERT INTO `employees` (`position`, `enabled`, `last_name`, `password`, `first_name`) VALUES('associate', NULL, 'Dalton', 'letmein', 'Jim')[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mEmployee Create (0.2ms)[0m   [0;1mINSERT INTO `employees` (`position`, `enabled`, `last_name`, `password`, `first_name`) VALUES('associate', NULL, 'Dunn', 'letmein', 'Sarah')[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mEmployee Create (0.1ms)[0m   [0mINSERT INTO `employees` (`position`, `enabled`, `last_name`, `password`, `first_name`) VALUES('associate', NULL, 'Young', 'letmein', 'Peter')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mEmployee Create (0.1ms)[0m   [0;1mINSERT INTO `employees` (`position`, `enabled`, `last_name`, `password`, `first_name`) VALUES('owner', NULL, 'Daly', 'letmein', 'Paul')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSection Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `sections`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mSection Create (0.2ms)[0m   [0;1mINSERT INTO `sections` (`name`, `location`) VALUES('New Releases', 'C01')[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSection Create (0.1ms)[0m   [0mINSERT INTO `sections` (`name`, `location`) VALUES('Comedy', 'C02')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSection Create (0.1ms)[0m   [0;1mINSERT INTO `sections` (`name`, `location`) VALUES('Award Winners', 'C03')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSection Create (0.1ms)[0m   [0mINSERT INTO `sections` (`name`, `location`) VALUES('Action', 'C04')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mItem Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mItem Create (0.2ms)[0m   [0mINSERT INTO `items` (`title`, `year`, `genre`, `item_type`) VALUES('(500) Days of Summer', '2009-01-01', 'Romance', 'Movie')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mItem Create (0.2ms)[0m   [0;1mINSERT INTO `items` (`title`, `year`, `genre`, `item_type`) VALUES('Where the Wild Things Are', '2009-01-01', 'Family', 'Movie')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mItem Create (0.2ms)[0m   [0mINSERT INTO `items` (`title`, `year`, `genre`, `item_type`) VALUES('Couples Retreat', '2009-01-01', 'Comedy', 'Movie')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mItem Create (0.2ms)[0m   [0;1mINSERT INTO `items` (`title`, `year`, `genre`, `item_type`) VALUES('Transformers', '2007-01-01', 'Action', 'Movie')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mCopy Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `copies`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mCopy Create (0.2ms)[0m   [0;1mINSERT INTO `copies` (`section_id`, `copy_type`, `item_id`, `sale_price`, `wholesale_price`) VALUES(1, 'BlueRay', 1, 9.99, 4.0)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCopy Create (0.3ms)[0m   [0mINSERT INTO `copies` (`section_id`, `copy_type`, `item_id`, `sale_price`, `wholesale_price`) VALUES(1, 'DVD', 2, 9.99, 4.0)[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mCopy Create (0.2ms)[0m   [0;1mINSERT INTO `copies` (`section_id`, `copy_type`, `item_id`, `sale_price`, `wholesale_price`) VALUES(2, 'BlueRay', 3, 9.99, 4.0)[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCopy Create (0.2ms)[0m   [0mINSERT INTO `copies` (`section_id`, `copy_type`, `item_id`, `sale_price`, `wholesale_price`) VALUES(4, 'DVD', 4, 9.99, 4.0)[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mCopy Create (0.1ms)[0m   [0;1mINSERT INTO `copies` (`section_id`, `copy_type`, `item_id`, `sale_price`, `wholesale_price`) VALUES(1, 'BlueRay', 1, 9.99, 4.0)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCopy Create (0.1ms)[0m   [0mINSERT INTO `copies` (`section_id`, `copy_type`, `item_id`, `sale_price`, `wholesale_price`) VALUES(1, 'DVD', 2, 9.99, 4.0)[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mCopy Create (0.1ms)[0m   [0;1mINSERT INTO `copies` (`section_id`, `copy_type`, `item_id`, `sale_price`, `wholesale_price`) VALUES(2, 'BlueRay', 3, 9.99, 4.0)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCopy Create (0.1ms)[0m   [0mINSERT INTO `copies` (`section_id`, `copy_type`, `item_id`, `sale_price`, `wholesale_price`) VALUES(4, 'DVD', 4, 9.99, 4.0)[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mCopy Create (0.1ms)[0m   [0;1mINSERT INTO `copies` (`section_id`, `copy_type`, `item_id`, `sale_price`, `wholesale_price`) VALUES(1, 'BlueRay', 1, 9.99, 4.0)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCopy Create (0.1ms)[0m   [0mINSERT INTO `copies` (`section_id`, `copy_type`, `item_id`, `sale_price`, `wholesale_price`) VALUES(1, 'DVD', 2, 9.99, 4.0)[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mCopy Create (0.1ms)[0m   [0;1mINSERT INTO `copies` (`section_id`, `copy_type`, `item_id`, `sale_price`, `wholesale_price`) VALUES(2, 'BlueRay', 3, 9.99, 4.0)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCopy Create (0.1ms)[0m   [0mINSERT INTO `copies` (`section_id`, `copy_type`, `item_id`, `sale_price`, `wholesale_price`) VALUES(4, 'DVD', 4, 9.99, 4.0)[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mCopy Create (0.1ms)[0m   [0;1mINSERT INTO `copies` (`section_id`, `copy_type`, `item_id`, `sale_price`, `wholesale_price`) VALUES(1, 'BlueRay', 1, 9.99, 4.0)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCopy Create (0.1ms)[0m   [0mINSERT INTO `copies` (`section_id`, `copy_type`, `item_id`, `sale_price`, `wholesale_price`) VALUES(1, 'DVD', 2, 9.99, 4.0)[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mCopy Create (0.2ms)[0m   [0;1mINSERT INTO `copies` (`section_id`, `copy_type`, `item_id`, `sale_price`, `wholesale_price`) VALUES(2, 'BlueRay', 3, 9.99, 4.0)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCopy Create (0.2ms)[0m   [0mINSERT INTO `copies` (`section_id`, `copy_type`, `item_id`, `sale_price`, `wholesale_price`) VALUES(4, 'DVD', 4, 9.99, 4.0)[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSale Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `sales`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSale Create (0.2ms)[0m   [0mINSERT INTO `sales` (`coupon_note`, `transaction_ammount`, `employee_id`, `transaction_type`, `transaction_date`, `copy_id`, `customer_id`) VALUES(NULL, 9.99, 1, 'sale', '2009-11-16 17:57:02', 1, 1)[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSale Create (0.2ms)[0m   [0;1mINSERT INTO `sales` (`coupon_note`, `transaction_ammount`, `employee_id`, `transaction_type`, `transaction_date`, `copy_id`, `customer_id`) VALUES(NULL, 9.99, 2, 'sale', '2009-11-16 17:57:02', 3, 2)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSale Create (0.5ms)[0m   [0mINSERT INTO `sales` (`coupon_note`, `transaction_ammount`, `employee_id`, `transaction_type`, `transaction_date`, `copy_id`, `customer_id`) VALUES(NULL, 9.99, 3, 'sale', '2009-11-16 17:57:02', 4, 3)[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSale Create (0.2ms)[0m   [0;1mINSERT INTO `sales` (`coupon_note`, `transaction_ammount`, `employee_id`, `transaction_type`, `transaction_date`, `copy_id`, `customer_id`) VALUES(NULL, 9.99, 4, 'sale', '2009-11-16 17:57:02', 7, 4)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mStudio Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `studios`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mStudio Create (0.2ms)[0m   [0;1mINSERT INTO `studios` (`name`, `category`) VALUES('Fox Searchlight', 'Hollywood')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mStudio Create (0.1ms)[0m   [0mINSERT INTO `studios` (`name`, `category`) VALUES('Warner Bros.', 'Hollywood')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mStudio Create (0.1ms)[0m   [0;1mINSERT INTO `studios` (`name`, `category`) VALUES('Universal Pictures', 'Hollywood')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mStudio Create (0.1ms)[0m   [0mINSERT INTO `studios` (`name`, `category`) VALUES('DreamWorks SKG', 'Hollywood')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mStudio Create (1.0ms)[0m   [0;1mINSERT INTO `studios` (`name`, `category`) VALUES('Canal+', 'Foreign')[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mStudio Create (0.2ms)[0m   [0mINSERT INTO `studios` (`name`, `category`) VALUES('IFC', 'independant')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mStudio Load (0.2ms)[0m   [0mSELECT * FROM `studios` WHERE (`studios`.`id` = 1) [0m
+  [4;36;1mItem Load (0.2ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.`id` = 1) [0m
+  [4;35;1mItem Load (0.1ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.`id` = 2) [0m
+  [4;36;1mItem Load (0.1ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.`id` = 3) [0m
+  [4;35;1mItem Load (0.1ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.`id` = 4) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mdescribe `items_studios`[0m
+  [4;36;1mitems_studios Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `items_studios`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mINSERT INTO `items_studios` (`studio_id`, `item_id`) VALUES (1, 1)[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (1.6ms)[0m   [0;1mdescribe `items_studios`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mINSERT INTO `items_studios` (`studio_id`, `item_id`) VALUES (1, 2)[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mdescribe `items_studios`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mINSERT INTO `items_studios` (`studio_id`, `item_id`) VALUES (1, 3)[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mdescribe `items_studios`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mINSERT INTO `items_studios` (`studio_id`, `item_id`) VALUES (1, 4)[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mCelebrity Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `celebrities`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCelebrity Create (0.3ms)[0m   [0mINSERT INTO `celebrities` (`position`, `dob`, `last_name`, `first_name`) VALUES('1010', '1965-02-19', 'Bay', 'Michael')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mCelebrity Create (0.2ms)[0m   [0;1mINSERT INTO `celebrities` (`position`, `dob`, `last_name`, `first_name`) VALUES('1000', '1971-04-16', 'Billingsley', 'Peter')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCelebrity Create (0.3ms)[0m   [0mINSERT INTO `celebrities` (`position`, `dob`, `last_name`, `first_name`) VALUES('1000', '1969-10-22', 'Jonze', 'Spike')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mCelebrity Create (0.2ms)[0m   [0;1mINSERT INTO `celebrities` (`position`, `dob`, `last_name`, `first_name`) VALUES('1000', NULL, 'Webb', 'Mark')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCelebrity Create (0.2ms)[0m   [0mINSERT INTO `celebrities` (`position`, `dob`, `last_name`, `first_name`) VALUES('0100', NULL, 'Deschanel', 'Zooey')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mCelebrity Create (0.1ms)[0m   [0;1mINSERT INTO `celebrities` (`position`, `dob`, `last_name`, `first_name`) VALUES('0100', NULL, 'LaBeouf', 'Shia')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCelebrity Create (0.1ms)[0m   [0mINSERT INTO `celebrities` (`position`, `dob`, `last_name`, `first_name`) VALUES('0100', NULL, 'Bateman', 'Jason')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mCelebrity Create (0.1ms)[0m   [0;1mINSERT INTO `celebrities` (`position`, `dob`, `last_name`, `first_name`) VALUES('0100', NULL, 'Records', 'Max')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCelebrity Create (0.2ms)[0m   [0mINSERT INTO `celebrities` (`position`, `dob`, `last_name`, `first_name`) VALUES('0010', NULL, 'Isbell', 'John')[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mCelebrity Create (0.2ms)[0m   [0;1mINSERT INTO `celebrities` (`position`, `dob`, `last_name`, `first_name`) VALUES('0010', NULL, 'Bates', 'Kenny')[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCelebrity Create (0.1ms)[0m   [0mINSERT INTO `celebrities` (`position`, `dob`, `last_name`, `first_name`) VALUES('0010', NULL, 'Doe', 'John')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mCelebrity Create (0.1ms)[0m   [0;1mINSERT INTO `celebrities` (`position`, `dob`, `last_name`, `first_name`) VALUES('0010', NULL, 'Doe', 'Jane')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mCelebrity Load (0.2ms)[0m   [0;1mSELECT * FROM `celebrities` WHERE (`celebrities`.`id` = 1) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mdescribe `celebrities_items`[0m
+  [4;35;1mcelebrities_items Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `celebrities_items`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mINSERT INTO `celebrities_items` (`position`, `item_id`, `celebrity_id`) VALUES ('1010', 1, 1)[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mCelebrity Load (0.2ms)[0m   [0;1mSELECT * FROM `celebrities` WHERE (`celebrities`.`id` = 2) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mdescribe `celebrities_items`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mINSERT INTO `celebrities_items` (`position`, `item_id`, `celebrity_id`) VALUES ('1000', 2, 2)[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mCelebrity Load (0.2ms)[0m   [0mSELECT * FROM `celebrities` WHERE (`celebrities`.`id` = 3) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (1.5ms)[0m   [0mdescribe `celebrities_items`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mINSERT INTO `celebrities_items` (`position`, `item_id`, `celebrity_id`) VALUES ('1000', 3, 3)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mCelebrity Load (0.2ms)[0m   [0;1mSELECT * FROM `celebrities` WHERE (`celebrities`.`id` = 4) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mdescribe `celebrities_items`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mINSERT INTO `celebrities_items` (`position`, `item_id`, `celebrity_id`) VALUES ('1000', 4, 4)[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mCelebrity Load (0.2ms)[0m   [0mSELECT * FROM `celebrities` WHERE (`celebrities`.`id` = 5) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mdescribe `celebrities_items`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mINSERT INTO `celebrities_items` (`position`, `item_id`, `celebrity_id`) VALUES ('0100', 4, 5)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mCelebrity Load (0.2ms)[0m   [0;1mSELECT * FROM `celebrities` WHERE (`celebrities`.`id` = 6) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mdescribe `celebrities_items`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mINSERT INTO `celebrities_items` (`position`, `item_id`, `celebrity_id`) VALUES ('0100', 3, 6)[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mCelebrity Load (0.2ms)[0m   [0mSELECT * FROM `celebrities` WHERE (`celebrities`.`id` = 7) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mdescribe `celebrities_items`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mINSERT INTO `celebrities_items` (`position`, `item_id`, `celebrity_id`) VALUES ('0100', 2, 7)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mCelebrity Load (0.2ms)[0m   [0;1mSELECT * FROM `celebrities` WHERE (`celebrities`.`id` = 8) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mdescribe `celebrities_items`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mINSERT INTO `celebrities_items` (`position`, `item_id`, `celebrity_id`) VALUES ('0100', 1, 8)[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mCelebrity Load (0.2ms)[0m   [0mSELECT * FROM `celebrities` WHERE (`celebrities`.`id` = 9) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mdescribe `celebrities_items`[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mINSERT INTO `celebrities_items` (`position`, `item_id`, `celebrity_id`) VALUES ('0010', 1, 9)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mCelebrity Load (0.2ms)[0m   [0;1mSELECT * FROM `celebrities` WHERE (`celebrities`.`id` = 10) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mdescribe `celebrities_items`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mINSERT INTO `celebrities_items` (`position`, `item_id`, `celebrity_id`) VALUES ('0010', 2, 10)[0m
+  [4;36;1mSQL (21.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mCelebrity Load (0.3ms)[0m   [0mSELECT * FROM `celebrities` WHERE (`celebrities`.`id` = 11) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mdescribe `celebrities_items`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mINSERT INTO `celebrities_items` (`position`, `item_id`, `celebrity_id`) VALUES ('0010', 3, 11)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mCelebrity Load (0.2ms)[0m   [0;1mSELECT * FROM `celebrities` WHERE (`celebrities`.`id` = 12) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mdescribe `celebrities_items`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mINSERT INTO `celebrities_items` (`position`, `item_id`, `celebrity_id`) VALUES ('0010', 4, 12)[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mItem Load (0.3ms)[0m   [0;1mSELECT * FROM `items` ORDER BY items.id DESC LIMIT 1[0m
+  [4;35;1mItem Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+  [4;36;1mcelebrities_items Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `celebrities_items`[0m
+  [4;35;1mCelebrity Load (0.4ms)[0m   [0mSELECT * FROM `celebrities` INNER JOIN `celebrities_items` ON `celebrities`.id = `celebrities_items`.celebrity_id WHERE (`celebrities_items`.item_id = 4 AND (celebrities_items.position REGEXP '1...')) [0m
+  [4;36;1mCelebrity Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `celebrities`[0m
+  [4;35;1mItem Load (0.4ms)[0m   [0mSELECT * FROM `items` LIMIT 1[0m
+  [4;36;1mCelebrity Load (0.4ms)[0m   [0;1mSELECT * FROM `celebrities` INNER JOIN `celebrities_items` ON `celebrities`.id = `celebrities_items`.celebrity_id WHERE (`celebrities_items`.item_id = 1 AND (celebrities_items.position REGEXP '1...')) [0m
+  [4;35;1mItem Load (0.3ms)[0m   [0mSELECT * FROM `items` LIMIT 1[0m
+  [4;36;1mcelebrities_items Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `celebrities_items`[0m
+  [4;35;1mCelebrity Load (1.1ms)[0m   [0mSELECT * FROM `celebrities` INNER JOIN `celebrities_items` ON `celebrities`.id = `celebrities_items`.celebrity_id WHERE (`celebrities_items`.item_id = 1 AND (celebrities_items.position REGEXP '.1..')) [0m
+  [4;36;1mItem Load (0.3ms)[0m   [0;1mSELECT * FROM `items` LIMIT 1[0m
+  [4;35;1mcelebrities_items Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `celebrities_items`[0m
+  [4;36;1mCelebrity Load (1.1ms)[0m   [0;1mSELECT * FROM `celebrities` INNER JOIN `celebrities_items` ON `celebrities`.id = `celebrities_items`.celebrity_id WHERE (`celebrities_items`.item_id = 1 AND (celebrities_items.position REGEXP '..1.')) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index to xml (for 127.0.0.1 at 2009-11-16 20:17:51) [GET]
+  [4;36;1mItem Load (7.2ms)[0m   [0;1mSELECT * FROM `items` [0m
+  [4;35;1mItem Columns (34.8ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+Completed in 183ms (View: 72, DB: 42) | 200 OK [http://localhost/items.xml]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (54.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mItem Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+  [4;36;1mItem Load (0.3ms)[0m   [0;1mSELECT * FROM `items` [0m
+  [4;35;1mItem Load (0.4ms)[0m   [0mSELECT * FROM `items` [0m
+  [4;36;1mItem Load (0.3ms)[0m   [0;1mSELECT * FROM `items` [0m
+  [4;35;1mItem Load (0.3ms)[0m   [0mSELECT * FROM `items` [0m
+  [4;36;1mItem Load (0.3ms)[0m   [0;1mSELECT * FROM `items` [0m
+  [4;35;1mItem Load (0.3ms)[0m   [0mSELECT * FROM `items` [0m
+  [4;36;1mItem Load (0.3ms)[0m   [0;1mSELECT * FROM `items` [0m
+  [4;35;1mItem Load (0.3ms)[0m   [0mSELECT * FROM `items` [0m
+  [4;36;1mItem Load (0.3ms)[0m   [0;1mSELECT * FROM `items` [0m
+  [4;35;1mItem Load (0.3ms)[0m   [0mSELECT * FROM `items` [0m
+  [4;36;1mItem Load (0.3ms)[0m   [0;1mSELECT * FROM `items` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index to xml (for 127.0.0.1 at 2009-11-16 20:23:17) [GET]
+  [4;36;1mItem Load (0.6ms)[0m   [0;1mSELECT * FROM `items` [0m
+  [4;35;1mItem Columns (46.3ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+Completed in 120ms (View: 53, DB: 47) | 200 OK [http://localhost/items.xml]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index to xml (for 127.0.0.1 at 2009-11-16 20:23:36) [GET]
+  [4;36;1mItem Load (0.4ms)[0m   [0;1mSELECT * FROM `items` [0m
+  [4;35;1mItem Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+Completed in 27ms (View: 8, DB: 3) | 200 OK [http://localhost/items.xml]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index to xml (for 127.0.0.1 at 2009-11-16 20:24:10) [GET]
+  [4;36;1mItem Load (0.6ms)[0m   [0;1mSELECT * FROM `items` [0m
+  [4;35;1mItem Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+Completed in 26ms (View: 6, DB: 3) | 200 OK [http://localhost/items.xml]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index to xml (for 127.0.0.1 at 2009-11-16 20:24:43) [GET]
+  [4;36;1mItem Load (0.5ms)[0m   [0;1mSELECT * FROM `items` [0m
+  [4;35;1mItem Columns (11.9ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+Completed in 178ms (View: 6, DB: 13) | 200 OK [http://localhost/items.xml]
+  [4;36;1mSQL (8.6ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index to xml (for 127.0.0.1 at 2009-11-16 20:25:05) [GET]
+  [4;36;1mItem Load (0.4ms)[0m   [0;1mSELECT * FROM `items` [0m
+  [4;35;1mItem Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+Completed in 26ms (View: 6, DB: 12) | 200 OK [http://localhost/items.xml]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index to xml (for 127.0.0.1 at 2009-11-16 20:25:31) [GET]
+  [4;36;1mItem Load (0.4ms)[0m   [0;1mSELECT * FROM `items` [0m
+  [4;35;1mItem Columns (32.0ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+Completed in 68ms (View: 23, DB: 33) | 200 OK [http://localhost/items.xml]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index to xml (for 127.0.0.1 at 2009-11-16 20:25:56) [GET]
+  [4;36;1mItem Load (0.4ms)[0m   [0;1mSELECT * FROM `items` [0m
+  [4;35;1mItem Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+Completed in 20ms (View: 7, DB: 2) | 200 OK [http://localhost/items.xml]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index to xml (for 127.0.0.1 at 2009-11-16 20:26:33) [GET]
+  [4;36;1mItem Load (0.4ms)[0m   [0;1mSELECT * FROM `items` [0m
+  [4;35;1mItem Columns (12.4ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+Completed in 193ms (View: 7, DB: 13) | 200 OK [http://localhost/items.xml]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (3.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index to xml (for 127.0.0.1 at 2009-11-16 20:26:46) [GET]
+  [4;36;1mItem Load (2.0ms)[0m   [0;1mSELECT * FROM `items` [0m
+  [4;35;1mItem Columns (15.7ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+Completed in 33ms (View: 5, DB: 21) | 200 OK [http://localhost/items.xml]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index to xml (for 127.0.0.1 at 2009-11-16 20:28:13) [GET]
+  [4;36;1mItem Load (19.4ms)[0m   [0;1mSELECT * FROM `items` [0m
+  [4;35;1mItem Columns (10.9ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+Completed in 53ms (View: 14, DB: 31) | 200 OK [http://localhost/items.xml]
+  [4;35;1mItem Load (0.3ms)[0m   [0mSELECT * FROM `items` [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index to xml (for 127.0.0.1 at 2009-11-16 20:32:19) [GET]
+  [4;36;1mItem Load (3.3ms)[0m   [0;1mSELECT * FROM `items` [0m
+  [4;35;1mItem Columns (8.0ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+Completed in 31ms (View: 6, DB: 12) | 200 OK [http://localhost/items.xml]
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index to xml (for 127.0.0.1 at 2009-11-16 20:33:13) [GET]
+  [4;36;1mItem Load (0.4ms)[0m   [0;1mSELECT * FROM `items` [0m
+  [4;35;1mItem Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+Completed in 17ms (View: 6, DB: 3) | 200 OK [http://localhost/items.xml]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index to xml (for 127.0.0.1 at 2009-11-16 20:34:14) [GET]
+  [4;36;1mItem Load (2.8ms)[0m   [0;1mSELECT * FROM `items` [0m
+  [4;35;1mItem Columns (3.7ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+Completed in 33ms (View: 6, DB: 7) | 200 OK [http://localhost/items.xml]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index to xml (for 127.0.0.1 at 2009-11-16 20:34:28) [GET]
+  [4;36;1mItem Load (8.4ms)[0m   [0;1mSELECT * FROM `items` [0m
+  [4;35;1mItem Columns (7.5ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+Completed in 32ms (View: 5, DB: 16) | 200 OK [http://localhost/items.xml]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index to xml (for 127.0.0.1 at 2009-11-16 20:34:39) [GET]
+  [4;36;1mItem Load (3.8ms)[0m   [0;1mSELECT * FROM `items` [0m
+  [4;35;1mItem Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+Completed in 143ms (View: 6, DB: 6) | 200 OK [http://localhost/items.xml]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index to xml (for 127.0.0.1 at 2009-11-16 20:34:56) [GET]
+  [4;36;1mItem Load (0.5ms)[0m   [0;1mSELECT * FROM `items` [0m
+  [4;35;1mItem Columns (5.2ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+Completed in 26ms (View: 6, DB: 6) | 200 OK [http://localhost/items.xml]
+  [4;36;1mItem Load (0.3ms)[0m   [0;1mSELECT * FROM `items` [0m
+  [4;35;1mItem Load (0.3ms)[0m   [0mSELECT * FROM `items` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (3.4ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index to xml (for 127.0.0.1 at 2009-11-16 20:35:40) [GET]
+  [4;36;1mItem Load (0.4ms)[0m   [0;1mSELECT * FROM `items` [0m
+  [4;35;1mItem Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+Completed in 17ms (View: 5, DB: 6) | 200 OK [http://localhost/items.xml]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index to xml (for 127.0.0.1 at 2009-11-16 20:36:03) [GET]
+  [4;36;1mItem Load (0.4ms)[0m   [0;1mSELECT * FROM `items` [0m
+  [4;35;1mItem Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+Completed in 18ms (View: 5, DB: 3) | 200 OK [http://localhost/items.xml]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index to xml (for 127.0.0.1 at 2009-11-16 20:36:39) [GET]
+  [4;36;1mItem Load (0.5ms)[0m   [0;1mSELECT * FROM `items` [0m
+  [4;35;1mItem Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+Completed in 128ms (View: 6, DB: 3) | 200 OK [http://localhost/items.xml]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (14.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index to xml (for 127.0.0.1 at 2009-11-16 20:37:31) [GET]
+  [4;36;1mItem Load (0.9ms)[0m   [0;1mSELECT * FROM `items` [0m
+  [4;35;1mItem Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+Completed in 29ms (View: 5, DB: 17) | 200 OK [http://localhost/items.xml]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index to xml (for 127.0.0.1 at 2009-11-16 20:38:24) [GET]
+  [4;36;1mItem Load (0.5ms)[0m   [0;1mSELECT * FROM `items` [0m
+  [4;35;1mItem Columns (25.4ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+Completed in 61ms (View: 26, DB: 26) | 200 OK [http://localhost/items.xml]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index to xml (for 127.0.0.1 at 2009-11-16 20:38:43) [GET]
+  [4;36;1mItem Load (3.2ms)[0m   [0;1mSELECT * FROM `items` [0m
+  [4;35;1mItem Columns (10.6ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+Completed in 30ms (View: 5, DB: 14) | 200 OK [http://localhost/items.xml]
+  [4;36;1mItem Load (0.3ms)[0m   [0;1mSELECT * FROM `items` [0m
+  [4;35;1mCopy Load (0.8ms)[0m   [0mSELECT `copies`.* FROM `copies` WHERE (`copies`.item_id IN (1,2,3,4)) [0m
+  [4;36;1mCopy Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `copies`[0m
+  [4;35;1mItem Load (0.3ms)[0m   [0mSELECT * FROM `items` [0m
+  [4;36;1mCopy Load (0.2ms)[0m   [0;1mSELECT `copies`.* FROM `copies` WHERE (`copies`.item_id IN (1,2,3,4)) [0m
+/!\ FAILSAFE /!\  Mon Nov 16 21:00:31 -0500 2009
+  Status: 500 Internal Server Error
+  uninitialized constant MysqlCompat::MysqlRes
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:440:in `load_missing_constant'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:80:in `const_missing'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/mysql_adapter.rb:9:in `define_all_hashes_method!'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/mysql_adapter.rb:66:in `mysql_connection'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `send'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `new_connection'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:245:in `checkout_new_connection'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:188:in `checkout'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `loop'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `checkout'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/monitor.rb:242:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:183:in `checkout'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:98:in `connection'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:326:in `retrieve_connection'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_specification.rb:123:in `retrieve_connection'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_specification.rb:115:in `connection'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:9:in `cache'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:28:in `call'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/params_parser.rb:15:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/session/cookie_store.rb:93:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/failsafe.rb:26:in `call'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:114:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/reloader.rb:34:in `run'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:108:in `call'
+    /Library/Ruby/Gems/1.8/gems/rails-2.3.4/lib/rails/rack/static.rb:31:in `call'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+    /Library/Ruby/Gems/1.8/gems/rails-2.3.4/lib/rails/rack/log_tailer.rb:17:in `call'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/chunked.rb:15:in `call'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:64:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:34:in `run'
+    /Library/Ruby/Gems/1.8/gems/rails-2.3.4/lib/commands/server.rb:111
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    ./script/server:3
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mItem Load (0.3ms)[0m   [0;1mSELECT * FROM `items` ORDER BY items.id DESC LIMIT 1[0m
+  [4;35;1mItem Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `items`[0m

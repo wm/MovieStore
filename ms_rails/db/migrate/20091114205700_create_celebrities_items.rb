@@ -3,6 +3,7 @@ class CreateCelebritiesItems < ActiveRecord::Migration
     create_table :celebrities_items, :id => false do |t|
       t.integer :item_id
       t.integer :celebrity_id
+      t.string :position
     end
   end
 

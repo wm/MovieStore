@@ -1,4 +1,5 @@
 development:
+  host: will-mernaghs-macbook-pro-15.local
   adapter: mysql
   encoding: utf8
   database: movie_store

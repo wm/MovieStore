@@ -1,7 +1,9 @@
 
 class Customer < ActiveRecord::Base
   validates_presence_of :first_name
-  validates_presence_of :last_name   
+  validates_presence_of :last_name 
+  validates_uniqueness_of :first_name, :scope => :last_name, :case_sensitive => false, :message => " and last name combination already taken"
+  
   
   has_many :sales
   has_many :copies, :through => :sales

@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(:version => 20091114205700) do
   create_table "celebrities_items", :id => false, :force => true do |t|
     t.integer "item_id"
     t.integer "celebrity_id"
+    t.string  "position"
   end
 
   create_table "copies", :force => true do |t|
