@@ -30,7 +30,9 @@ class SalesController < ApplicationController
 		  @customer = @customers[@customers_table.selectedRow]
 			puts "Customer = #{@customer.last_name} is about to buy a copy of #{@item.title}"
 	  end
-		check_customer_selected && check_item_being_sold		
+		if check_customer_selected && check_item_being_sold		
+		  #do_sale
+		end
 	end
 	
 	# 
@@ -44,7 +46,9 @@ class SalesController < ApplicationController
 		  @customer = @customers[@customers_table.selectedRow]
   		puts "Customer = #{@customer.last_name} is about to return a copy of #{@item.title}"	
 		end		
-		check_customer_selected	&& check_item_being_returned
+		if check_customer_selected	&& check_item_being_returned
+		  #do_return
+		end
 	end
 
   # 
