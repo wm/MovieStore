@@ -116,7 +116,7 @@ class CatalogController < ApplicationController
 	  conditions = {}
 		search_fields = [:title, :genre, :year, :directors, :actors]
 		search_fields.each do |sf|
-		  conditions[sf] = self.send(sf).stringValue unless self.send(sf).stringValue.blank?
+		  conditions[sf] = self.send(sf).stringValue unless self.send(sf).nil? || self.send(sf).stringValue == ""
 		end
 		(conditions.empty?) ? nil : conditions
 	end

@@ -16,6 +16,9 @@
 		6615567910AB8BE700FACE3B /* application_controller.rb in Resources */ = {isa = PBXBuildFile; fileRef = 6615567810AB8BE700FACE3B /* application_controller.rb */; };
 		6615569110AB982700FACE3B /* customers_controller.rb in Resources */ = {isa = PBXBuildFile; fileRef = 6615569010AB982700FACE3B /* customers_controller.rb */; };
 		661CA98910B8A020005A2207 /* copy.rb in Resources */ = {isa = PBXBuildFile; fileRef = 661CA98810B8A020005A2207 /* copy.rb */; };
+		667E04F410B9C26500A396F2 /* data_base_model.rb in Resources */ = {isa = PBXBuildFile; fileRef = 667E04F310B9C26500A396F2 /* data_base_model.rb */; };
+		667E061E10BA165500A396F2 /* sales_controller.rb in Resources */ = {isa = PBXBuildFile; fileRef = 667E061D10BA165500A396F2 /* sales_controller.rb */; };
+		667E06DE10BA45F700A396F2 /* sale.rb in Resources */ = {isa = PBXBuildFile; fileRef = 667E06DD10BA45F700A396F2 /* sale.rb */; };
 		66B02EDB10ABC726003DBE8C /* customer.rb in Resources */ = {isa = PBXBuildFile; fileRef = 66B02EDA10ABC726003DBE8C /* customer.rb */; };
 		66B02EED10ACE926003DBE8C /* database.yml in Resources */ = {isa = PBXBuildFile; fileRef = 66B02EEC10ACE926003DBE8C /* database.yml */; };
 		66BD0D4F10AF1902007FC410 /* catalog_controller.rb in Resources */ = {isa = PBXBuildFile; fileRef = 66BD0D4E10AF1902007FC410 /* catalog_controller.rb */; };
@@ -35,6 +38,9 @@
 		6615567810AB8BE700FACE3B /* application_controller.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = application_controller.rb; sourceTree = "<group>"; };
 		6615569010AB982700FACE3B /* customers_controller.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = customers_controller.rb; sourceTree = "<group>"; };
 		661CA98810B8A020005A2207 /* copy.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = copy.rb; sourceTree = "<group>"; };
+		667E04F310B9C26500A396F2 /* data_base_model.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = data_base_model.rb; sourceTree = "<group>"; };
+		667E061D10BA165500A396F2 /* sales_controller.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = sales_controller.rb; sourceTree = "<group>"; };
+		667E06DD10BA45F700A396F2 /* sale.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = sale.rb; sourceTree = "<group>"; };
 		66B02EDA10ABC726003DBE8C /* customer.rb */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = text.script.ruby; path = customer.rb; sourceTree = "<group>"; tabWidth = 2; usesTabs = 1; };
 		66B02EEC10ACE926003DBE8C /* database.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = database.yml; sourceTree = "<group>"; };
 		66BD0D4E10AF1902007FC410 /* catalog_controller.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = catalog_controller.rb; sourceTree = "<group>"; };
@@ -141,6 +147,7 @@
 				66BD0D4E10AF1902007FC410 /* catalog_controller.rb */,
 				6615569010AB982700FACE3B /* customers_controller.rb */,
 				6615567810AB8BE700FACE3B /* application_controller.rb */,
+				667E061D10BA165500A396F2 /* sales_controller.rb */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -151,6 +158,8 @@
 				66B02EDA10ABC726003DBE8C /* customer.rb */,
 				66BD0DFC10B230C9007FC410 /* item.rb */,
 				661CA98810B8A020005A2207 /* copy.rb */,
+				667E04F310B9C26500A396F2 /* data_base_model.rb */,
+				667E06DD10BA45F700A396F2 /* sale.rb */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -219,6 +228,9 @@
 				66BD0D4F10AF1902007FC410 /* catalog_controller.rb in Resources */,
 				66BD0DFD10B230C9007FC410 /* item.rb in Resources */,
 				661CA98910B8A020005A2207 /* copy.rb in Resources */,
+				667E04F410B9C26500A396F2 /* data_base_model.rb in Resources */,
+				667E061E10BA165500A396F2 /* sales_controller.rb in Resources */,
+				667E06DE10BA45F700A396F2 /* sale.rb in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

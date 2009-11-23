@@ -8,12 +8,13 @@
 require 'osx/cocoa'
 
 class ApplicationController < OSX::NSObject
-  ib_outlets :customers_box, :catalog_box
+  ib_outlets :customers_box, :catalog_box, :sales_returns_box
 
   #ib_action :hide_boxes
   def hide_boxes
+	  @sales_returns_box.setHidden_(true)
     @customers_box.setHidden_(true)
-	@catalog_box.setHidden_(true)
+	  @catalog_box.setHidden_(true)
   end
   
   # Recieves notification when window closes 
