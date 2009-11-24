@@ -18,13 +18,15 @@ class Customer < DataBaseModel
 
 	# Called when Customer.new is issued
 	#
-  def initialize(cells)
-    cells.each_key do |key|
-	    self.send("#{key}=",cells[key])
-	  end
+  def initialize(cells=nil)
+	  unless cells.nil?
+      cells.each_key do |key|
+	      self.send("#{key}=",cells[key])
+	    end
+		end
   end
 	
-  def Customer.new_with_form(customer_form)
+  def Customer.enter_with_form(customer_form)
     customer = Customer.new
 		customer.first_name = customer_form.cellAtIndex_(0).stringValue
 		customer.last_name = customer_form.cellAtIndex_(1).stringValue
@@ -33,7 +35,8 @@ class Customer < DataBaseModel
 		customer.city = customer_form.cellAtIndex_(4).stringValue
 		customer.zip = customer_form.cellAtIndex_(5).stringValue
 		customer.phone = customer_form.cellAtIndex_(6).stringValue
-		customer.email = customer_form.cellAtIndex_(7).stringValue
+		customer.email = customer_form.cellAtIndex_(7).stringValue		
+		customer.id = customer_form.cellAtIndex_(8).stringValue
 		customer
 	end
 	
@@ -41,23 +44,29 @@ class Customer < DataBaseModel
 	# If the user already exists then it just updates that user.
 	#
 	def save
-	  create
+	  if self.id.nil? || self.id.empty?
+		  puts "Creating new customer" #DEBUG
+	    create
+		else
+		  puts "Editing customer with id = #{self.id}" #DEBUG		
+		  update
+		end
 	end
 	
 	def update
-	  esc_id = Customer.mysql.escape_string(self.id)
+	  esc_id = Customer.mysql.escape_string(self.id.to_s)
 	  sets = ""
 		attrs = [:first_name,:last_name,:street_1,:street_2,:city,:zip,:email,:phone]
 		index = 0
 
 		attrs.each do |key|
 		  index = index + 1
-			value = Customer.mysql.escape_string(self.send("#{key}"))
+			value = Customer.mysql.escape_string(self.send("#{key}").to_s)
 			next if value.nil? || value.to_s == ""
 			sets = sets + key.to_s + " = '" + value + "'," 
 		end
 		
-		sets = sets.gsub(/,$/,'') + ")"
+		sets = sets.gsub(/,$/,'')
 		query = UPDATE_CUSTOMERS + sets + "WHERE id = #{esc_id}"
 
 		puts query #DEBUG
@@ -73,7 +82,7 @@ class Customer < DataBaseModel
 		index = 0
 		attrs.each do |key|
 		  index = index + 1
-			value = Customer.mysql.escape_string(self.send("#{key}"))
+			value = Customer.mysql.escape_string(self.send("#{key}").to_s)
 			next if value.nil? || value.to_s == ""
 			insert_attrs = insert_attrs + key.to_s + ','
 			insert_values = insert_values + "'" + value + "',"

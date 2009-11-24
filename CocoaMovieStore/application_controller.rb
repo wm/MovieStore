@@ -22,4 +22,12 @@ class ApplicationController < OSX::NSObject
   def windowWillClose(notification)
     OSX::NSApp.terminate(self)
   end
+	
+	protected
+	
+	def clean_backtrace(exception)
+    if backtrace = exception.backtrace
+			backtrace.join("\n    ") + "\n\n"
+		end
+	end
 end
