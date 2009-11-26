@@ -12,7 +12,7 @@ class CustomersController < ApplicationController
 	attr_accessor :customers, :customer
   ib_outlets :customers_box, :new_customer_box, :edit_customer_box, :new_edit_box, :cust_box_label
   ib_outlets :first_name_field, :last_name_field, :find_customer_box, :customer_form
-	ib_outlets :new_cust_error_label, :info_box, :customers_table
+	ib_outlets :new_cust_error_label, :info_box, :customers_table, :status_label
   
 	def initialize
 	  @customers = nil
@@ -36,7 +36,7 @@ class CustomersController < ApplicationController
 	    if customer.save
 	      puts "CustomerController: Saved Customer with id #{customer.id}" #DEBUG
 		    reset_customers
-		    @cust_box_label.setStringValue("Successfully added new customer to the system")
+		    @cust_box_label.setStringValue("Successfully saved Customer with id #{customer.id}")
   	  else
 	      puts "CustomerController: failed to save customer" #DEBUG
 		    error_text = ''
@@ -46,9 +46,7 @@ class CustomersController < ApplicationController
 		    @new_cust_error_label.setStringValue(error_text)
 	    end
 	  rescue Exception => e
-		  puts e  #DEBUG - ERRORS
-	    puts clean_backtrace(e)  #DEBUG - ERRORS
-	    OSX::NSApp.terminate(self)
+			model_exception e,@status_label
 	  end
   end
   
@@ -67,16 +65,20 @@ class CustomersController < ApplicationController
 	  @info_box.setStringValue("")
 	  f_name = @first_name_field.stringValue
 	  l_name = @last_name_field.stringValue
-		if !f_name.empty? && !l_name.empty?
-		  @customers = Customer.find_by_name(l_name,f_name)
-		elsif !f_name.empty?
-		  @customers = Customer.find_by_name(nil,f_name)
-		elsif !l_name.empty?
-		  @customers = Customer.find_by_name(l_name,nil)
-		else
-		  @customers = nil
+		begin
+			if !f_name.empty? && !l_name.empty?
+				@customers = Customer.find_by_name(l_name,f_name)
+			elsif !f_name.empty?
+				@customers = Customer.find_by_name(nil,f_name)
+			elsif !l_name.empty?
+				@customers = Customer.find_by_name(l_name,nil)
+			else
+				@customers = nil
+			end
+		  @info_box.setStringValue("No Customer found.") if @customers.nil? || @customers.empty?
+		rescue Exception => e
+		  model_exception e,@status_label
 		end
-		@info_box.setStringValue("No Customer found.") if @customers.nil? || @customers.empty?
 		@customers_table.reloadData
   end
 	

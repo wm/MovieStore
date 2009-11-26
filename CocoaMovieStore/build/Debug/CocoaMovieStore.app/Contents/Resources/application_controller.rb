@@ -25,6 +25,15 @@ class ApplicationController < OSX::NSObject
 	
 	protected
 	
+	# Handles exceptions thrown from the Model. These will be most
+	# likely MySQL related.
+	#
+	def model_exception(e)
+	  puts e
+	end
+	
+	# Prints the backtrace in a nice way
+	#
 	def clean_backtrace(exception)
     if backtrace = exception.backtrace
 			backtrace.join("\n    ") + "\n\n"

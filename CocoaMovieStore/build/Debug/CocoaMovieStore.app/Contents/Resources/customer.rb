@@ -40,6 +40,15 @@ class Customer < DataBaseModel
 		customer
 	end
 	
+	# Combines the first and last names
+	#
+	def full_name
+	  name = ""
+	  name = name + "#{first_name}" if !first_name.nil? || !first_name.empty?
+	  name = name + " #{last_name}" if !last_name.nil? || !last_name.empty?
+		name.gsub(/^ /,'')
+	end
+			
 	# Inserts the current values of a user instance into the table
 	# If the user already exists then it just updates that user.
 	#

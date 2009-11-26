@@ -13,17 +13,18 @@
 		4DDCA70A0ACC9A6100E082CE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		4DDCA70C0ACC9A6100E082CE /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 		4DDCA70D0ACC9A6100E082CE /* RubyCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8F5E24E03AEB6EC03A81C6F /* RubyCocoa.framework */; };
+		6605A6AD10BF1B1100211E11 /* employee.rb in Resources */ = {isa = PBXBuildFile; fileRef = 6605A6AC10BF1B1100211E11 /* employee.rb */; };
 		6615567910AB8BE700FACE3B /* application_controller.rb in Resources */ = {isa = PBXBuildFile; fileRef = 6615567810AB8BE700FACE3B /* application_controller.rb */; };
 		6615569110AB982700FACE3B /* customers_controller.rb in Resources */ = {isa = PBXBuildFile; fileRef = 6615569010AB982700FACE3B /* customers_controller.rb */; };
 		661CA98910B8A020005A2207 /* copy.rb in Resources */ = {isa = PBXBuildFile; fileRef = 661CA98810B8A020005A2207 /* copy.rb */; };
+		664EAE1510BCE89700C1A368 /* Preferences.xib in Resources */ = {isa = PBXBuildFile; fileRef = 664EAE1410BCE89700C1A368 /* Preferences.xib */; };
+		664EAE2410BCEAAE00C1A368 /* app_delegate.rb in Resources */ = {isa = PBXBuildFile; fileRef = 664EAE2310BCEAAE00C1A368 /* app_delegate.rb */; };
 		667E04F410B9C26500A396F2 /* data_base_model.rb in Resources */ = {isa = PBXBuildFile; fileRef = 667E04F310B9C26500A396F2 /* data_base_model.rb */; };
 		667E061E10BA165500A396F2 /* sales_controller.rb in Resources */ = {isa = PBXBuildFile; fileRef = 667E061D10BA165500A396F2 /* sales_controller.rb */; };
 		667E06DE10BA45F700A396F2 /* sale.rb in Resources */ = {isa = PBXBuildFile; fileRef = 667E06DD10BA45F700A396F2 /* sale.rb */; };
 		66B02EDB10ABC726003DBE8C /* customer.rb in Resources */ = {isa = PBXBuildFile; fileRef = 66B02EDA10ABC726003DBE8C /* customer.rb */; };
-		66B02EED10ACE926003DBE8C /* database.yml in Resources */ = {isa = PBXBuildFile; fileRef = 66B02EEC10ACE926003DBE8C /* database.yml */; };
 		66BD0D4F10AF1902007FC410 /* catalog_controller.rb in Resources */ = {isa = PBXBuildFile; fileRef = 66BD0D4E10AF1902007FC410 /* catalog_controller.rb */; };
 		66BD0DFD10B230C9007FC410 /* item.rb in Resources */ = {isa = PBXBuildFile; fileRef = 66BD0DFC10B230C9007FC410 /* item.rb */; };
-		66BD0E6A10B23722007FC410 /* mysql.o in Frameworks */ = {isa = PBXBuildFile; fileRef = 66BD0E6910B23722007FC410 /* mysql.o */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,17 +36,18 @@
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		4DDCA7110ACC9A6100E082CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4DDCA7120ACC9A6100E082CE /* CocoaMovieStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CocoaMovieStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6605A6AC10BF1B1100211E11 /* employee.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = employee.rb; sourceTree = "<group>"; };
 		6615567810AB8BE700FACE3B /* application_controller.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = application_controller.rb; sourceTree = "<group>"; };
 		6615569010AB982700FACE3B /* customers_controller.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = customers_controller.rb; sourceTree = "<group>"; };
 		661CA98810B8A020005A2207 /* copy.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = copy.rb; sourceTree = "<group>"; };
+		664EAE1410BCE89700C1A368 /* Preferences.xib */ = {isa = PBXFileReference; explicitFileType = file.xib; path = Preferences.xib; sourceTree = "<group>"; };
+		664EAE2310BCEAAE00C1A368 /* app_delegate.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = app_delegate.rb; sourceTree = "<group>"; };
 		667E04F310B9C26500A396F2 /* data_base_model.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = data_base_model.rb; sourceTree = "<group>"; };
 		667E061D10BA165500A396F2 /* sales_controller.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = sales_controller.rb; sourceTree = "<group>"; };
 		667E06DD10BA45F700A396F2 /* sale.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = sale.rb; sourceTree = "<group>"; };
 		66B02EDA10ABC726003DBE8C /* customer.rb */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = text.script.ruby; path = customer.rb; sourceTree = "<group>"; tabWidth = 2; usesTabs = 1; };
-		66B02EEC10ACE926003DBE8C /* database.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = database.yml; sourceTree = "<group>"; };
 		66BD0D4E10AF1902007FC410 /* catalog_controller.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = catalog_controller.rb; sourceTree = "<group>"; };
 		66BD0DFC10B230C9007FC410 /* item.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = item.rb; sourceTree = "<group>"; };
-		66BD0E6910B23722007FC410 /* mysql.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; path = mysql.o; sourceTree = "<group>"; };
 		E8F5E24E03AEB6EC03A81C6F /* RubyCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RubyCocoa.framework; path = /Library/Frameworks/RubyCocoa.framework; sourceTree = "<absolute>"; };
 		E8F5E25803AEB7C803A81C6F /* rb_main.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = rb_main.rb; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -57,7 +59,6 @@
 			files = (
 				4DDCA70C0ACC9A6100E082CE /* Cocoa.framework in Frameworks */,
 				4DDCA70D0ACC9A6100E082CE /* RubyCocoa.framework in Frameworks */,
-				66BD0E6A10B23722007FC410 /* mysql.o in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,8 +103,6 @@
 		29B97314FDCFA39411CA2CEA /* CocoaMovieStore */ = {
 			isa = PBXGroup;
 			children = (
-				66BD0E6910B23722007FC410 /* mysql.o */,
-				66B02EEC10ACE926003DBE8C /* database.yml */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
@@ -148,6 +147,7 @@
 				6615569010AB982700FACE3B /* customers_controller.rb */,
 				6615567810AB8BE700FACE3B /* application_controller.rb */,
 				667E061D10BA165500A396F2 /* sales_controller.rb */,
+				664EAE2310BCEAAE00C1A368 /* app_delegate.rb */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -155,11 +155,13 @@
 		66B02ED710ABC6DC003DBE8C /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				664EAE1410BCE89700C1A368 /* Preferences.xib */,
 				66B02EDA10ABC726003DBE8C /* customer.rb */,
 				66BD0DFC10B230C9007FC410 /* item.rb */,
 				661CA98810B8A020005A2207 /* copy.rb */,
 				667E04F310B9C26500A396F2 /* data_base_model.rb */,
 				667E06DD10BA45F700A396F2 /* sale.rb */,
+				6605A6AC10BF1B1100211E11 /* employee.rb */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -224,13 +226,15 @@
 				6615567910AB8BE700FACE3B /* application_controller.rb in Resources */,
 				6615569110AB982700FACE3B /* customers_controller.rb in Resources */,
 				66B02EDB10ABC726003DBE8C /* customer.rb in Resources */,
-				66B02EED10ACE926003DBE8C /* database.yml in Resources */,
 				66BD0D4F10AF1902007FC410 /* catalog_controller.rb in Resources */,
 				66BD0DFD10B230C9007FC410 /* item.rb in Resources */,
 				661CA98910B8A020005A2207 /* copy.rb in Resources */,
 				667E04F410B9C26500A396F2 /* data_base_model.rb in Resources */,
 				667E061E10BA165500A396F2 /* sales_controller.rb in Resources */,
 				667E06DE10BA45F700A396F2 /* sale.rb in Resources */,
+				664EAE1510BCE89700C1A368 /* Preferences.xib in Resources */,
+				664EAE2410BCEAAE00C1A368 /* app_delegate.rb in Resources */,
+				6605A6AD10BF1B1100211E11 /* employee.rb in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

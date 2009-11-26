@@ -21,7 +21,11 @@ class CatalogController < ApplicationController
 	# Finds all items in order to populate the catalog table.
 	#
   def initialize()
-	  @items = Item.find_with_conditions(nil)
+	  begin
+	    @items = Item.find_with_conditions(nil)
+		rescue Exception => e
+		  model_exception(e)
+		end
 		@copies = nil
   end
   
@@ -30,10 +34,12 @@ class CatalogController < ApplicationController
 	#
   ib_action :search
   def search
-    puts "Starting search..." #DEBUG
-		@items = Item.find_with_conditions(gen_conditions)
-	  @items_table.reloadData
-	  puts "Finished searching..." #DEBUG
+	  begin
+			@items = Item.find_with_conditions(gen_conditions)
+			@items_table.reloadData
+		rescue Exception => e
+		  model_exception(e)
+		end
   end
 	
 	# This method needs to be implemented by the dataSource of an NSTableView.

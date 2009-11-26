@@ -36,7 +36,7 @@ class CustomersController < ApplicationController
 	    if customer.save
 	      puts "CustomerController: Saved Customer with id #{customer.id}" #DEBUG
 		    reset_customers
-		    @cust_box_label.setStringValue("Successfully added new customer to the system")
+		    @cust_box_label.setStringValue("Successfully saved Customer with id #{customer.id}")
   	  else
 	      puts "CustomerController: failed to save customer" #DEBUG
 		    error_text = ''

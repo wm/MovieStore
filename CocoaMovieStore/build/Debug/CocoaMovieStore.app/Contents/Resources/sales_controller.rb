@@ -9,7 +9,7 @@ require 'osx/cocoa'
 
 class SalesController < ApplicationController
  
-	attr_accessor :customers, :copy, :item, :customer
+	attr_accessor :customers, :copy, :item, :customer, :last_sale
 	ib_outlets :first_name_field, :last_name_field, :item_id_field
 	ib_outlets :price_field, :format_field, :title_field, :type_field	
   ib_outlets :sale_box, :info_box, :customers_table, :notification_label
@@ -20,40 +20,45 @@ class SalesController < ApplicationController
 		@item = nil
 	end
   
-	# 
+	# Record the sale if correct information is provided.
+	#
   ib_action :make_sale
   def make_sale
-	  puts "Sale" #DEBUG
-		if @customers_table.selectedRow < 0
-		  @customer = nil
-		else
+		if check_customer_selected && check_item_being_sold	
 		  @customer = @customers[@customers_table.selectedRow]
-			puts "Customer = #{@customer.last_name} is about to buy a copy of #{@item.title}"
-	  end
-		if check_customer_selected && check_item_being_sold		
-		  #do_sale
+			sale = Sale.new({:copy_id => @copy.id,:customer_id => @customer.id,:transaction_type => "sale", :transaction_ammount => @copy.sale_price, :employee_id => 1})
+			if sale.save
+			  message = "#{@customer.full_name} successfully purchased a copy of #{@item.title} for $#{@copy.sale_price}"
+			  reset_sales_stuff
+		    @notification_label.setStringValue(message)
+			else
+			  @notification_label.setStringValue("#{sale.error_message}")
+			end
 		end
 	end
 	
+	# Record the return if correct information is provided.
 	# 
 	ib_action :make_return
-  def make_return
-	  puts "Return" #DEBUG
-	  puts "Sale" #DEBUG
-		if @customers_table.selectedRow < 0 || @item.nil?
-		  @customer = nil
-		else
-		  @customer = @customers[@customers_table.selectedRow]
-  		puts "Customer = #{@customer.last_name} is about to return a copy of #{@item.title}"	
-		end		
+  def make_return	
 		if check_customer_selected	&& check_item_being_returned
-		  #do_return
+		  @customer = @customers[@customers_table.selectedRow]
+			sale = Sale.new({:copy_id => @copy.id,:customer_id => @customer.id, :transaction_type => "return", :transaction_ammount => @copy.sale_price, :employee_id => 1})
+			if sale.save
+        message = "{@customer.full_name} successfully returned a copy of #{@item.title}"
+			  reset_sales_stuff
+	  	  @notification_label.setStringValue(message)
+			else
+			  @notification_label.setStringValue("#{sale.error_message}")
+			end
 		end
 	end
 
-  # 
+  # Search for Customer and product
+	#
 	ib_action :search
   def search
+	  @notification_label.setStringValue("")
 	  find_product
 	  find_customer
 		@customers_table.reloadData
@@ -133,6 +138,7 @@ class SalesController < ApplicationController
 		  @format_field.setStringValue("")
 	  	@title_field.setStringValue("")
   		@type_field.setStringValue("")
+			@copy = nil
 		end
   end
 	
@@ -167,7 +173,7 @@ class SalesController < ApplicationController
 	
 	def check_item_being_sold
 	  if @item.nil?
-		  @notification_label.setStringValue("Please a product number.")
+		  @notification_label.setStringValue("Please provide a product number.")
 			return false
 		else
 		  return true
@@ -176,11 +182,11 @@ class SalesController < ApplicationController
 	
 	def check_item_being_returned
 	  if @item.nil?
-		  @notification_label.setStringValue("Please a product number.")
+		  @notification_label.setStringValue("Please provide a product number.")
 			return false
 		else
-		  last_sale = Sale.find_last_by_copy_id(@copy.id)
-			if last_sale.nil? || last_sale.transaction_type != "sale"
+		  @last_sale = Sale.find_last_by_copy_id(@copy.id)
+			if @last_sale.nil? || @last_sale.transaction_type != "sale"
 			  @notification_label.setStringValue("This product was not sold!!!.")
 				return false
 			else
@@ -188,6 +194,27 @@ class SalesController < ApplicationController
 		    return true
 			end
 		end
+	end
+	
+	private
+	
+	# Reset to starting state
+	#
+	def reset_sales_stuff
+	  @last_sale = nil
+		@sale = nil
+		@item = nil
+		@copy = nil
+		@customers = nil
+		@first_name_field.setStringValue("")
+		@last_name_field.setStringValue("")
+		@item_id_field.setStringValue("")
+		@price_field.setStringValue("")
+		@format_field.setStringValue("")
+		@title_field.setStringValue("")
+		@type_field.setStringValue("")
+		@notification_label.setStringValue("")	
+		@customers_table.reloadData	
 	end
 
 end
