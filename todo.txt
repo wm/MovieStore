@@ -1,0 +1,6 @@
+Need to complet sale/return
+Need to add customer numbers/passwords
+Need to time out login
+Need to close register
+
+

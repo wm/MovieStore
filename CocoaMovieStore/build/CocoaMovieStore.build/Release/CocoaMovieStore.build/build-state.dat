@@ -1,7 +1,7 @@
 TCocoaMovieStore
 v7
 r0
-t280969811.100657
+t280973323.263970
 cCheck dependencies
 cProcessInfoPlistFile /Users/wmernagh/Documents/comp115/Project/MovieStore/CocoaMovieStore/build/Release/CocoaMovieStore.app/Contents/Info.plist Info.plist
 cStripNIB /Users/wmernagh/Documents/comp115/Project/MovieStore/CocoaMovieStore/English.lproj/MainMenu.nib
@@ -98,9 +98,9 @@ t1259124677
 s470
 
 N/Users/wmernagh/Documents/comp115/Project/MovieStore/CocoaMovieStore/application_controller.rb
-c000000004B0F0ACC00000000000007F2
-t1259277004
-s2034
+c000000004B0F187D0000000000000818
+t1259280509
+s2072
 
 N/Users/wmernagh/Documents/comp115/Project/MovieStore/CocoaMovieStore/build/CocoaMovieStore.build/Release/CocoaMovieStore.build/Objects-normal/i386/CocoaMovieStore
 t1259131161
@@ -129,7 +129,7 @@ t1259131089
 s5024
 
 N/Users/wmernagh/Documents/comp115/Project/MovieStore/CocoaMovieStore/build/Release/CocoaMovieStore.app
-t1259277011
+t1259280511
 s102
 
 N/Users/wmernagh/Documents/comp115/Project/MovieStore/CocoaMovieStore/build/Release/CocoaMovieStore.app.dSYM
@@ -165,8 +165,8 @@ t1259129680
 s470
 
 N/Users/wmernagh/Documents/comp115/Project/MovieStore/CocoaMovieStore/build/Release/CocoaMovieStore.app/Contents/Resources/application_controller.rb
-t1259277011
-s2034
+t1259280511
+s2072
 
 N/Users/wmernagh/Documents/comp115/Project/MovieStore/CocoaMovieStore/build/Release/CocoaMovieStore.app/Contents/Resources/catalog_controller.rb
 t1259261746
@@ -213,9 +213,9 @@ t1259276277
 s6670
 
 N/Users/wmernagh/Documents/comp115/Project/MovieStore/CocoaMovieStore/catalog_controller.rb
-c000000004B0ECF0A0000000000000D45
-t1259261706
-s3397
+c000000004B1027580000000000000D46
+t1259349848
+s3398
 
 N/Users/wmernagh/Documents/comp115/Project/MovieStore/CocoaMovieStore/copy.rb
 c000000004B0A0E9A000000000000060D
@@ -286,7 +286,7 @@ s859
 
 CCheck dependencies
 r0
-lSLF07#2@18"Check dependencies280969811#280969811#0(0"0(0#1#0"4300885448#0"0#
+lSLF07#2@18"Check dependencies280973323#280973323#0(0"0(0#1#0"4300885448#0"0#
 
 CCompileC build/CocoaMovieStore.build/Release/CocoaMovieStore.build/Objects-normal/i386/main.o /Users/wmernagh/Documents/comp115/Project/MovieStore/CocoaMovieStore/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
 s280823888.141198
@@ -341,13 +341,13 @@ xapp_delegate.rb
 lSLF07#2@20"Copy app_delegate.rb280822480#280822480#0(0"0(0#0#84"/Users/wmernagh/Documents/comp115/Project/MovieStore/CocoaMovieStore/app_delegate.rb4300885448#452"    cd /Users/wmernagh/Documents/comp115/Project/MovieStore/CocoaMovieStore    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/wmernagh/Documents/comp115/Project/MovieStore/CocoaMovieStore/app_delegate.rb /Users/wmernagh/Documents/comp115/Project/MovieStore/CocoaMovieStore/build/Release/CocoaMovieStore.app/Contents/Resources0#
 
 CCpResource build/Release/CocoaMovieStore.app/Contents/Resources/application_controller.rb application_controller.rb
-s280969811.090092
-e280969811.096631
+s280973311.596473
+e280973311.604323
 r1
 xCpResource
 xbuild/Release/CocoaMovieStore.app/Contents/Resources/application_controller.rb
 xapplication_controller.rb
-lSLF07#2@30"Copy application_controller.rb280969811#280969811#0(0"0(0#0#94"/Users/wmernagh/Documents/comp115/Project/MovieStore/CocoaMovieStore/application_controller.rb4300885448#462"    cd /Users/wmernagh/Documents/comp115/Project/MovieStore/CocoaMovieStore    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/wmernagh/Documents/comp115/Project/MovieStore/CocoaMovieStore/application_controller.rb /Users/wmernagh/Documents/comp115/Project/MovieStore/CocoaMovieStore/build/Release/CocoaMovieStore.app/Contents/Resources0#
+lSLF07#2@30"Copy application_controller.rb280973311#280973311#0(0"0(0#0#94"/Users/wmernagh/Documents/comp115/Project/MovieStore/CocoaMovieStore/application_controller.rb4300885448#462"    cd /Users/wmernagh/Documents/comp115/Project/MovieStore/CocoaMovieStore    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/wmernagh/Documents/comp115/Project/MovieStore/CocoaMovieStore/application_controller.rb /Users/wmernagh/Documents/comp115/Project/MovieStore/CocoaMovieStore/build/Release/CocoaMovieStore.app/Contents/Resources0#
 
 CCpResource build/Release/CocoaMovieStore.app/Contents/Resources/catalog_controller.rb catalog_controller.rb
 s280954546.440599
@@ -505,10 +505,10 @@ x/Users/wmernagh/Documents/comp115/Project/MovieStore/CocoaMovieStore/English.lp
 lSLF07#2@35"StripNIB English.lproj/MainMenu.nib280969748#280969748#0(0"0(0#0#95"/Users/wmernagh/Documents/comp115/Project/MovieStore/CocoaMovieStore/English.lproj/MainMenu.nib4300885448#395"    cd /Users/wmernagh/Documents/comp115/Project/MovieStore/CocoaMovieStore    /Developer/usr/bin/ibtool --strip /Users/wmernagh/Documents/comp115/Project/MovieStore/CocoaMovieStore/build/Release/CocoaMovieStore.app/Contents/Resources/English.lproj/MainMenu.nib --output-format human-readable-text /Users/wmernagh/Documents/comp115/Project/MovieStore/CocoaMovieStore/English.lproj/MainMenu.nib0#
 
 CTouch /Users/wmernagh/Documents/comp115/Project/MovieStore/CocoaMovieStore/build/Release/CocoaMovieStore.app
-s280969811.097272
-e280969811.100614
+s280973311.604928
+e280973311.608284
 r1
 xTouch
 x/Users/wmernagh/Documents/comp115/Project/MovieStore/CocoaMovieStore/build/Release/CocoaMovieStore.app
-lSLF07#2@108"Touch /Users/wmernagh/Documents/comp115/Project/MovieStore/CocoaMovieStore/build/Release/CocoaMovieStore.app280969811#280969811#0(0"0(0#0#0"4300885448#201"    cd /Users/wmernagh/Documents/comp115/Project/MovieStore/CocoaMovieStore    /usr/bin/touch -c /Users/wmernagh/Documents/comp115/Project/MovieStore/CocoaMovieStore/build/Release/CocoaMovieStore.app0#
+lSLF07#2@108"Touch /Users/wmernagh/Documents/comp115/Project/MovieStore/CocoaMovieStore/build/Release/CocoaMovieStore.app280973311#280973311#0(0"0(0#0#0"4300885448#201"    cd /Users/wmernagh/Documents/comp115/Project/MovieStore/CocoaMovieStore    /usr/bin/touch -c /Users/wmernagh/Documents/comp115/Project/MovieStore/CocoaMovieStore/build/Release/CocoaMovieStore.app0#
 

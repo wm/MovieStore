@@ -73,7 +73,7 @@ class CatalogController < ApplicationController
 			else
 				return nil
 			end
-  	elsif view = @copies_table
+  	elsif view == @copies_table
 			case col.identifier.to_s	
 			when "SECTION"
 				return @copies[row].section_name

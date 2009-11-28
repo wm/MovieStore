@@ -34,6 +34,7 @@ class ApplicationController < OSX::NSObject
 					@login_box.setHidden_(true)
 					@button_box.setHidden_(false)
 					$employee_id = employee.id
+					@status_label.setStringValue("")
 				else
 					@login_label.setStringValue("Invalid credentials")
 				end
