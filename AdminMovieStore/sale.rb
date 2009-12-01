@@ -54,10 +54,9 @@ class Sale < DataBaseModel
     return data
   end
 	
-	#
+	# Save 
 	#
 	def save
-	  puts @copy_id + " " + @transaction_type + " " + @transaction_ammount + " " + @employee_id.to_s
 		if create
 		  @error_message = nil
 	  else

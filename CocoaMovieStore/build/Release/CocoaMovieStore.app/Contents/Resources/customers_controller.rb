@@ -30,15 +30,12 @@ class CustomersController < ApplicationController
 	#
   ib_action :create_customer
   def create_customer
-    puts("Create New Customer") #DEBUG
 		customer = Customer.enter_with_form(@customer_form)
 	  begin
 	    if customer.save
-	      puts "CustomerController: Saved Customer with id #{customer.id}" #DEBUG
 		    reset_customers
 		    @cust_box_label.setStringValue("Successfully saved Customer with id #{customer.id}")
   	  else
-	      puts "CustomerController: failed to save customer" #DEBUG
 		    error_text = ''
 		    customer.errors.full_messages.each do |error_msg|
 	  	    error_text += error_msg + "\n"

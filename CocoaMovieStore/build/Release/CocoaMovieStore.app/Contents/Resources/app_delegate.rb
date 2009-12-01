@@ -17,6 +17,5 @@ class AppDelegate < OSX::NSObject
     end 
 		@wc.showWindow(self) 
 		@wc.window.makeKeyWindow
-	  puts "Will launch preference panel"
 	end
 end

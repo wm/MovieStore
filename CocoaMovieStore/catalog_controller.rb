@@ -46,7 +46,6 @@ class CatalogController < ApplicationController
 	# This controller to the TableView as its dataSource.
 	#
 	def tableViewSelectionDidChange(notification)
-	  puts "Getting copies for item_id '#{@items_table.selectedRow}'..." #DEBUG
 		if @items_table.selectedRow < 0
 		  @copies = nil
 	  else
@@ -54,7 +53,6 @@ class CatalogController < ApplicationController
 		  @copies = Copy.find_by_item_id(item_id) 
 		end
 	  @copies_table.reloadData
-	  puts "Got copies..." #DEBUG
 	end
 	
 	# This method needs to be implemented by the dataSource of an NSTableView.

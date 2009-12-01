@@ -52,10 +52,8 @@ class Employee < DataBaseModel
 	#
 	def save
 	  if self.id.nil? || self.id.empty?
-		  puts "Creating new employee" #DEBUG
 	    create
 		else
-		  puts "Editing employee with id = #{self.id}" #DEBUG		
 		  update
 		end
 	end
@@ -120,9 +118,8 @@ class Employee < DataBaseModel
     end		
 		if find_query
   		res = Employee.mysql.query(find_query) 
-	  	puts find_query
+	  	puts find_query #DEBUG
       res.each_hash do |h|
-		    puts h
 	      data << Employee.new(h)
       end
 		end

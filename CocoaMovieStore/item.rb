@@ -18,7 +18,7 @@ class Item < DataBaseModel
 	  data = nil
 		item_id = Item.mysql.escape_string(item_id)
 		find_query = FIND_ITEMS_QUERY + " WHERE id = #{item_id}"
-		puts find_query
+		puts find_query #DEBUG
 	  
 		res = Item.mysql.query(find_query)
     res.each_hash do |h|
@@ -52,7 +52,7 @@ class Item < DataBaseModel
 		end
 		
 		# DEBUGING
-		puts find_query
+		puts find_query #DEBUG
 	  
 		res = Item.mysql.query(find_query)
     res.each_hash do |h|

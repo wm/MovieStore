@@ -55,10 +55,8 @@ class Customer < DataBaseModel
 	#
 	def save
 	  if self.id.nil? || self.id.empty?
-		  puts "Creating new customer" #DEBUG
 	    create
 		else
-		  puts "Editing customer with id = #{self.id}" #DEBUG		
 		  update
 		end
 	end
@@ -123,9 +121,8 @@ class Customer < DataBaseModel
     end		
 		if find_query
   		res = Customer.mysql.query(find_query) 
-	  	puts find_query
+	  	puts find_query #DEBUG
       res.each_hash do |h|
-		    puts h
 	      data << Customer.new(h)
       end
 		end
@@ -141,10 +138,9 @@ class Customer < DataBaseModel
 			find_query = FIND_CUSTOMERS + " WHERE customers.id = #{esc_cust_id}"
     end		
 		if find_query
-	  	puts find_query
+	  	puts find_query #DEBUG
   		res = Customer.mysql.query(find_query) 
       res.each_hash do |h|
-		    puts h
 	      data = Customer.new(h)
       end
 		end

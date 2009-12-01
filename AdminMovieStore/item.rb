@@ -1,4 +1,4 @@
-#
+#!/usr/bin/ruby
 #  item.rb
 #  CocoaMovieStore
 #
@@ -68,7 +68,7 @@ class Item < DataBaseModel
 	  data = nil
 		item_id = Item.mysql.escape_string(item_id)
 		find_query = FIND_ITEMS_QUERY + " WHERE id = #{item_id}"
-		puts find_query
+		puts find_query #DEBUG
 	  
 		res = Item.mysql.query(find_query)
     res.each_hash do |h|
@@ -99,8 +99,8 @@ class Item < DataBaseModel
 				find_query = find_query + ")"				
 			end
 		end
-		# DEBUGING
-		puts find_query
+		
+		puts find_query # DEBUGING
 	  
 		res = Item.mysql.query(find_query)
     res.each_hash do |h|
@@ -110,8 +110,10 @@ class Item < DataBaseModel
     data
   end
 	
+	# Delete a record
+	#
 	def delete
-	  puts DELETE_ITEM + "WHERE items.id = #{@id}"
+	  puts DELETE_ITEM + "WHERE items.id = #{@id}" #DEBUG
 		Item.mysql.query(DELETE_ITEM + "WHERE items.id = #{@id}")
 	end
   
@@ -122,34 +124,5 @@ class Item < DataBaseModel
 	    self.send("#{key}=",cells[key])
 	  end
   end
-  
-  private
-	
-	
-	# Convert the actor and director portions of conditions to a clause of an SQL query.
-	# Remove the actor and director search fields from the conditions
-	#
-	# Returns the generated filtering clause as a string or nil if no actor/director values
-	#
-	def Item.actor_director_query(conditions)
-	  return nil if conditions.nil?
-		query = nil
-		
-		conditions.each do |key,value|
-			if (!conditions[:actors].nil?  && !conditions[:directors].nil?)
-        # Saftey First :)			
-        a_last_name = Item.mysql.escape_string(conditions.delete(:actors).to_s)				
-			  d_last_name = Item.mysql.escape_string(conditions.delete(:directors).to_s)
-				query = " AND item_id IN ( SELECT item_id from celebrities_items WHERE celebrity_id IN ( select id FROM celebrities where (last_name LIKE '%#{d_last_name}%' AND position REGEXP '1...'))) AND item_id IN ( SELECT item_id from celebrities_items WHERE celebrity_id IN (  select id FROM celebrities where (last_name LIKE '%#{a_last_name}%' AND position REGEXP '.1..') ) )"
-			elsif !conditions[:actors].nil?
-			  a_last_name = Item.mysql.escape_string(conditions.delete(:actors).to_s)
-				query = " AND item_id IN ( SELECT item_id from celebrities_items WHERE celebrity_id IN (select id FROM celebrities where last_name LIKE '%#{a_last_name}%' AND position REGEXP '.1..') )"
-			elsif !conditions[:directors].nil?
-        d_last_name = Item.mysql.escape_string(conditions.delete(:directors).to_s)
-				query = " AND item_id IN ( SELECT item_id from celebrities_items WHERE celebrity_id IN (select id FROM celebrities where last_name LIKE '%#{d_last_name}%' AND position REGEXP '1...') )"
-			end
-		end
-		
-    query
-	end
+
 end

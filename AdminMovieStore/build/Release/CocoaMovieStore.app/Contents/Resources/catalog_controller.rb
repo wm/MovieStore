@@ -150,7 +150,7 @@ class CatalogController < ApplicationController
 	#
 	def gen_conditions
 	  conditions = {}
-		search_fields = [:title, :genre, :year, :directors, :actors, :id]
+		search_fields = [:title, :genre, :year, :id]
 		search_fields.each do |sf|
 		  conditions[sf] = self.send(sf).stringValue unless self.send(sf).nil? || self.send(sf).stringValue == ""
 		end

@@ -104,7 +104,7 @@ class Copy < DataBaseModel
 	  section_id_found = nil
 	  section_name = Copy.mysql.escape_string(@section_name.to_s)
 	  sql_query = FIND_SECTION + " WHERE name = '#{section_name}'"
-		puts sql_query
+		puts sql_query  #DEBUG
 	  res = Copy.mysql.query(sql_query)
     res.each_hash do |h|
 	    section_id_found = h['id']
@@ -117,8 +117,10 @@ class Copy < DataBaseModel
 		section_id_found
 	end
 	
+	# Delete a record
+	#
 	def delete
-	  puts DELETE_COPY + "WHERE copies.id = #{@id}"
+	  puts DELETE_COPY + "WHERE copies.id = #{@id}"  #DEBUG
 		Copy.mysql.query(DELETE_COPY + "WHERE copies.id = #{@id}")
 	end
 	
