@@ -30,6 +30,7 @@ class Customer < DataBaseModel
     customer = Customer.new
 		customer.first_name = customer_form.cellAtIndex_(0).stringValue
 		customer.last_name = customer_form.cellAtIndex_(1).stringValue
+		return nil if customer.first_name.empty? || customer.last_name.empty?		
 		customer.street_1 = customer_form.cellAtIndex_(2).stringValue
 		customer.street_2 = customer_form.cellAtIndex_(3).stringValue
 		customer.city = customer_form.cellAtIndex_(4).stringValue

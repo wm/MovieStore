@@ -54,7 +54,7 @@ class Sale < DataBaseModel
 	
 	# Creating 
 	def create
-	  @transaction_date = Time.now.strftime("%Y-%M-%d")
+	  @transaction_date = Time.now.strftime("%Y-%m-%d")
 	  insert_attrs = "("
 		insert_values = " VALUES ("
 		attrs = [:id, :customer_id, :copy_id, :employee_id, :transaction_date, :coupon_note, :transaction_ammount, :transaction_type]

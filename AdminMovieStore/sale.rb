@@ -11,7 +11,7 @@ require 'data_base_model'
 class Sale < DataBaseModel
   FIND_ALL = "SELECT * FROM Sales"
 	SAVE_SALE = "INSERT INTO Sales "
-	SALES_ITEM_COPY_CUST = "SELECT sales.id,title,year,genre,copy_type,sale_price AS price,wholesale_price,transaction_date,copies.id AS copy_id FROM sales,copies,items WHERE copies.id = sales.copy_id AND items.id = copies.item_id "
+	SALES_ITEM_COPY_CUST = "SELECT DISTINCT sales.id,title,year,genre,copy_type,sale_price AS price,wholesale_price,transaction_date,copies.id AS copy_id FROM sales,copies,items WHERE copies.id = sales.copy_id AND items.id = copies.item_id"
 
 	attr_accessor :id, :customer_id, :copy_id, :employee_id, :transaction_date
 	attr_accessor :coupon_note, :transaction_ammount, :transaction_type
@@ -24,6 +24,10 @@ class Sale < DataBaseModel
     cells.each_key do |key|
 	    self.send("#{key}=",cells[key])
 	  end
+		#if self.transaction_type == "return"
+  	#	self.send("price=",(-1 * self.price.to_f)) 
+		#end
+			
   end
 	
   # Returns the last sale object that has copy_id = copy_id.
@@ -45,12 +49,26 @@ class Sale < DataBaseModel
   def Sale.find_by_customer_id(customer_id)
     data = []
 		customer_id = Sale.mysql.escape_string(customer_id)
-		sql_query = SALES_ITEM_COPY_CUST + " AND customer_id = #{customer_id} ORDER BY transaction_date"
-		puts sql_query #DEBUG
-		res = Sale.mysql.query(sql_query)
-    res.each_hash do |h|
+		
+		# Find sales
+		sql_query_sales = SALES_ITEM_COPY_CUST + " AND transaction_type = 'sale' AND customer_id = #{customer_id} ORDER BY transaction_date"
+		puts sql_query_sales #DEBUG
+		res_sales = Sale.mysql.query(sql_query_sales)
+    res_sales.each_hash do |h|
 	    data << Sale.new(h)
     end
+		
+		# Find returns
+		sql_query_rets = SALES_ITEM_COPY_CUST + " AND transaction_type = 'return' AND customer_id = #{customer_id} ORDER BY transaction_date"
+		puts sql_query_rets #DEBUG
+		res_rets = Sale.mysql.query(sql_query_rets)
+    res_rets.each_hash do |h|
+			current = Sale.new(h)
+			current.price = (-1 * current.price.to_f).to_s
+			data << current
+    end
+
+
     return data
   end
 	

@@ -13,8 +13,8 @@ require 'osx/cocoa'
 class CatalogController < ApplicationController
   
   attr_accessor :items, :copies
-	attr_accessor :title, :genre, :year, :directors, :actors
-	ib_outlets :title, :genre, :year, :directors, :actors
+	attr_accessor :title, :genre, :year
+	ib_outlets :title, :genre, :year
   ib_outlets :catalog_box, :items_table, :copies_table, :status_label
 
   # Called upon instantiation.
@@ -118,7 +118,7 @@ class CatalogController < ApplicationController
 	#
 	def gen_conditions
 	  conditions = {}
-		search_fields = [:title, :genre, :year, :directors, :actors]
+		search_fields = [:title, :genre, :year]
 		search_fields.each do |sf|
 		  conditions[sf] = self.send(sf).stringValue unless self.send(sf).nil? || self.send(sf).stringValue == ""
 		end

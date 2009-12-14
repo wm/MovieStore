@@ -32,6 +32,7 @@ class ItemsController < ApplicationController
   ib_action :search
   def search
 	  @info_box.setStringValue("")
+	  @status_label.setStringValue("")
 	  begin
 			@items = Item.find_with_conditions(gen_conditions)
 			if @items.nil? || @items.length < 1
@@ -56,10 +57,12 @@ class ItemsController < ApplicationController
 		@genre.setStringValue("")
 		@year.setStringValue("")
 		@id.setStringValue("")
+	  @status_label.setStringValue("")
   end
 	
 	ib_action :delete_item
 	def delete_item
+	  @status_label.setStringValue("")
 		if @copies.nil? || @copies.length < 1
 		  item = @items[@items_table.selectedRow]
 			begin
@@ -75,6 +78,7 @@ class ItemsController < ApplicationController
 	
 	ib_action :delete_copy
 	def delete_copy
+	  @status_label.setStringValue("")
 	  copy = @copies[@copies_table.selectedRow]
 		begin
   		copy.delete
@@ -89,6 +93,7 @@ class ItemsController < ApplicationController
 	
 	ib_action :add_new_item
 	def add_new_item
+	  @status_label.setStringValue("")
 	  if @title.stringValue.empty? || @year.stringValue.empty? || @genre.stringValue.empty?
 		  @info_box.setStringValue("All 3 fields need to be filled to create a new Item")
 	  else
@@ -105,8 +110,8 @@ class ItemsController < ApplicationController
 	
 	ib_action :update_selected_item
 	def update_selected_item
-	  puts "here"
-	  if @title.stringValue.empty? || @year.stringValue.empty? || @genre.stringValue.empty?
+	  @status_label.setStringValue("")
+		if @title.stringValue.empty? || @year.stringValue.empty? || @genre.stringValue.empty?
 		  @info_box.setStringValue("All 3 fields need to be filled to create a new Item")
 	  else
 		  @info_box.setStringValue("")
@@ -125,10 +130,12 @@ class ItemsController < ApplicationController
 	
 	ib_action :add_new_copy
 	def add_new_copy
+	  @status_label.setStringValue("")
+		@copy_info_box.setStringValue("")		
+		@info_box.setStringValue("")
 	  if @copy_type.stringValue.empty? || @section_name.stringValue.empty? || @wholesale_price.stringValue.empty?|| @sale_price.stringValue.empty?
 		  @copy_info_box.setStringValue("All 4 fields need to be filled to create a new Copy")
 	  else
-		  @copy_info_box.setStringValue("")
 		  copy = Copy.new(:item_id => @items[@items_table.selectedRow].id, :copy_type => @copy_type.stringValue, :section_name => @section_name.stringValue, :wholesale_price => @wholesale_price.stringValue, :sale_price => @sale_price.stringValue)
 			begin
 			  copy.create_new_copy
@@ -143,11 +150,11 @@ class ItemsController < ApplicationController
 	
 	ib_action :update_selected_copy
 	def update_selected_copy
-	  puts "here"
+	  @copy_info_box.setStringValue("")
+	  @status_label.setStringValue("")		
 	  if @copy_type.stringValue.empty? || @section_name.stringValue.empty? || @wholesale_price.stringValue.empty?|| @sale_price.stringValue.empty?
 		  @copy_info_box.setStringValue("All 4 fields need to be filled to update the selected Copy")
 	  else
-		  @info_box.setStringValue("")
 			copy = @copies[@copies_table.selectedRow]
 			copy.wholesale_price = @wholesale_price.stringValue
 			copy.sale_price = @sale_price.stringValue

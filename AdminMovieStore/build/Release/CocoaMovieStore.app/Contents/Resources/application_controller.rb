@@ -30,10 +30,15 @@ class ApplicationController < OSX::NSObject
 	  if !@login_username.stringValue.nil? && !@login_username.stringValue.empty?
 		  begin
   		  employee = Employee.find_by_id(@login_username.stringValue.to_i)
-				if @login_password.stringValue == employee.password
-					@login_box.setHidden_(true)
-					@button_box.setHidden_(false)
-					@status_label.setStringValue("")
+				if @login_password.stringValue == employee.password 
+				  if employee.position == "owner"
+						@login_box.setHidden_(true)
+						@button_box.setHidden_(false)
+						@status_label.setStringValue("")
+						@login_label.setStringValue("")
+					else
+					  @login_label.setStringValue("You are not authorized to use this application.")
+					end
 					$employee_id = employee.id
 				else
 					@login_label.setStringValue("Invalid credentials")
@@ -52,8 +57,8 @@ class ApplicationController < OSX::NSObject
 		@catalog_box.setHidden_(true)
 		@sales_returns_box.setHidden_(true)
 		
-		@login_username.setStringValue("")
 		@login_password.setStringValue("")
+		@login_username.setStringValue("")
 	  @login_box.setHidden_(false)
 		
 		@button_box.setHidden_(true)

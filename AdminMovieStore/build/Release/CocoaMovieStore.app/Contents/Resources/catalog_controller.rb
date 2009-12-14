@@ -93,7 +93,8 @@ class CatalogController < ApplicationController
 			when "ID"
 				return @customers[row].id
 			when "FNAME"
-				return @customers[row].first_name
+				return "* " + @customers[row].first_name if @customers[row].transaction_type == "return"
+				return @customers[row].first_name if @customers[row].transaction_type != "return"				
 			when "LNAME"
 				return @customers[row].last_name
 			when "STREET1"

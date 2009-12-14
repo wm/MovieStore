@@ -98,7 +98,7 @@ class Copy < DataBaseModel
     return data
   end
   
-	# find the section id based on the section_name
+	# find the section id based on the section_name (create it if it does not yet exist)
 	#
 	def get_section_id
 	  section_id_found = nil
@@ -109,6 +109,8 @@ class Copy < DataBaseModel
     res.each_hash do |h|
 	    section_id_found = h['id']
     end
+		
+		# Create a section for if it does not exist
 		if section_id_found.nil?
 		  insert_section_name = Copy.mysql.escape_string(section_name)
 		  res = Copy.mysql.query(INSERT_SECTION + "(name) VALUES ('#{insert_section_name}')")

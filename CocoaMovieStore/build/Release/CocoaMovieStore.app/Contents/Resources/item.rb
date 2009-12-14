@@ -9,7 +9,7 @@
 require 'data_base_model'
 
 class Item < DataBaseModel
-	FIND_ALL_QUERY = "SELECT DISTINCT Items.id,title,year,genre FROM Items,Celebrities,Celebrities_Items WHERE Items.id = Celebrities_Items.item_id AND Celebrities.id = Celebrities_Items.celebrity_id"
+	FIND_ALL_QUERY = "SELECT DISTINCT Items.id,title,year,genre FROM Items"
 	FIND_ITEMS_QUERY = "SELECT * FROM Items"
 
   attr_accessor :id, :title, :year, :genre, :item_type
@@ -33,12 +33,12 @@ class Item < DataBaseModel
 		find_query = FIND_ALL_QUERY
 		
 		# Update the query to filter by actors and/or directors
-		ad_query = Item.actor_director_query(conditions)
-		find_query = find_query + "#{ad_query}" unless ad_query.nil?
+		#ad_query = Item.actor_director_query(conditions)
+		#find_query = find_query + "#{ad_query}" unless ad_query.nil?
 		
 		# Update the query to filter on genre, year, and title
 		unless conditions.nil? || conditions.empty?
-		  find_query = find_query + " AND ("
+		  find_query = find_query + " WHERE ("
 			index = 0
 		  
 			conditions.each do |key,value|

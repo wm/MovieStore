@@ -27,13 +27,17 @@ class SalesController < ApplicationController
 		if check_customer_selected && check_item_being_sold	
 		  @customer = @customers[@customers_table.selectedRow]
 			sale = Sale.new({:copy_id => @copy.id,:customer_id => @customer.id,:transaction_type => "sale", :transaction_ammount => @copy.sale_price, :employee_id => $employee_id})
-			if sale.save
-			  message = "#{@customer.full_name} successfully purchased a copy of #{@item.title} for $#{@copy.sale_price}"
-			  reset_sales_stuff
-		    @notification_label.setStringValue(message)
-			else
-			  @notification_label.setStringValue("#{sale.error_message}")
-			end
+      begin
+				if sale.save
+					message = "#{@customer.full_name} successfully purchased a copy of #{@item.title} for $#{@copy.sale_price}"
+					reset_sales_stuff
+					@notification_label.setStringValue(message)
+				else
+					@notification_label.setStringValue("#{sale.error_message}")
+				end
+			rescue Exception => e
+			  model_exception e,@status_label
+	    end
 		end
 	end
 	
@@ -44,13 +48,17 @@ class SalesController < ApplicationController
 		if check_customer_selected	&& check_item_being_returned
 		  @customer = @customers[@customers_table.selectedRow]
 			sale = Sale.new({:copy_id => @copy.id,:customer_id => @customer.id, :transaction_type => "return", :transaction_ammount => @copy.sale_price, :employee_id => $employee_id})
-			if sale.save
-        message = "{@customer.full_name} successfully returned a copy of #{@item.title}"
-			  reset_sales_stuff
-	  	  @notification_label.setStringValue(message)
-			else
-			  @notification_label.setStringValue("#{sale.error_message}")
-			end
+			begin
+				if sale.save
+					message = "#{@customer.full_name} successfully returned a copy of #{@item.title}"
+					reset_sales_stuff
+					@notification_label.setStringValue(message)
+				else
+					@notification_label.setStringValue("#{sale.error_message}")
+				end
+			rescue Exception => e
+			  model_exception e,@status_label
+	    end
 		end
 	end
 
@@ -125,6 +133,12 @@ class SalesController < ApplicationController
 	end
 	
 	def find_product
+	  @price_field.setStringValue("")
+		@format_field.setStringValue("")
+		@title_field.setStringValue("")
+		@type_field.setStringValue("")
+		@status_label.setStringValue("")
+		@copy = nil
 	  copy_id = @item_id_field.stringValue
 	  unless copy_id.nil? || copy_id.empty?
 		  begin
@@ -142,12 +156,6 @@ class SalesController < ApplicationController
 				reset_sales_stuff
 				model_exception e,@status_label
 			end
-		else
-  		@price_field.setStringValue("")
-		  @format_field.setStringValue("")
-	  	@title_field.setStringValue("")
-  		@type_field.setStringValue("")
-			@copy = nil
 		end
   end
 	

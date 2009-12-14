@@ -126,7 +126,7 @@ class Employee < DataBaseModel
 		data
 	end
 	
-	# Querys for employees based on the first_name and last_name
+	# Querys for employees based on the id
 	#
 	def Employee.find_by_id(id)
 	  data = nil

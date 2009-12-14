@@ -15,11 +15,10 @@ class DataBaseModel
 	# The MySQL query connection
 	#
   def DataBaseModel.mysql
-	  mysql_prefs = [{ :property => "Host", :value => "localhost"}, 
-								  { :property => "User", :value => "wmernagh"}, 
-								  { :property => "Password", :value => "water7932"},
-								  { :property => "Database", :value => "movie_store"},
-								  { :property => "TestProp", :value => "this is a test"}
+	  mysql_prefs = [{ :property => "Host", :value => ""}, 
+								  { :property => "User", :value => ""}, 
+								  { :property => "Password", :value => ""},
+								  { :property => "Database", :value => ""}
 							   ]
 		@defaults = OSX::NSUserDefaults.standardUserDefaults
 		@defaults.registerDefaults(:mysql_properties => mysql_prefs)

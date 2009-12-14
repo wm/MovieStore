@@ -11,7 +11,7 @@ require 'data_base_model'
 class Customer < DataBaseModel
 	FIND_CUSTOMERS = "SELECT * FROM Customers"
 	SAVE_CUSTOMERS = "INSERT INTO Customers "
-	SALES_ITEM_CUST = "SELECT first_name,last_name,street_1,street_2,city,zip,email,phone,transaction_type,transaction_date FROM customers,items,copies,sales WHERE items.id = copies.item_id AND sales.copy_id = copies.id AND customer_id = customers.id "
+	SALES_ITEM_CUST = "SELECT first_name,last_name,street_1,street_2,city,zip,email,phone,transaction_type,transaction_date FROM customers,items,copies,sales WHERE items.id = copies.item_id AND sales.copy_id = copies.id AND customer_id = customers.id"
 	UPDATE_CUSTOMERS = "UPDATE Customers SET "
 	
 	attr_accessor :id,:first_name,:last_name,:street_1,:street_2,:city,:zip,:email,:phone,:transaction_date,:transaction_type
@@ -31,6 +31,7 @@ class Customer < DataBaseModel
     customer = Customer.new
 		customer.first_name = customer_form.cellAtIndex_(0).stringValue
 		customer.last_name = customer_form.cellAtIndex_(1).stringValue
+		return nil if customer.first_name.empty? || customer.last_name.empty?
 		customer.street_1 = customer_form.cellAtIndex_(2).stringValue
 		customer.street_2 = customer_form.cellAtIndex_(3).stringValue
 		customer.city = customer_form.cellAtIndex_(4).stringValue

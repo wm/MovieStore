@@ -70,6 +70,7 @@ class CustomersController < ApplicationController
 		  if !@customer_id_field.nil? && !@customer_id_field.stringValue.empty?
 			  @customers = []
 			  @customers[0] = Customer.find_by_id(customer_id)
+				@customers = [] if @customers[0].nil?
 			elsif !f_name.empty? && !l_name.empty?
 				@customers = Customer.find_by_name(l_name,f_name)
 			elsif !f_name.empty?
