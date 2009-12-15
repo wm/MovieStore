@@ -44,7 +44,11 @@ class CatalogController < ApplicationController
   end
 	
 	# This method needs to be implemented by the dataSource of an NSTableView.
-	# This controller to the TableView as its dataSource.
+	# It is called when an item is selected/deselected
+	#
+	# This view uses this controller as its dataSource for items and copies.
+	# We check for items only here since nothing happens when a copy is selected 
+	# only and item.
 	#
 	def tableViewSelectionDidChange(notification)
 		if notification.object == @items_table
@@ -63,7 +67,7 @@ class CatalogController < ApplicationController
 	
 	# This method needs to be implemented by the dataSource of an NSTableView.
 	# This function is used by the NSTableView to populate itself
-  # It is used for both the items_table and the copies_table
+  # It is used for the customer_table, items_table, and the copies_table
 	#
   def tableView_objectValueForTableColumn_row_(view, col, row)
     if view == @items_table
@@ -147,7 +151,7 @@ class CatalogController < ApplicationController
 	end
 	
 	# Converts the search attributes into an array only containing those that have 
-	# non-blank values
+	# non-blank values. The attributes are set by the view.
 	#
 	def gen_conditions
 	  conditions = {}

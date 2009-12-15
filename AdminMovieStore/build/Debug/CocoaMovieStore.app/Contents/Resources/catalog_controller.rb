@@ -12,10 +12,10 @@ require 'osx/cocoa'
 #
 class CatalogController < ApplicationController
   
-  attr_accessor :items, :copies
-	attr_accessor :title, :genre, :year, :directors, :actors
-	ib_outlets :title, :genre, :year, :directors, :actors
-  ib_outlets :catalog_box, :items_table, :copies_table
+  attr_accessor :items, :copies, :customers
+	attr_accessor :title, :genre, :year, :directors, :actors, :item_id
+	ib_outlets :title, :genre, :year, :directors, :actors, :item_id
+  ib_outlets :catalog_box, :items_table, :copies_table, :status_label, :customers_sales_table
 
   # Called upon instantiation.
 	# Finds all items in order to populate the catalog table.
@@ -24,9 +24,10 @@ class CatalogController < ApplicationController
 	  begin
 	    @items = Item.find_with_conditions(nil)
 		rescue Exception => e
-		  model_exception(e)
+		  model_exception(e,@status_label)
 		end
 		@copies = nil
+		@customers = nil
   end
   
 	# A search function with link to the view.
@@ -38,28 +39,35 @@ class CatalogController < ApplicationController
 			@items = Item.find_with_conditions(gen_conditions)
 			@items_table.reloadData
 		rescue Exception => e
-		  model_exception(e)
+		  model_exception(e,@status_label)
 		end
   end
 	
 	# This method needs to be implemented by the dataSource of an NSTableView.
-	# This controller to the TableView as its dataSource.
+	# It is called when an item is selected/deselected
+	#
+	# This view uses this controller as its dataSource for items and copies.
+	# We check for items only here since nothing happens when a copy is selected 
+	# only and item.
 	#
 	def tableViewSelectionDidChange(notification)
-	  puts "Getting copies for item_id '#{@items_table.selectedRow}'..." #DEBUG
-		if @items_table.selectedRow < 0
-		  @copies = nil
-	  else
-		  item_id = @items[@items_table.selectedRow].id
-		  @copies = Copy.find_by_item_id(item_id) 
+		if notification.object == @items_table
+			if @items_table.selectedRow < 0
+				@copies = nil
+				@customers = nil
+			else
+				item_id = @items[@items_table.selectedRow].id
+				@copies = Copy.find_by_item_id(item_id) 
+				@customers = Customer.find_by_item_id(item_id)
+			end
+			@copies_table.reloadData
+			@customers_sales_table.reloadData
 		end
-	  @copies_table.reloadData
-	  puts "Got copies..." #DEBUG
 	end
 	
 	# This method needs to be implemented by the dataSource of an NSTableView.
 	# This function is used by the NSTableView to populate itself
-  # It is used for both the items_table and the copies_table
+  # It is used for the customer_table, items_table, and the copies_table
 	#
   def tableView_objectValueForTableColumn_row_(view, col, row)
     if view == @items_table
@@ -73,7 +81,7 @@ class CatalogController < ApplicationController
 			else
 				return nil
 			end
-  	elsif view = @copies_table
+  	elsif view == @copies_table
 			case col.identifier.to_s	
 			when "SECTION"
 				return @copies[row].section_name
@@ -81,6 +89,26 @@ class CatalogController < ApplicationController
 				return @copies[row].copy_type
 			when "PRICE"
 				return @copies[row].sale_price
+			else
+				return nil
+			end
+		elsif view == @customers_sales_table
+			case col.identifier.to_s
+			when "ID"
+				return @customers[row].id
+			when "FNAME"
+				return "* " + @customers[row].first_name if @customers[row].transaction_type == "return"
+				return @customers[row].first_name if @customers[row].transaction_type != "return"				
+			when "LNAME"
+				return @customers[row].last_name
+			when "STREET1"
+				return @customers[row].street_1
+			when "CITY"
+				return @customers[row].city
+			when "ZIP"
+				return @customers[row].zip
+			when "EMAIL"
+				return @customers[row].email
 			else
 				return nil
 			end
@@ -96,6 +124,9 @@ class CatalogController < ApplicationController
     elsif view == @items_table
 	    return 0 if @items.nil?
 	    return @items.length
+		elsif view == @customers_sales_table
+	    return 0 if @customers.nil?
+	    return @customers.length
 	  end
   end
 	
@@ -115,12 +146,16 @@ class CatalogController < ApplicationController
 	
 	private
 	
+	def id
+	  @item_id
+	end
+	
 	# Converts the search attributes into an array only containing those that have 
-	# non-blank values
+	# non-blank values. The attributes are set by the view.
 	#
 	def gen_conditions
 	  conditions = {}
-		search_fields = [:title, :genre, :year, :directors, :actors]
+		search_fields = [:title, :genre, :year, :id]
 		search_fields.each do |sf|
 		  conditions[sf] = self.send(sf).stringValue unless self.send(sf).nil? || self.send(sf).stringValue == ""
 		end

@@ -15,6 +15,8 @@ class DataBaseModel
 	# The MySQL query connection
 	#
   def DataBaseModel.mysql
+    # These values are updated by using the Preferences button in the application menu.
+    # Once entered they will remain. (i.e. a user does not have to enter them upon relaunch)
 	  mysql_prefs = [{ :property => "Host", :value => ""}, 
 								  { :property => "User", :value => ""}, 
 								  { :property => "Password", :value => ""},

@@ -94,6 +94,7 @@ class CustomersController < ApplicationController
 	#
 	ib_action :edit_selected_customer
 	def edit_selected_customer
+	  # if the customer is selected then fill in what we know about them
 	  unless @customers_table.selectedRow < 0
 		  @info_box.setStringValue("")
 			customer = @customers[@customers_table.selectedRow]

@@ -1,7 +1,7 @@
 TCocoaMovieStore
 v7
 r0
-t282257217.431634
+t282536300.193275
 cCheck dependencies
 cProcessInfoPlistFile /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/build/Release/CocoaMovieStore.app/Contents/Info.plist Info.plist
 cStripNIB /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/English.lproj/MainMenu.nib
@@ -78,8 +78,8 @@ t1242690596
 s1472
 
 N/Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/English.lproj/InfoPlist.strings
-c000000004B097FB800000000000001C0
-t1258913720
+c000000004B26BF0A00000000000001C0
+t1260830474
 s448
 
 N/Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/English.lproj/MainMenu.nib
@@ -93,119 +93,123 @@ t1259129751
 s47722
 
 N/Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/app_delegate.rb
-c000000004B0CB7C500000000000001D6
-t1259124677
-s470
+c000000004B26B88F000000000000027A
+t1260828815
+s634
 
 N/Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/application_controller.rb
-c000000004B21A62C00000000000008D1
-t1260496428
-s2257
+c000000004B26B9B30000000000000A2E
+t1260829107
+s2606
 
 N/Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/build/CocoaMovieStore.build/Release/CocoaMovieStore.build/Objects-normal/i386/CocoaMovieStore
-t1259278300
-s13172
+t1260831433
+s13092
 
 N/Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/build/CocoaMovieStore.build/Release/CocoaMovieStore.build/Objects-normal/i386/CocoaMovieStore.LinkFileList
-c000000004B0F0FDB000000000000009A
-t1259278299
+c000000004B26C1AA000000000000009A
+t1260831146
 s154
 
 N/Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/build/CocoaMovieStore.build/Release/CocoaMovieStore.build/Objects-normal/i386/main.o
-t1259131089
-s4956
+t1260831433
+s4896
 
 N/Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/build/CocoaMovieStore.build/Release/CocoaMovieStore.build/Objects-normal/ppc/CocoaMovieStore
-t1259278300
+t1260831433
 s12940
 
 N/Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/build/CocoaMovieStore.build/Release/CocoaMovieStore.build/Objects-normal/ppc/CocoaMovieStore.LinkFileList
-c000000004B0F0FDB0000000000000099
-t1259278299
+c000000004B26C1AA0000000000000099
+t1260831146
 s153
 
 N/Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/build/CocoaMovieStore.build/Release/CocoaMovieStore.build/Objects-normal/ppc/main.o
-t1259131089
-s5024
+t1260831433
+s4964
 
 N/Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/build/Release/CocoaMovieStore.app
-t1260509073
+t1260831433
 s102
 
 N/Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/build/Release/CocoaMovieStore.app.dSYM
-t1259278300
+t1260831433
 s102
 
 N/Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/build/Release/CocoaMovieStore.app/Contents/Info.plist
-t1259129680
+t1260831417
 s802
 
 N/Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/build/Release/CocoaMovieStore.app/Contents/MacOS/CocoaMovieStore
-t1259278300
-s33652
+t1260831433
+s33572
 
 N/Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/build/Release/CocoaMovieStore.app/Contents/PkgInfo
-t1259129680
+t1260831417
 s8
 
+N/Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/build/Release/CocoaMovieStore.app/Contents/Resources/CocoaMovieStore.app
+t2
+s0
+
 N/Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/build/Release/CocoaMovieStore.app/Contents/Resources/English.lproj/InfoPlist.strings
-t1259129680
+t1260831146
 s448
 
 N/Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/build/Release/CocoaMovieStore.app/Contents/Resources/English.lproj/MainMenu.nib
-t1260505463
+t1260831146
 s107578
 
 N/Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/build/Release/CocoaMovieStore.app/Contents/Resources/Preferences.nib
-t1259130105
+t1260831146
 s8272
 
 N/Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/build/Release/CocoaMovieStore.app/Contents/Resources/app_delegate.rb
-t1259129680
-s470
+t1260831146
+s634
 
 N/Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/build/Release/CocoaMovieStore.app/Contents/Resources/application_controller.rb
-t1260496435
-s2257
+t1260831146
+s2606
 
 N/Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/build/Release/CocoaMovieStore.app/Contents/Resources/catalog_controller.rb
-t1260509073
-s4223
+t1260831146
+s4443
 
 N/Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/build/Release/CocoaMovieStore.app/Contents/Resources/copy.rb
-t1260502115
+t1260831146
 s4057
 
 N/Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/build/Release/CocoaMovieStore.app/Contents/Resources/customer.rb
-t1260507103
+t1260831146
 s5208
 
 N/Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/build/Release/CocoaMovieStore.app/Contents/Resources/customers_controller.rb
-t1260502480
-s6880
+t1260831146
+s6950
 
 N/Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/build/Release/CocoaMovieStore.app/Contents/Resources/data_base_model.rb
-t1260493298
-s909
+t1260831146
+s1090
 
 N/Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/build/Release/CocoaMovieStore.app/Contents/Resources/employee.rb
-t1260495468
+t1260831146
 s4314
 
 N/Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/build/Release/CocoaMovieStore.app/Contents/Resources/item.rb
-t1259450909
+t1260831146
 s3168
 
 N/Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/build/Release/CocoaMovieStore.app/Contents/Resources/items_controller.rb
-t1260502115
+t1260831146
 s9167
 
 N/Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/build/Release/CocoaMovieStore.app/Contents/Resources/rb_main.rb
-t1259129680
+t1260831146
 s495
 
 N/Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/build/Release/CocoaMovieStore.app/Contents/Resources/sale.rb
-t1260507765
+t1260831146
 s3210
 
 N/Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/build/Release/CocoaMovieStore.app/Contents/Resources/sales_controller.rb
@@ -213,9 +217,9 @@ t1259276277
 s6670
 
 N/Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/catalog_controller.rb
-c000000004B21D78E000000000000107F
-t1260509070
-s4223
+c000000004B26BF5E000000000000115B
+t1260830558
+s4443
 
 N/Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/copy.rb
 c000000004B21BBCA0000000000000FD9
@@ -228,14 +232,14 @@ t1260507101
 s5208
 
 N/Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/customers_controller.rb
-c000000004B21BDCC0000000000001AE0
-t1260502476
-s6880
+c000000004B26BE3A0000000000001B26
+t1260830266
+s6950
 
 N/Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/data_base_model.rb
-c000000004B2199E7000000000000038D
-t1260493287
-s909
+c000000004B26BE930000000000000442
+t1260830355
+s1090
 
 N/Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/employee.rb
 c000000004B21A26C00000000000010DA
@@ -477,16 +481,26 @@ t1259276275
 s6670
 
 NInfo.plist
-c000000004AFA4E30000000000000035B
-t1257918000
-s859
+c000000004B26C2B70000000000000352
+t1260831415
+s850
 
 CCheck dependencies
 r0
-lSLF07#2@18"Check dependencies282257217#282257217#0(0"0(0#1#0"4300885448#0"0#
+lSLF07#2@18"Check dependencies282536300#282536300#0(0"0(0#1#0"4300885448#0"0#
 
 CCompileC build/CocoaMovieStore.build/Release/CocoaMovieStore.build/Objects-normal/i386/main.o /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
-r0
+s282524188.772270
+e282524189.812244
+r1
+xCompileC
+xbuild/CocoaMovieStore.build/Release/CocoaMovieStore.build/Objects-normal/i386/main.o
+x/Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/main.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@83"Compile /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/main.m282524188#282524189#0(0"0(0#0#75"/Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/main.m4300885448#1241"    cd /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -mdynamic-no-pic -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.5.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -I/Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/build/CocoaMovieStore.build/Release/CocoaMovieStore.build/CocoaMovieStore.hmap -F/Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/build/Release -I/Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/build/Release/include -I/Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/build/CocoaMovieStore.build/Release/CocoaMovieStore.build/DerivedSources/i386 -I/Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/build/CocoaMovieStore.build/Release/CocoaMovieStore.build/DerivedSources -c /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/main.m -o /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/build/CocoaMovieStore.build/Release/CocoaMovieStore.build/Objects-normal/i386/main.o0#
 
 CCompileC build/CocoaMovieStore.build/Release/CocoaMovieStore.build/Objects-normal/i386/main.o /Users/wmernagh/Documents/comp115/Project/MovieStore/CocoaMovieStore/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
 s280823888.141198
@@ -502,7 +516,17 @@ xcom.apple.compilers.gcc.4_2
 lSLF07#2@83"Compile /Users/wmernagh/Documents/comp115/Project/MovieStore/CocoaMovieStore/main.m280823888#280823889#0(0"0(0#0#75"/Users/wmernagh/Documents/comp115/Project/MovieStore/CocoaMovieStore/main.m4300885448#1241"    cd /Users/wmernagh/Documents/comp115/Project/MovieStore/CocoaMovieStore    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -mdynamic-no-pic -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.5.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -I/Users/wmernagh/Documents/comp115/Project/MovieStore/CocoaMovieStore/build/CocoaMovieStore.build/Release/CocoaMovieStore.build/CocoaMovieStore.hmap -F/Users/wmernagh/Documents/comp115/Project/MovieStore/CocoaMovieStore/build/Release -I/Users/wmernagh/Documents/comp115/Project/MovieStore/CocoaMovieStore/build/Release/include -I/Users/wmernagh/Documents/comp115/Project/MovieStore/CocoaMovieStore/build/CocoaMovieStore.build/Release/CocoaMovieStore.build/DerivedSources/i386 -I/Users/wmernagh/Documents/comp115/Project/MovieStore/CocoaMovieStore/build/CocoaMovieStore.build/Release/CocoaMovieStore.build/DerivedSources -c /Users/wmernagh/Documents/comp115/Project/MovieStore/CocoaMovieStore/main.m -o /Users/wmernagh/Documents/comp115/Project/MovieStore/CocoaMovieStore/build/CocoaMovieStore.build/Release/CocoaMovieStore.build/Objects-normal/i386/main.o0#
 
 CCompileC build/CocoaMovieStore.build/Release/CocoaMovieStore.build/Objects-normal/ppc/main.o /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/main.m normal ppc objective-c com.apple.compilers.gcc.4_2
-r0
+s282524188.770959
+e282524189.724595
+r1
+xCompileC
+xbuild/CocoaMovieStore.build/Release/CocoaMovieStore.build/Objects-normal/ppc/main.o
+x/Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/main.m
+xnormal
+xppc
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@83"Compile /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/main.m282524188#282524189#0(0"0(0#0#75"/Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/main.m4300885448#1235"    cd /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch ppc -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -Os -mdynamic-no-pic -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.5.sdk -mtune=G5 -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -I/Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/build/CocoaMovieStore.build/Release/CocoaMovieStore.build/CocoaMovieStore.hmap -F/Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/build/Release -I/Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/build/Release/include -I/Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/build/CocoaMovieStore.build/Release/CocoaMovieStore.build/DerivedSources/ppc -I/Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/build/CocoaMovieStore.build/Release/CocoaMovieStore.build/DerivedSources -c /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/main.m -o /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/build/CocoaMovieStore.build/Release/CocoaMovieStore.build/Objects-normal/ppc/main.o0#
 
 CCompileC build/CocoaMovieStore.build/Release/CocoaMovieStore.build/Objects-normal/ppc/main.o /Users/wmernagh/Documents/comp115/Project/MovieStore/CocoaMovieStore/main.m normal ppc objective-c com.apple.compilers.gcc.4_2
 s280823888.139982
@@ -518,7 +542,12 @@ xcom.apple.compilers.gcc.4_2
 lSLF07#2@83"Compile /Users/wmernagh/Documents/comp115/Project/MovieStore/CocoaMovieStore/main.m280823888#280823889#0(0"0(0#0#75"/Users/wmernagh/Documents/comp115/Project/MovieStore/CocoaMovieStore/main.m4300885448#1235"    cd /Users/wmernagh/Documents/comp115/Project/MovieStore/CocoaMovieStore    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch ppc -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -Os -mdynamic-no-pic -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.5.sdk -mtune=G5 -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -I/Users/wmernagh/Documents/comp115/Project/MovieStore/CocoaMovieStore/build/CocoaMovieStore.build/Release/CocoaMovieStore.build/CocoaMovieStore.hmap -F/Users/wmernagh/Documents/comp115/Project/MovieStore/CocoaMovieStore/build/Release -I/Users/wmernagh/Documents/comp115/Project/MovieStore/CocoaMovieStore/build/Release/include -I/Users/wmernagh/Documents/comp115/Project/MovieStore/CocoaMovieStore/build/CocoaMovieStore.build/Release/CocoaMovieStore.build/DerivedSources/ppc -I/Users/wmernagh/Documents/comp115/Project/MovieStore/CocoaMovieStore/build/CocoaMovieStore.build/Release/CocoaMovieStore.build/DerivedSources -c /Users/wmernagh/Documents/comp115/Project/MovieStore/CocoaMovieStore/main.m -o /Users/wmernagh/Documents/comp115/Project/MovieStore/CocoaMovieStore/build/CocoaMovieStore.build/Release/CocoaMovieStore.build/Objects-normal/ppc/main.o0#
 
 CCompileXIB /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/Preferences.xib
-r0
+s282523946.307988
+e282523946.662706
+r1
+xCompileXIB
+x/Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/Preferences.xib
+lSLF07#2@26"CompileXIB Preferences.xib282523946#282523946#0(0"0(0#0#84"/Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/Preferences.xib4300885448#405"    cd /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/build/Release/CocoaMovieStore.app/Contents/Resources/Preferences.nib /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/Preferences.xib0#
 
 CCompileXIB /Users/wmernagh/Documents/comp115/Project/MovieStore/CocoaMovieStore/Preferences.xib
 s280822905.744666
@@ -529,7 +558,13 @@ x/Users/wmernagh/Documents/comp115/Project/MovieStore/CocoaMovieStore/Preference
 lSLF07#2@26"CompileXIB Preferences.xib280822905#280822906#0(0"0(0#0#84"/Users/wmernagh/Documents/comp115/Project/MovieStore/CocoaMovieStore/Preferences.xib4300885448#405"    cd /Users/wmernagh/Documents/comp115/Project/MovieStore/CocoaMovieStore    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/wmernagh/Documents/comp115/Project/MovieStore/CocoaMovieStore/build/Release/CocoaMovieStore.app/Contents/Resources/Preferences.nib /Users/wmernagh/Documents/comp115/Project/MovieStore/CocoaMovieStore/Preferences.xib0#
 
 CCopyStringsFile /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/build/Release/CocoaMovieStore.app/Contents/Resources/English.lproj/InfoPlist.strings English.lproj/InfoPlist.strings
-r0
+s282523946.199080
+e282523946.290320
+r1
+xCopyStringsFile
+x/Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/build/Release/CocoaMovieStore.app/Contents/Resources/English.lproj/InfoPlist.strings
+xEnglish.lproj/InfoPlist.strings
+lSLF07#2@36"Copy English.lproj/InfoPlist.strings282523946#282523946#0(0"0(0#0#100"/Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/English.lproj/InfoPlist.strings4300885448#436"    cd /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore    setenv ICONV /usr/bin/iconv    /Developer/Library/Xcode/Plug-ins/CoreBuildTasks.xcplugin/Contents/Resources/copystrings --validate --inputencoding utf-16 --outputencoding UTF-16 English.lproj/InfoPlist.strings --outdir /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/build/Release/CocoaMovieStore.app/Contents/Resources/English.lproj0#
 
 CCopyStringsFile /Users/wmernagh/Documents/comp115/Project/MovieStore/CocoaMovieStore/build/Release/CocoaMovieStore.app/Contents/Resources/English.lproj/InfoPlist.strings English.lproj/InfoPlist.strings
 s280822480.078552
@@ -540,68 +575,71 @@ x/Users/wmernagh/Documents/comp115/Project/MovieStore/CocoaMovieStore/build/Rele
 xEnglish.lproj/InfoPlist.strings
 lSLF07#2@36"Copy English.lproj/InfoPlist.strings280822480#280822480#0(0"0(0#0#100"/Users/wmernagh/Documents/comp115/Project/MovieStore/CocoaMovieStore/English.lproj/InfoPlist.strings4300885448#436"    cd /Users/wmernagh/Documents/comp115/Project/MovieStore/CocoaMovieStore    setenv ICONV /usr/bin/iconv    /Developer/Library/Xcode/Plug-ins/CoreBuildTasks.xcplugin/Contents/Resources/copystrings --validate --inputencoding utf-16 --outputencoding UTF-16 English.lproj/InfoPlist.strings --outdir /Users/wmernagh/Documents/comp115/Project/MovieStore/CocoaMovieStore/build/Release/CocoaMovieStore.app/Contents/Resources/English.lproj0#
 
+CCpResource build/Release/CocoaMovieStore.app/Contents/Resources/CocoaMovieStore.app build/Release/CocoaMovieStore.app
+r0
+
 CCpResource build/Release/CocoaMovieStore.app/Contents/Resources/app_delegate.rb app_delegate.rb
-s280822480.388314
-e280822480.394161
+s282523946.480594
+e282523946.492733
 r1
 xCpResource
 xbuild/Release/CocoaMovieStore.app/Contents/Resources/app_delegate.rb
 xapp_delegate.rb
-lSLF07#2@20"Copy app_delegate.rb280822480#280822480#0(0"0(0#0#84"/Users/wmernagh/Documents/comp115/Project/MovieStore/CocoaMovieStore/app_delegate.rb4300885448#452"    cd /Users/wmernagh/Documents/comp115/Project/MovieStore/CocoaMovieStore    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/wmernagh/Documents/comp115/Project/MovieStore/CocoaMovieStore/app_delegate.rb /Users/wmernagh/Documents/comp115/Project/MovieStore/CocoaMovieStore/build/Release/CocoaMovieStore.app/Contents/Resources0#
+lSLF07#2@20"Copy app_delegate.rb282523946#282523946#0(0"0(0#0#84"/Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/app_delegate.rb4300885448#452"    cd /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/app_delegate.rb /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/build/Release/CocoaMovieStore.app/Contents/Resources0#
 
 CCpResource build/Release/CocoaMovieStore.app/Contents/Resources/application_controller.rb application_controller.rb
-s282189235.051140
-e282189235.100601
+s282523946.291245
+e282523946.305934
 r1
 xCpResource
 xbuild/Release/CocoaMovieStore.app/Contents/Resources/application_controller.rb
 xapplication_controller.rb
-lSLF07#2@30"Copy application_controller.rb282189235#282189235#0(0"0(0#0#94"/Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/application_controller.rb4300885448#462"    cd /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/application_controller.rb /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/build/Release/CocoaMovieStore.app/Contents/Resources0#
+lSLF07#2@30"Copy application_controller.rb282523946#282523946#0(0"0(0#0#94"/Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/application_controller.rb4300885448#462"    cd /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/application_controller.rb /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/build/Release/CocoaMovieStore.app/Contents/Resources0#
 
 CCpResource build/Release/CocoaMovieStore.app/Contents/Resources/catalog_controller.rb catalog_controller.rb
-s282201873.066112
-e282201873.087063
+s282523946.294600
+e282523946.311640
 r1
 xCpResource
 xbuild/Release/CocoaMovieStore.app/Contents/Resources/catalog_controller.rb
 xcatalog_controller.rb
-lSLF07#2@26"Copy catalog_controller.rb282201873#282201873#0(0"0(0#0#90"/Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/catalog_controller.rb4300885448#458"    cd /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/catalog_controller.rb /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/build/Release/CocoaMovieStore.app/Contents/Resources0#
+lSLF07#2@26"Copy catalog_controller.rb282523946#282523946#0(0"0(0#0#90"/Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/catalog_controller.rb4300885448#458"    cd /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/catalog_controller.rb /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/build/Release/CocoaMovieStore.app/Contents/Resources0#
 
 CCpResource build/Release/CocoaMovieStore.app/Contents/Resources/copy.rb copy.rb
-s282194915.469204
-e282194915.555417
+s282523946.298733
+e282523946.346457
 r1
 xCpResource
 xbuild/Release/CocoaMovieStore.app/Contents/Resources/copy.rb
 xcopy.rb
-lSLF07#2@12"Copy copy.rb282194915#282194915#0(0"0(0#0#76"/Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/copy.rb4300885448#444"    cd /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/copy.rb /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/build/Release/CocoaMovieStore.app/Contents/Resources0#
+lSLF07#2@12"Copy copy.rb282523946#282523946#0(0"0(0#0#76"/Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/copy.rb4300885448#444"    cd /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/copy.rb /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/build/Release/CocoaMovieStore.app/Contents/Resources0#
 
 CCpResource build/Release/CocoaMovieStore.app/Contents/Resources/customer.rb customer.rb
-s282199903.414026
-e282199903.425453
+s282523946.292949
+e282523946.317695
 r1
 xCpResource
 xbuild/Release/CocoaMovieStore.app/Contents/Resources/customer.rb
 xcustomer.rb
-lSLF07#2@16"Copy customer.rb282199903#282199903#0(0"0(0#0#80"/Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/customer.rb4300885448#448"    cd /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/customer.rb /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/build/Release/CocoaMovieStore.app/Contents/Resources0#
+lSLF07#2@16"Copy customer.rb282523946#282523946#0(0"0(0#0#80"/Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/customer.rb4300885448#448"    cd /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/customer.rb /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/build/Release/CocoaMovieStore.app/Contents/Resources0#
 
 CCpResource build/Release/CocoaMovieStore.app/Contents/Resources/customers_controller.rb customers_controller.rb
-s282195280.956290
-e282195280.981695
+s282523946.292211
+e282523946.341071
 r1
 xCpResource
 xbuild/Release/CocoaMovieStore.app/Contents/Resources/customers_controller.rb
 xcustomers_controller.rb
-lSLF07#2@28"Copy customers_controller.rb282195280#282195280#0(0"0(0#0#92"/Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/customers_controller.rb4300885448#460"    cd /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/customers_controller.rb /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/build/Release/CocoaMovieStore.app/Contents/Resources0#
+lSLF07#2@28"Copy customers_controller.rb282523946#282523946#0(0"0(0#0#92"/Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/customers_controller.rb4300885448#460"    cd /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/customers_controller.rb /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/build/Release/CocoaMovieStore.app/Contents/Resources0#
 
 CCpResource build/Release/CocoaMovieStore.app/Contents/Resources/data_base_model.rb data_base_model.rb
-s282186098.800877
-e282186098.948468
+s282523946.301123
+e282523946.327979
 r1
 xCpResource
 xbuild/Release/CocoaMovieStore.app/Contents/Resources/data_base_model.rb
 xdata_base_model.rb
-lSLF07#2@23"Copy data_base_model.rb282186098#282186098#0(0"0(0#0#87"/Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/data_base_model.rb4300885448#455"    cd /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/data_base_model.rb /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/build/Release/CocoaMovieStore.app/Contents/Resources0#
+lSLF07#2@23"Copy data_base_model.rb282523946#282523946#0(0"0(0#0#87"/Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/data_base_model.rb4300885448#455"    cd /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/data_base_model.rb /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/build/Release/CocoaMovieStore.app/Contents/Resources0#
 
 CCpResource build/Release/CocoaMovieStore.app/Contents/Resources/database.yml database.yml
 s280822480.236183
@@ -613,49 +651,49 @@ xdatabase.yml
 lSLF07#2@17"Copy database.yml280822480#280822480#0(0"0(0#0#81"/Users/wmernagh/Documents/comp115/Project/MovieStore/CocoaMovieStore/database.yml4300885448#449"    cd /Users/wmernagh/Documents/comp115/Project/MovieStore/CocoaMovieStore    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/wmernagh/Documents/comp115/Project/MovieStore/CocoaMovieStore/database.yml /Users/wmernagh/Documents/comp115/Project/MovieStore/CocoaMovieStore/build/Release/CocoaMovieStore.app/Contents/Resources0#
 
 CCpResource build/Release/CocoaMovieStore.app/Contents/Resources/employee.rb employee.rb
-s282188268.601086
-e282188268.632635
+s282523946.482441
+e282523946.488590
 r1
 xCpResource
 xbuild/Release/CocoaMovieStore.app/Contents/Resources/employee.rb
 xemployee.rb
-lSLF07#2@16"Copy employee.rb282188268#282188268#0(0"0(0#0#80"/Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/employee.rb4300885448#448"    cd /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/employee.rb /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/build/Release/CocoaMovieStore.app/Contents/Resources0#
+lSLF07#2@16"Copy employee.rb282523946#282523946#0(0"0(0#0#80"/Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/employee.rb4300885448#448"    cd /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/employee.rb /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/build/Release/CocoaMovieStore.app/Contents/Resources0#
 
 CCpResource build/Release/CocoaMovieStore.app/Contents/Resources/item.rb item.rb
-s281143709.596147
-e281143709.606521
+s282523946.296999
+e282523946.328147
 r1
 xCpResource
 xbuild/Release/CocoaMovieStore.app/Contents/Resources/item.rb
 xitem.rb
-lSLF07#2@12"Copy item.rb281143709#281143709#0(0"0(0#0#76"/Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/item.rb4300885448#444"    cd /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/item.rb /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/build/Release/CocoaMovieStore.app/Contents/Resources0#
+lSLF07#2@12"Copy item.rb282523946#282523946#0(0"0(0#0#76"/Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/item.rb4300885448#444"    cd /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/item.rb /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/build/Release/CocoaMovieStore.app/Contents/Resources0#
 
 CCpResource build/Release/CocoaMovieStore.app/Contents/Resources/items_controller.rb items_controller.rb
-s282194915.470285
-e282194915.557353
+s282523946.303429
+e282523946.322609
 r1
 xCpResource
 xbuild/Release/CocoaMovieStore.app/Contents/Resources/items_controller.rb
 xitems_controller.rb
-lSLF07#2@24"Copy items_controller.rb282194915#282194915#0(0"0(0#0#88"/Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/items_controller.rb4300885448#456"    cd /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/items_controller.rb /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/build/Release/CocoaMovieStore.app/Contents/Resources0#
+lSLF07#2@24"Copy items_controller.rb282523946#282523946#0(0"0(0#0#88"/Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/items_controller.rb4300885448#456"    cd /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/items_controller.rb /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/build/Release/CocoaMovieStore.app/Contents/Resources0#
 
 CCpResource build/Release/CocoaMovieStore.app/Contents/Resources/rb_main.rb rb_main.rb
-s280822480.231176
-e280822480.244960
+s282523946.290514
+e282523946.305803
 r1
 xCpResource
 xbuild/Release/CocoaMovieStore.app/Contents/Resources/rb_main.rb
 xrb_main.rb
-lSLF07#2@15"Copy rb_main.rb280822480#280822480#0(0"0(0#0#79"/Users/wmernagh/Documents/comp115/Project/MovieStore/CocoaMovieStore/rb_main.rb4300885448#447"    cd /Users/wmernagh/Documents/comp115/Project/MovieStore/CocoaMovieStore    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/wmernagh/Documents/comp115/Project/MovieStore/CocoaMovieStore/rb_main.rb /Users/wmernagh/Documents/comp115/Project/MovieStore/CocoaMovieStore/build/Release/CocoaMovieStore.app/Contents/Resources0#
+lSLF07#2@15"Copy rb_main.rb282523946#282523946#0(0"0(0#0#79"/Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/rb_main.rb4300885448#447"    cd /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/rb_main.rb /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/build/Release/CocoaMovieStore.app/Contents/Resources0#
 
 CCpResource build/Release/CocoaMovieStore.app/Contents/Resources/sale.rb sale.rb
-s282200565.086999
-e282200565.098643
+s282523946.306078
+e282523946.329435
 r1
 xCpResource
 xbuild/Release/CocoaMovieStore.app/Contents/Resources/sale.rb
 xsale.rb
-lSLF07#2@12"Copy sale.rb282200565#282200565#0(0"0(0#0#76"/Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/sale.rb4300885448#444"    cd /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/sale.rb /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/build/Release/CocoaMovieStore.app/Contents/Resources0#
+lSLF07#2@12"Copy sale.rb282523946#282523946#0(0"0(0#0#76"/Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/sale.rb4300885448#444"    cd /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/sale.rb /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/build/Release/CocoaMovieStore.app/Contents/Resources0#
 
 CCpResource build/Release/CocoaMovieStore.app/Contents/Resources/sales_controller.rb sales_controller.rb
 s280969077.736039
@@ -667,14 +705,14 @@ xsales_controller.rb
 lSLF07#2@24"Copy sales_controller.rb280969077#280969077#0(0"0(0#0#88"/Users/wmernagh/Documents/comp115/Project/MovieStore/CocoaMovieStore/sales_controller.rb4300885448#456"    cd /Users/wmernagh/Documents/comp115/Project/MovieStore/CocoaMovieStore    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/wmernagh/Documents/comp115/Project/MovieStore/CocoaMovieStore/sales_controller.rb /Users/wmernagh/Documents/comp115/Project/MovieStore/CocoaMovieStore/build/Release/CocoaMovieStore.app/Contents/Resources0#
 
 CCreateUniversalBinary /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/build/Release/CocoaMovieStore.app/Contents/MacOS/CocoaMovieStore normal "ppc i386"
-s280971100.305993
-e280971100.341397
+s282524189.841010
+e282524189.844507
 r1
 xCreateUniversalBinary
 x/Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/build/Release/CocoaMovieStore.app/Contents/MacOS/CocoaMovieStore
 xnormal
 xppc i386
-lSLF07#2@104"CreateUniversalBinary build/Release/CocoaMovieStore.app/Contents/MacOS/CocoaMovieStore normal "ppc i386"280971100#280971100#0(0"0(0#0#77"/Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/ppc i3864300885448#569"    cd /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore    /usr/bin/lipo -create /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/build/CocoaMovieStore.build/Release/CocoaMovieStore.build/Objects-normal/ppc/CocoaMovieStore /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/build/CocoaMovieStore.build/Release/CocoaMovieStore.build/Objects-normal/i386/CocoaMovieStore -output /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/build/Release/CocoaMovieStore.app/Contents/MacOS/CocoaMovieStore0#
+lSLF07#2@104"CreateUniversalBinary build/Release/CocoaMovieStore.app/Contents/MacOS/CocoaMovieStore normal "ppc i386"282524189#282524189#0(0"0(0#0#77"/Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/ppc i3864300885448#569"    cd /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore    /usr/bin/lipo -create /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/build/CocoaMovieStore.build/Release/CocoaMovieStore.build/Objects-normal/ppc/CocoaMovieStore /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/build/CocoaMovieStore.build/Release/CocoaMovieStore.build/Objects-normal/i386/CocoaMovieStore -output /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/build/Release/CocoaMovieStore.app/Contents/MacOS/CocoaMovieStore0#
 
 CCreateUniversalBinary /Users/wmernagh/Documents/comp115/Project/MovieStore/CocoaMovieStore/build/Release/CocoaMovieStore.app/Contents/MacOS/CocoaMovieStore normal "ppc i386"
 s280823961.137842
@@ -687,13 +725,13 @@ xppc i386
 lSLF07#2@104"CreateUniversalBinary build/Release/CocoaMovieStore.app/Contents/MacOS/CocoaMovieStore normal "ppc i386"280823961#280823961#0(0"0(0#0#77"/Users/wmernagh/Documents/comp115/Project/MovieStore/CocoaMovieStore/ppc i3864300885448#569"    cd /Users/wmernagh/Documents/comp115/Project/MovieStore/CocoaMovieStore    /usr/bin/lipo -create /Users/wmernagh/Documents/comp115/Project/MovieStore/CocoaMovieStore/build/CocoaMovieStore.build/Release/CocoaMovieStore.build/Objects-normal/ppc/CocoaMovieStore /Users/wmernagh/Documents/comp115/Project/MovieStore/CocoaMovieStore/build/CocoaMovieStore.build/Release/CocoaMovieStore.build/Objects-normal/i386/CocoaMovieStore -output /Users/wmernagh/Documents/comp115/Project/MovieStore/CocoaMovieStore/build/Release/CocoaMovieStore.app/Contents/MacOS/CocoaMovieStore0#
 
 CGenerateDSYMFile /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/build/Release/CocoaMovieStore.app.dSYM /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/build/Release/CocoaMovieStore.app/Contents/MacOS/CocoaMovieStore
-s280971100.341540
-e280971100.422675
+s282524189.844602
+e282524189.852981
 r1
 xGenerateDSYMFile
 x/Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/build/Release/CocoaMovieStore.app.dSYM
 x/Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/build/Release/CocoaMovieStore.app/Contents/MacOS/CocoaMovieStore
-lSLF07#2@120"GenerateDSYMFile build/Release/CocoaMovieStore.app.dSYM build/Release/CocoaMovieStore.app/Contents/MacOS/CocoaMovieStore280971100#280971100#0(0"0(0#0#133"/Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/build/Release/CocoaMovieStore.app/Contents/MacOS/CocoaMovieStore4300885448#353"    cd /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore    /Developer/usr/bin/dsymutil /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/build/Release/CocoaMovieStore.app/Contents/MacOS/CocoaMovieStore -o /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/build/Release/CocoaMovieStore.app.dSYM0#
+lSLF07#2@120"GenerateDSYMFile build/Release/CocoaMovieStore.app.dSYM build/Release/CocoaMovieStore.app/Contents/MacOS/CocoaMovieStore282524189#282524189#0(0"0(0#0#133"/Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/build/Release/CocoaMovieStore.app/Contents/MacOS/CocoaMovieStore4300885448#353"    cd /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore    /Developer/usr/bin/dsymutil /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/build/Release/CocoaMovieStore.app/Contents/MacOS/CocoaMovieStore -o /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/build/Release/CocoaMovieStore.app.dSYM0#
 
 CGenerateDSYMFile /Users/wmernagh/Documents/comp115/Project/MovieStore/CocoaMovieStore/build/Release/CocoaMovieStore.app.dSYM /Users/wmernagh/Documents/comp115/Project/MovieStore/CocoaMovieStore/build/Release/CocoaMovieStore.app/Contents/MacOS/CocoaMovieStore
 s280823961.230777
@@ -705,24 +743,24 @@ x/Users/wmernagh/Documents/comp115/Project/MovieStore/CocoaMovieStore/build/Rele
 lSLF07#2@120"GenerateDSYMFile build/Release/CocoaMovieStore.app.dSYM build/Release/CocoaMovieStore.app/Contents/MacOS/CocoaMovieStore280823961#280823961#0(0"0(0#0#133"/Users/wmernagh/Documents/comp115/Project/MovieStore/CocoaMovieStore/build/Release/CocoaMovieStore.app/Contents/MacOS/CocoaMovieStore4300885448#353"    cd /Users/wmernagh/Documents/comp115/Project/MovieStore/CocoaMovieStore    /Developer/usr/bin/dsymutil /Users/wmernagh/Documents/comp115/Project/MovieStore/CocoaMovieStore/build/Release/CocoaMovieStore.app/Contents/MacOS/CocoaMovieStore -o /Users/wmernagh/Documents/comp115/Project/MovieStore/CocoaMovieStore/build/Release/CocoaMovieStore.app.dSYM0#
 
 CLd /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/build/CocoaMovieStore.build/Release/CocoaMovieStore.build/Objects-normal/i386/CocoaMovieStore normal i386
-s280971099.122291
-e280971100.305859
+s282524189.812351
+e282524189.840899
 r1
 xLd
 x/Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/build/CocoaMovieStore.build/Release/CocoaMovieStore.build/Objects-normal/i386/CocoaMovieStore
 xnormal
 xi386
-lSLF07#2@167"Link /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/build/CocoaMovieStore.build/Release/CocoaMovieStore.build/Objects-normal/i386/CocoaMovieStore280971099#280971100#0(0"0(0#0#0"4300885448#786"    cd /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore    setenv MACOSX_DEPLOYMENT_TARGET 10.5    /Developer/usr/bin/gcc-4.2 -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -L/Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/build/Release -F/Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/build/Release -filelist /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/build/CocoaMovieStore.build/Release/CocoaMovieStore.build/Objects-normal/i386/CocoaMovieStore.LinkFileList -mmacosx-version-min=10.5 -framework Cocoa -framework RubyCocoa -o /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/build/CocoaMovieStore.build/Release/CocoaMovieStore.build/Objects-normal/i386/CocoaMovieStore0#
+lSLF07#2@167"Link /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/build/CocoaMovieStore.build/Release/CocoaMovieStore.build/Objects-normal/i386/CocoaMovieStore282524189#282524189#0(0"0(0#0#0"4300885448#786"    cd /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore    setenv MACOSX_DEPLOYMENT_TARGET 10.5    /Developer/usr/bin/gcc-4.2 -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -L/Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/build/Release -F/Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/build/Release -filelist /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/build/CocoaMovieStore.build/Release/CocoaMovieStore.build/Objects-normal/i386/CocoaMovieStore.LinkFileList -mmacosx-version-min=10.5 -framework Cocoa -framework RubyCocoa -o /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/build/CocoaMovieStore.build/Release/CocoaMovieStore.build/Objects-normal/i386/CocoaMovieStore0#
 
 CLd /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/build/CocoaMovieStore.build/Release/CocoaMovieStore.build/Objects-normal/ppc/CocoaMovieStore normal ppc
-s280971099.121284
-e280971100.304556
+s282524189.724703
+e282524189.761016
 r1
 xLd
 x/Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/build/CocoaMovieStore.build/Release/CocoaMovieStore.build/Objects-normal/ppc/CocoaMovieStore
 xnormal
 xppc
-lSLF07#2@166"Link /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/build/CocoaMovieStore.build/Release/CocoaMovieStore.build/Objects-normal/ppc/CocoaMovieStore280971099#280971100#0(0"0(0#0#0"32651453787340904#783"    cd /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore    setenv MACOSX_DEPLOYMENT_TARGET 10.5    /Developer/usr/bin/gcc-4.2 -arch ppc -isysroot /Developer/SDKs/MacOSX10.5.sdk -L/Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/build/Release -F/Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/build/Release -filelist /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/build/CocoaMovieStore.build/Release/CocoaMovieStore.build/Objects-normal/ppc/CocoaMovieStore.LinkFileList -mmacosx-version-min=10.5 -framework Cocoa -framework RubyCocoa -o /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/build/CocoaMovieStore.build/Release/CocoaMovieStore.build/Objects-normal/ppc/CocoaMovieStore0#
+lSLF07#2@166"Link /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/build/CocoaMovieStore.build/Release/CocoaMovieStore.build/Objects-normal/ppc/CocoaMovieStore282524189#282524189#0(0"0(0#0#0"4300885448#783"    cd /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore    setenv MACOSX_DEPLOYMENT_TARGET 10.5    /Developer/usr/bin/gcc-4.2 -arch ppc -isysroot /Developer/SDKs/MacOSX10.5.sdk -L/Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/build/Release -F/Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/build/Release -filelist /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/build/CocoaMovieStore.build/Release/CocoaMovieStore.build/Objects-normal/ppc/CocoaMovieStore.LinkFileList -mmacosx-version-min=10.5 -framework Cocoa -framework RubyCocoa -o /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/build/CocoaMovieStore.build/Release/CocoaMovieStore.build/Objects-normal/ppc/CocoaMovieStore0#
 
 CLd /Users/wmernagh/Documents/comp115/Project/MovieStore/CocoaMovieStore/build/CocoaMovieStore.build/Release/CocoaMovieStore.build/Objects-normal/i386/CocoaMovieStore normal i386
 s280823961.039754
@@ -745,7 +783,13 @@ xppc
 lSLF07#2@166"Link /Users/wmernagh/Documents/comp115/Project/MovieStore/CocoaMovieStore/build/CocoaMovieStore.build/Release/CocoaMovieStore.build/Objects-normal/ppc/CocoaMovieStore280823961#280823961#0(0"0(0#0#0"4300885448#783"    cd /Users/wmernagh/Documents/comp115/Project/MovieStore/CocoaMovieStore    setenv MACOSX_DEPLOYMENT_TARGET 10.5    /Developer/usr/bin/gcc-4.2 -arch ppc -isysroot /Developer/SDKs/MacOSX10.5.sdk -L/Users/wmernagh/Documents/comp115/Project/MovieStore/CocoaMovieStore/build/Release -F/Users/wmernagh/Documents/comp115/Project/MovieStore/CocoaMovieStore/build/Release -filelist /Users/wmernagh/Documents/comp115/Project/MovieStore/CocoaMovieStore/build/CocoaMovieStore.build/Release/CocoaMovieStore.build/Objects-normal/ppc/CocoaMovieStore.LinkFileList -mmacosx-version-min=10.5 -framework Cocoa -framework RubyCocoa -o /Users/wmernagh/Documents/comp115/Project/MovieStore/CocoaMovieStore/build/CocoaMovieStore.build/Release/CocoaMovieStore.build/Objects-normal/ppc/CocoaMovieStore0#
 
 CProcessInfoPlistFile /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/build/Release/CocoaMovieStore.app/Contents/Info.plist Info.plist
-r0
+s282524217.853547
+e282524217.862421
+r1
+xProcessInfoPlistFile
+x/Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/build/Release/CocoaMovieStore.app/Contents/Info.plist
+xInfo.plist
+lSLF07#2@18"Process Info.plist282524217#282524217#0(0"0(0#0#79"/Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/Info.plist4300885448#412"    cd /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore    builtin-infoPlistUtility Info.plist -genpkginfo /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/build/Release/CocoaMovieStore.app/Contents/PkgInfo -expandbuildsettings -platform macosx -o /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/build/Release/CocoaMovieStore.app/Contents/Info.plist0#
 
 CProcessInfoPlistFile /Users/wmernagh/Documents/comp115/Project/MovieStore/CocoaMovieStore/build/Release/CocoaMovieStore.app/Contents/Info.plist Info.plist
 s280822480.060044
@@ -757,12 +801,12 @@ xInfo.plist
 lSLF07#2@18"Process Info.plist280822480#280822480#0(0"0(0#0#79"/Users/wmernagh/Documents/comp115/Project/MovieStore/CocoaMovieStore/Info.plist4300885448#412"    cd /Users/wmernagh/Documents/comp115/Project/MovieStore/CocoaMovieStore    builtin-infoPlistUtility Info.plist -genpkginfo /Users/wmernagh/Documents/comp115/Project/MovieStore/CocoaMovieStore/build/Release/CocoaMovieStore.app/Contents/PkgInfo -expandbuildsettings -platform macosx -o /Users/wmernagh/Documents/comp115/Project/MovieStore/CocoaMovieStore/build/Release/CocoaMovieStore.app/Contents/Info.plist0#
 
 CStripNIB /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/English.lproj/MainMenu.nib
-s282198263.353979
-e282198263.648274
+s282523946.197481
+e282523946.480465
 r1
 xStripNIB
 x/Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/English.lproj/MainMenu.nib
-lSLF07#2@35"StripNIB English.lproj/MainMenu.nib282198263#282198263#0(0"0(0#0#95"/Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/English.lproj/MainMenu.nib4300885448#395"    cd /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore    /Developer/usr/bin/ibtool --strip /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/build/Release/CocoaMovieStore.app/Contents/Resources/English.lproj/MainMenu.nib --output-format human-readable-text /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/English.lproj/MainMenu.nib0#
+lSLF07#2@35"StripNIB English.lproj/MainMenu.nib282523946#282523946#0(0"0(0#0#95"/Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/English.lproj/MainMenu.nib4300885448#395"    cd /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore    /Developer/usr/bin/ibtool --strip /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/build/Release/CocoaMovieStore.app/Contents/Resources/English.lproj/MainMenu.nib --output-format human-readable-text /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/English.lproj/MainMenu.nib0#
 
 CStripNIB /Users/wmernagh/Documents/comp115/Project/MovieStore/CocoaMovieStore/English.lproj/MainMenu.nib
 s280969748.716204
@@ -773,12 +817,12 @@ x/Users/wmernagh/Documents/comp115/Project/MovieStore/CocoaMovieStore/English.lp
 lSLF07#2@35"StripNIB English.lproj/MainMenu.nib280969748#280969748#0(0"0(0#0#95"/Users/wmernagh/Documents/comp115/Project/MovieStore/CocoaMovieStore/English.lproj/MainMenu.nib4300885448#395"    cd /Users/wmernagh/Documents/comp115/Project/MovieStore/CocoaMovieStore    /Developer/usr/bin/ibtool --strip /Users/wmernagh/Documents/comp115/Project/MovieStore/CocoaMovieStore/build/Release/CocoaMovieStore.app/Contents/Resources/English.lproj/MainMenu.nib --output-format human-readable-text /Users/wmernagh/Documents/comp115/Project/MovieStore/CocoaMovieStore/English.lproj/MainMenu.nib0#
 
 CTouch /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/build/Release/CocoaMovieStore.app
-s282201873.087554
-e282201873.098258
+s282524217.863816
+e282524217.871951
 r1
 xTouch
 x/Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/build/Release/CocoaMovieStore.app
-lSLF07#2@108"Touch /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/build/Release/CocoaMovieStore.app282201873#282201873#0(0"0(0#0#0"4300885448#201"    cd /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore    /usr/bin/touch -c /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/build/Release/CocoaMovieStore.app0#
+lSLF07#2@108"Touch /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/build/Release/CocoaMovieStore.app282524217#282524217#0(0"0(0#0#0"4300885448#201"    cd /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore    /usr/bin/touch -c /Users/wmernagh/Documents/comp115/Project/MovieStore/AdminMovieStore/build/Release/CocoaMovieStore.app0#
 
 CTouch /Users/wmernagh/Documents/comp115/Project/MovieStore/CocoaMovieStore/build/Release/CocoaMovieStore.app
 s280969811.097272

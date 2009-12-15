@@ -1,2 +1,28 @@
 == MovieStore
 Project for comp115 at www.cs.tufts.edu/comp/115 Fall 2009
+
+There are two applications AdminMovieStore is for the Owner and CocoaMovieStore is for the employees. The database attached has 4 users one of which has position owner and 3 of which have position employee. To use the Admin app you need to have position owner.
+
+I developed the CocoaMovieStore app first and duplicated it for the Admin app and just modified the code to enhance it for the admin. It may be easier to read the AdminMovieStore code first and then glance through the CocoaMovieStore code after that, for grading purposes (Also the Admin one is commented better too). The requirements called for two apps so I implemented it that way, though it may have been better to have used just one application but have different views available depending on the position logged in.
+
+Notes.
+Debug statements can be seen in the console of a debug instance. Not in a release instance.
+
+It prevents database violations in code by validating data prior to queries. It then notifies the user of the problems. There are some exceptions in order to demonstrate the exception handling. e.g. If someone using the employee application enters a product and associates a customer with it but the owner deletes the product before the sale is made then there will be an SQL exception about breaking the foreign key constraint of the copy_id in a sale. I catch the exception and print it to the UI but it is not very informative for the user. I do this just to show that I am catching violations and handling them. A real implementation of this I would convert the error into more human readable information and present it to the user.
+
+To build the application you will need to be running the 32bit mysql, have installed XCode, rubycocoa, and mysql-ruby in its default location.
+
+Then to build the applications cd into each application and run the following
+  rake build
+This places the built application in build/Release and it will be called CocoaMovieStore.app
+You will be able to rename the application if you like. To run it you can run 
+  open build/Release/CocoaMovieStore.app
+from the command line. Or just double click on it. To run a debug version (i.e. see sql queries output to a terminal) you can run the following
+  build/Release/CocoaMovieStore.app/Contents/MacOS/CocoaMovieStore
+
+
+Running
+  rake -T
+will give you the full list of rake options.
+
+The view was made completely with InterfaceBuilder. So to see that you will need to open this project in XCode and and then double click on MainMenu.nib to launch Interface builder. 
